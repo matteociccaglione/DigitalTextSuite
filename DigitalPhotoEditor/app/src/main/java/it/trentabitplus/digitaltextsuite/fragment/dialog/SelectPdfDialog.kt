@@ -10,13 +10,15 @@ import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import it.trentabitplus.digitaltextsuite.BuildConfig
 import it.trentabitplus.digitaltextsuite.R
 import it.trentabitplus.digitaltextsuite.adapter.SelectPdfAdapter
 import it.trentabitplus.digitaltextsuite.databinding.FragmentSelectPdfDialogBinding
 import it.trentabitplus.digitaltextsuite.decorator.LinearSpacingDecorator
 import java.io.File
 
+/**
+ * This dialog is used to allow the user to select one of the saved pdf files
+ */
 class SelectPdfDialog(private var fileList : List<File>) : DialogFragment() {
 
     private lateinit var binding: FragmentSelectPdfDialogBinding
@@ -26,7 +28,7 @@ class SelectPdfDialog(private var fileList : List<File>) : DialogFragment() {
     }
 
     companion object{
-        // singleton
+        // singleton pattern
         private var instance : SelectPdfDialog? = null
         fun getInstance(fileList: List<File>): SelectPdfDialog{
             if (instance == null)
@@ -68,13 +70,13 @@ class SelectPdfDialog(private var fileList : List<File>) : DialogFragment() {
             }else{
                 val intent = Intent(Intent.ACTION_VIEW)
                 val data = FileProvider.getUriForFile(requireContext(),
-                    BuildConfig.APPLICATION_ID +".provider",
+                    requireContext().packageName +".provider",
                     rvAdapter.selectedFile.value!!)
+
+                // launch an intent with a chooser, to select to app to open the selected pdf file
                 intent.setDataAndTypeAndNormalize(data, "application/pdf")
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-
-
                 startActivity(Intent.createChooser(intent, "Open pdf with ..."))
                 dismiss()
             }

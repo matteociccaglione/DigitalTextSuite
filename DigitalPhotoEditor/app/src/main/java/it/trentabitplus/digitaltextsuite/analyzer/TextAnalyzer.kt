@@ -14,23 +14,36 @@ import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.TextRecognizerOptions
 import it.trentabitplus.digitaltextsuite.utils.ImageUtils
 
+/**
+ * This class is an analyzer used in the translation use case
+ * to recognize the text in the real time translation.
+ * It is set as the analyzer of the CameraX ImageAnalysis use case.
+ *
+ * @author Andrea Pepe
+ */
 class TextAnalyzer(private val context: Context,
                    private val lifecycle: Lifecycle,
                    private val result: MutableLiveData<String>,
                    private val cropPercentage : Float)
-    : ImageAnalysis.Analyzer{
+    : ImageAnalysis.Analyzer {
 
-    companion object{
+    companion object {
         private const val TAG = "Text Analyzer"
         private const val DIFFERENCE_PERCENTAGE = 0.35f
     }
 
     // instance of TextRecognition detector
     private val textDetector = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
+
     init {
         lifecycle.addObserver(textDetector)
     }
 
+    /**
+     * This method analyze only a percentage of the caught image and
+     * also rotate it.
+     * @param imageProxy : the ImageProxy object captured by the camera
+     */
     @SuppressLint("UnsafeOptInUsageError")
     override fun analyze(imageProxy: ImageProxy) {
         val mediaImage = imageProxy.image ?: return
@@ -47,15 +60,16 @@ class TextAnalyzer(private val context: Context,
             }
     }
 
-    private fun recognizeText(inputImage : InputImage) : Task<Text> {
+    /*
+     * This is the method called from the analyze method to recognize the text
+     * in the cropped and rotate bitmap, updating the recognized text if needed
+     */
+    private fun recognizeText(inputImage: InputImage): Task<Text> {
         return textDetector.process(inputImage).addOnSuccessListener { text ->
             //update mutableLiveData result
             val words = text.text.split(" ")
 
-            if (compareResult(words)){
-                Log.d("TEXT1234", "\n\nPrev value: ${result.value}")
-                Log.d("TEXT1234", text.text)
-                Log.d("TEXT1234", "\n New: ${words.size} Old: ${result.value?.split(" ")?.size}\n")
+            if (compareResult(words)) {
                 result.value = text.text
             }
         }.addOnFailureListener { exception ->
@@ -64,8 +78,13 @@ class TextAnalyzer(private val context: Context,
         }
     }
 
-    private fun compareResult(words: List<String>) : Boolean{
-        if (result.value == null){
+
+    /* This method is used to compare previous recognized data with the new analyzed data.
+    Recognized data will be updated only if there is a difference of at least
+    DIFFERENCE PERCENTAGE. This operation is used to avoid continuos updates on
+    recognized data, so the feature has more stability. */
+    private fun compareResult(words: List<String>): Boolean {
+        if (result.value == null) {
             return true
         }
         val actualWords = result.value!!.split(" ")
@@ -73,13 +92,13 @@ class TextAnalyzer(private val context: Context,
         val maxSize = Math.max(words.size, actualWords.size)
 
         val ref = (size * DIFFERENCE_PERCENTAGE)
-        val refInt : Int
-        if(ref - ref.toInt() >= 0.5f)
+        val refInt: Int
+        if (ref - ref.toInt() >= 0.5f)
             refInt = ref.toInt() + 1
         else
             refInt = ref.toInt()
         var count = 0
-        for (i in 0 until size){
+        for (i in 0 until size) {
             if (!words[i].equals(actualWords[i]))
                 count++
             if (count >= refInt)

@@ -7,12 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import it.trentabitplus.digitaltextsuite.databinding.ChooseLanguageDialogBinding
 
+/**
+ * This is a dialog to choose a target language, typically for translation
+ */
 class LanguageDialogFragment(private val languages : List<String>): DialogFragment() {
     /*
     This attribute must be set using setOnLanguageSelected
     If not set the Dialog do nothing with the selected string
      */
-    private  var languageSelectedListener: (language: String) -> Unit = {
+    private var languageSelectedListener: (language: String) -> Unit = {
 
     }
     /*
@@ -61,6 +64,12 @@ class LanguageDialogFragment(private val languages : List<String>): DialogFragme
     fun setOnLanguageSelected(listener: (language: String)-> Unit){
         this.languageSelectedListener=listener
     }
+
+    /**
+     * To handle the cancel request in a different way you can set this listener using the set method
+     * setOnCancelRequest
+     * For example if you want to customize this dialog by adding a confirmation message you can set it up
+     */
     fun setOnCancelRequest(listener: ()-> Boolean){
         this.cancelListener = listener
     }

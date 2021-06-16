@@ -26,9 +26,8 @@ import java.util.concurrent.Executors
 
 
 /**
- * A simple [Fragment] subclass.
- * Use the [CameraFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * This is an abstract class, performing camera features
+ * using CameraX APIs. This class has to be extended.
  */
 abstract class CameraFragment : Fragment(), CaptureHandler {
     protected var cameraExecutor: ExecutorService = Executors.newSingleThreadExecutor()
@@ -52,13 +51,15 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
             lensFacing = CameraSelector.DEFAULT_BACK_CAMERA
         else
             lensFacing = CameraSelector.DEFAULT_FRONT_CAMERA
-        // use binding to manipulate UI elements
-
     }
-    //This function must be called by children classes
+
+    /**
+     * Children classes must call this method to start the camera
+     */
     fun show(vfCamera: PreviewView){
         startCamera(vfCamera)
     }
+
     override fun onAttach(context: Context) {
         if(context is CaptureHandler){
             captureHandler = context
@@ -67,6 +68,11 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
             captureHandler = this
         super.onAttach(context)
     }
+
+    /**
+     * This method start the camera, setting the right use cases
+     * @param vfCamera : PreviewView used to stream frames
+     */
     @SuppressLint("UnsafeOptInUsageError")
     open fun startCamera(vfCamera: PreviewView){
             // get an instance of ProcessCameraProvider
@@ -181,9 +187,13 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
         }
     }
 
+    /**
+     * Children class have to override this method to
+     * set an Analyzer to ImageAnalysis use case.
+     * If they don't override this method,
+     * no analyzer will be set
+     */
     open fun setAnalyzer() {
-        /**
-         * Children have to override this function to set an analyzer
-         */
+
     }
 }

@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.camera.core.ImageAnalysis
 import androidx.core.view.children
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import it.trentabitplus.digitaltextsuite.activities.DeleteTranslationModulesActivity
 import it.trentabitplus.digitaltextsuite.analyzer.TextAnalyzer
 import it.trentabitplus.digitaltextsuite.databinding.FragmentCameraTranslateBinding
@@ -117,7 +116,7 @@ class FragmentCameraTranslate : CameraFragment() {
 
         viewModel.targetLang.value = Language(Locale.getDefault().language)
 
-        viewModel.translatedText.observe(viewLifecycleOwner, Observer { resultOrError ->
+        viewModel.translatedText.observe(viewLifecycleOwner, { resultOrError ->
             resultOrError?.let {
                 if (it.error != null){
                     Log.d("Translation", resultOrError.error?.localizedMessage.toString())
@@ -127,7 +126,7 @@ class FragmentCameraTranslate : CameraFragment() {
             }
         })
 
-        viewModel.modelDownloading.observe(viewLifecycleOwner, Observer { downloading ->
+        viewModel.modelDownloading.observe(viewLifecycleOwner, { downloading ->
             if (downloading){
                 binding.grpDownloading.visibility = View.VISIBLE
             }else{
