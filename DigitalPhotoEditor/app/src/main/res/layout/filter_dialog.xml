@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_repeat">
+
+    <TextView
+        android:id="@+id/labelSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/label_filter_by"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/filterSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/filterSpinner" />
+
+    <TextView
+        android:id="@+id/labelFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/label_sort_by"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/sorterSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/labelSort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sorterSpinner" />
+
+    <Spinner
+        android:id="@+id/filterSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/label_distance"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelSort"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <Spinner
+        android:id="@+id/sorterSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spinner_distance"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/filterSpinner"
+        app:layout_constraintStart_toStartOf="@+id/filterSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/filterSpinner" />
+
+    <Button
+        android:id="@+id/buttonCancFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/canc"
+        android:backgroundTint="@color/hint_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sorterSpinner" />
+
+    <Button
+        android:id="@+id/buttonOkFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/hint_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/sorterSpinner" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+</androidx.constraintlayout.widget.ConstraintLayout>

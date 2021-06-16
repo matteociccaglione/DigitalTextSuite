@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/it_save"
+        android:icon="@drawable/ic_baseline_save_24"
+        android:title="@string/save"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/it_delete"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="@string/delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/it_undo"
+        android:icon="@drawable/ic_baseline_undo_24"
+        android:title="@string/undo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/it_editable"
+        android:checkable="true"
+        android:title="@string/editable" />
+</menu>

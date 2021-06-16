@@ -1,0 +1,62 @@
+project.setOnSlideSelected{
+user -> when(user){
+	Luca -> {
+			Widget()
+			AllFiles()
+		}
+	Andrea -> {
+			Traduzione()
+			Pdf()
+		}
+	Matteo -> {
+			Digital_Ink_e_giochino_e_notifiche()
+			TutorialActivity()
+		}
+	Adrian -> {
+			Digital_Recognition_(FragmentCamera_astratto_e_quindi_parli_di_CameraX)()
+			Bandiere()
+		}
+	Gianluca -> {
+			DialogColore_e_DialogPenna()
+			TextResultActivity()
+		}
+	else -> "!bug ma una feature nuova"
+
+	}
+			
+}
+Widget(){
+	"Cosa fa il widget e a cosa serve e codice e quanto è figo e quanto è utile soprattutto per giocare e codice"
+}
+AllFiles(){
+	"Fragment all files e le enumerazioni per fare sia i filtri che cambiare la visuale degli elementi poi devi parlare della classe Directory
+	e della classe Note"
+}
+
+Traduzione(){
+	"Tutta la roba della  traduzione Dialog compresi"
+	}
+
+Pdf(){
+	"Tutta la roba del pdf"
+}
+
+Digital_Ink_e_giochino_e_notifiche(){
+	"Tutta la roba digital ink"
+}
+
+Digital_Recognition_\(FragmentCamera_astratto_e_quindi_parli_di_CameraX\)(){
+	"Tutta la classe di digital recognition compreso recognition util e poi anche del content provider (intent filter) per acquisire più di una immagine insieme"
+	"E anche la real main activity con il tab"
+}
+Bandiere(){
+	"le bandiere"
+}
+DialogColore_e_DialogPenna(){
+	"Il dialog con i colori ecc."
+}
+
+TextResultActivity(){
+	"La text result activity"
+}
+	

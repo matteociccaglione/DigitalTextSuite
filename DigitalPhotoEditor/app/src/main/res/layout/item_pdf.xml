@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/cardView_margin"
+    android:layout_marginStart="@dimen/cardView_margin"
+    android:layout_marginTop="@dimen/cardView_margin"
+    android:layout_marginEnd="@dimen/cardView_margin"
+    android:layout_marginBottom="@dimen/cardView_margin"
+    android:backgroundTint="@color/long_pressed_selector_files"
+    android:elevation="6dp"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="6dp">
+
+    <TextView
+        android:id="@+id/tvPdfFilename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:scrollHorizontally="true"
+        android:text="@string/pdf_saved"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</androidx.cardview.widget.CardView>

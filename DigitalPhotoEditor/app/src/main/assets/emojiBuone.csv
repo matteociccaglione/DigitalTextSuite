@@ -1,0 +1,845 @@
+U+1F600,😀,grinning face,2012,emoji,face; grin; person
+U+1F601,😁,grinning face with smiling eyes,2010,emoji,eye; face; grin; person; smile
+U+1F602,😂,face with tears of joy,2010,emoji,face; joy; person; tear
+U+1F603,😃,smiling face with open mouth,2010,emoji,face; mouth; open; person; smile
+U+1F604,😄,smiling face with open mouth and smiling eyes,2010,emoji,eye; face; mouth; open; person; smile
+U+1F605,😅,smiling face with open mouth and cold sweat,2010,emoji,cold; face; open; person; smile; sweat
+U+1F606,😆,smiling face with open mouth and tightly-closed eyes,2010,emoji,face; laugh; mouth; open; person; satisfied; smile
+U+1F609,😉,winking face,2010,emoji,face; person; wink
+U+1F60A,😊,smiling face with smiling eyes,2010,emoji,blush; eye; face; person; smile
+U+1F60B,😋,face savouring delicious food,2010,emoji,delicious; face; food; person; savouring; smile; um; yum
+U+1F60E,😎,smiling face with sunglasses,2010,emoji,bright; cool; eye; eyewear; face; glasses; person; smile; sun;sunglasses; weather
+U+1F60D,😍,smiling face with heart-shaped eyes,2010,emoji,eye; face; heart; love; person; smile
+U+1F618,😘,face throwing a kiss,2010,emoji,face; heart; kiss; person
+U+1F617,😗,kissing face,2012,emoji,face; kiss; person
+U+1F619,😙,kissing face with smiling eyes,2012,emoji,eye; face; kiss; person; smile
+U+1F61A,😚,kissing face with closed eyes,2010,emoji,closed; eye; face; kiss; person
+U+263A,☺️,white smiling face,1995,text,face; outlined; person; relaxed; smile
+U+1F607,😇,smiling face with halo,2010,emoji,angel; face; fairy tale; fantasy; halo; innocent; person; smile
+U+1F610,😐,neutral face,2010,emoji,deadpan; face; neutral; person
+U+1F611,😑,expressionless face,2012,emoji,expressionless; face; inexpressive; person; unexpressive
+U+1F636,😶,face without mouth,2010,emoji,face; mouth; person; quiet; silent
+U+1F60F,😏,smirking face,2010,emoji,face; person; smirk
+U+1F623,😣,persevering face,2010,emoji,face; persevere; person
+U+1F625,😥,disappointed but relieved face,2010,emoji,disappointed; face; person; relieved; whew
+U+1F62E,😮,face with open mouth,2012,emoji,face; mouth; open; person; sympathy
+U+1F62F,😯,hushed face,2012,emoji,face; hushed; person; stunned; surprised
+U+1F62A,😪,sleepy face,2010,emoji,face; person; sleep
+U+1F62B,😫,tired face,2010,emoji,face; person; tired
+U+1F634,😴,sleeping face,2012,emoji,face; person; sleep; zzz
+U+1F60C,😌,relieved face,2010,emoji,face; person; relieved
+U+1F61B,😛,face with stuck-out tongue,2012,emoji,face; person; tongue
+U+1F61C,😜,face with stuck-out tongue and winking eye,2010,emoji,eye; face; joke; person; tongue; wink
+U+1F61D,😝,face with stuck-out tongue and tightly-closed eyes,2010,emoji,eye; face; horrible; person; taste; tongue
+U+1F612,😒,unamused face,2010,emoji,face; person; unamused; unhappy
+U+1F613,😓,face with cold sweat,2010,emoji,cold; face; person; sweat
+U+1F614,😔,pensive face,2010,emoji,dejected; face; pensive; person
+U+1F615,😕,confused face,2012,emoji,confused; face; person
+U+1F616,😖,confounded face,2010,emoji,confounded; face; person
+U+1F637,😷,face with medical mask,2010,emoji,cold; doctor; face; mask; medicine; person; sick
+U+1F632,😲,astonished face,2010,emoji,astonished; face; person; shocked; totally
+U+1F61E,😞,disappointed face,2010,emoji,disappointed; face; person
+U+1F61F,😟,worried face,2012,emoji,face; person; worried
+U+1F624,😤,face with look of triumph,2010,emoji,face; person; triumph; won
+U+1F622,😢,crying face,2010,emoji,cry; face; person; sad; tear
+U+1F62D,😭,loudly crying face,2010,emoji,cry; face; person; sad; sob; tear
+U+1F626,😦,frowning face with open mouth,2012,emoji,face; frown; mouth; open; person
+U+1F627,😧,anguished face,2012,emoji,anguished; face; person
+U+1F628,😨,fearful face,2010,emoji,face; fear; fearful; person; scared
+U+1F629,😩,weary face,2010,emoji,face; person; tired; weary
+U+1F62C,😬,grimacing face,2012,emoji,face; grimace; person
+U+1F630,😰,face with open mouth and cold sweat,2010,emoji,blue; cold; face; mouth; open; person; rushed; sweat
+U+1F631,😱,face screaming in fear,2010,emoji,face; fear; fearful; munch; person; scared; scream
+U+1F633,😳,flushed face,2010,emoji,dazed; face; flushed; person
+U+1F635,😵,dizzy face,2010,emoji,dizzy; face; person
+U+1F621,😡,pouting face,2010,emoji,angry; face; mad; person; pouting; rage; red
+U+1F620,😠,angry face,2010,emoji,angry; face; mad; person
+U+1F608,😈,smiling face with horns,2010,emoji,face; fairy tale; fantasy; horns; person; smile
+U+1F47F,👿,imp,2010,emoji,devil; face; fairy tale; fantasy; imp; person
+U+1F479,👹,japanese ogre,2010,emoji,creature; face; fairy tale; fantasy; japanese; monster; ogre; person
+U+1F47A,👺,japanese goblin,2010,emoji,creature; face; fairy tale; fantasy; goblin; japanese; monster;person
+U+1F480,💀,skull,2010,emoji,body; death; face; fairy tale; monster; person; skull
+U+1F47B,👻,ghost,2010,emoji,creature; face; fairy tale; fantasy; ghost; monster; person
+U+1F47D,👽,extraterrestrial alien,2010,emoji,alien; creature; extraterrestrial; face; fairy tale; fantasy; monster;nature; person; space; ufo
+U+1F47E,👾,alien monster,2010,emoji,alien; creature; extraterrestrial; face; fairy tale; fantasy; monster;nature; person; space; ufo
+U+1F4A9,💩,pile of poo,2010,emoji,comic; dung; face; monster; nature; object; poo; poop
+U+1F63A,😺,smiling cat face with open mouth,2010,emoji,animal; cat; face; mouth; nature; open; smile
+U+1F638,😸,grinning cat face with smiling eyes,2010,emoji,animal; cat; eye; face; grin; nature; smile
+U+1F639,😹,cat face with tears of joy,2010,emoji,animal; cat; face; joy; nature; tear
+U+1F63B,😻,smiling cat face with heart-shaped eyes,2010,emoji,animal; cat; eye; face; heart; love; nature; smile
+U+1F63C,😼,cat face with wry smile,2010,emoji,animal; cat; face; ironic; nature; smile; wry
+U+1F63D,😽,kissing cat face with closed eyes,2010,emoji,animal; cat; eye; face; kiss; nature
+U+1F640,🙀,weary cat face,2010,emoji,animal; cat; face; nature; oh; surprised; weary
+U+1F63F,😿,crying cat face,2010,emoji,animal; cat; cry; face; nature; sad; tear
+U+1F63E,😾,pouting cat face,2010,emoji,animal; cat; face; nature; pouting
+U+1F648,🙈,see-no-evil monkey,2010,emoji,animal; evil; face; forbidden; gesture; monkey; nature; no; not;prohibited; see
+U+1F649,🙉,hear-no-evil monkey,2010,emoji,animal; evil; face; forbidden; gesture; hear; monkey; nature; no;not; prohibited
+U+1F64A,🙊,speak-no-evil monkey,2010,emoji,animal; evil; face; forbidden; gesture; monkey; nature; no; not;prohibited; speak
+U+1F466,👦,boy,2010,emoji,boy; person
+U+1F467,👧,girl,2010,emoji,girl; maiden; person; virgin; virgo; zodiac
+U+1F468,👨,man,2010,emoji,man; person
+U+1F469,👩,woman,2010,emoji,person; woman
+U+1F474,👴,older man,2010,emoji,man; old; person
+U+1F475,👵,older woman,2010,emoji,old; person; woman
+U+1F476,👶,baby,2010,emoji,baby; person
+U+1F471,👱,person with blond hair,2010,emoji,blond; person
+U+1F46E,👮,police officer,2010,emoji,cop; officer; person; police
+U+1F472,👲,man with gua pi mao,2010,emoji,gua pi mao; hat; man; person
+U+1F473,👳,man with turban,2010,emoji,man; person; turban
+U+1F477,👷,construction worker,2010,emoji,construction; hat; person; worker
+U+1F478,👸,princess,2010,emoji,fairy tale; fantasy; person; princess
+U+1F482,💂,guardsman,2010,emoji,guard; guardsman; person
+U+1F385,🎅,father christmas,2010,emoji,activity; celebration; christmas; fairy tale; fantasy; father; person;santa
+U+1F47C,👼,baby angel,2010,emoji,angel; baby; face; fairy tale; fantasy; person
+U+1F46F,👯,woman with bunny ears,2010,emoji,bunny; dancer; ear; girl; person; woman
+U+1F486,💆,face massage,2010,emoji,massage; person; salon
+U+1F487,💇,haircut,2010,emoji,barber; beauty; haircut; parlor; person
+U+1F470,👰,bride with veil,2010,emoji,bride; person; veil; wedding
+U+1F64D,🙍,person frowning,2010,emoji,frown; gesture; person
+U+1F64E,🙎,person with pouting face,2010,emoji,gesture; person; pouting
+U+1F645,🙅,face with no good gesture,2010,emoji,forbidden; gesture; hand; no; not; person; prohibited
+U+1F646,🙆,face with ok gesture,2010,emoji,gesture; hand; ok; person
+U+1F481,💁,information desk person,2010,emoji,hand; help; information; person; sassy
+U+1F64B,🙋,happy person raising one hand,2010,emoji,gesture; hand; happy; person; raised
+U+1F647,🙇,person bowing deeply,2010,emoji,apology; bow; gesture; person; sorry
+U+1F64C,🙌,person raising both hands in celebration,2010,emoji,body; celebration; gesture; hand; hooray; person; raised
+U+1F64F,🙏,person with folded hands,2010,emoji,ask; body; bow; folded; gesture; hand; person; please; pray; thanks
+U+1F464,👤,bust in silhouette,2010,emoji,bust; person; silhouette
+U+1F465,👥,busts in silhouette,2010,emoji,bust; person; silhouette
+U+1F6B6,🚶,pedestrian,2010,emoji,hike; pedestrian; person; walk; walking
+U+1F3C3,🏃,runner,2010,emoji,marathon; person; runner; running
+U+1F483,💃,dancer,2010,emoji,dancer; person
+U+1F48F,💏,kiss,2010,emoji,couple; kiss; person; romance
+U+1F491,💑,couple with heart,2010,emoji,couple; heart; love; person; romance
+U+1F46A,👪,family,2010,emoji,child; family; father; mother; person
+U+1F46B,👫,man and woman holding hands,2010,emoji,couple; hand; hold; man; person; woman
+U+1F46C,👬,two men holding hands,2010,emoji,couple; gemini; hand; hold; man; person; twins; zodiac
+U+1F46D,👭,two women holding hands,2010,emoji,couple; hand; hold; person; woman
+U+1F4AA,💪,flexed biceps,2010,emoji,biceps; body; comic; flex; muscle; person
+U+1F448,👈,white left pointing backhand index,2010,emoji,backhand; body; finger; hand; index; person; point
+U+1F449,👉,white right pointing backhand index,2010,emoji,backhand; body; finger; hand; index; person; point
+U+261D,☝️,white up pointing index,1995,text,body; finger; hand; index; person; point; up
+U+1F446,👆,white up pointing backhand index,2010,emoji,backhand; body; finger; hand; index; person; point; up
+U+1F447,👇,white down pointing backhand index,2010,emoji,backhand; body; down; finger; hand; index; person; point
+U+270C,✌️,victory hand,1995,text,body; hand; person; v; victory
+U+270A,✊,raised fist,2010,emoji,body; clenched; fist; hand; person; punch
+U+270B,✋,raised hand,2010,emoji,body; hand; person
+U+1F44A,👊,fisted hand sign,2010,emoji,body; clenched; fist; hand; person; punch
+U+1F44C,👌,ok hand sign,2010,emoji,body; hand; ok; person
+U+1F44D,👍,thumbs up sign,2010,emoji,#ERROR!
+U+1F44E,👎,thumbs down sign,2010,emoji,-1; body; down; hand; person; thumb; thumbs down
+U+1F44B,👋,waving hand sign,2010,emoji,body; hand; person; wave; waving
+U+1F44F,👏,clapping hands sign,2010,emoji,body; clap; hand; person
+U+1F450,👐,open hands sign,2010,emoji,body; hand; open; person
+U+1F485,💅,nail polish,2010,emoji,body; care; cosmetics; manicure; nail; person; polish
+U+1F442,👂,ear,2010,emoji,body; ear; person
+U+1F443,👃,nose,2010,emoji,body; nose; person
+U+1F463,👣,footprints,2010,emoji,body; clothing; footprint; person; print
+U+1F440,👀,eyes,2010,emoji,body; eye; face; person
+U+1F445,👅,tongue,2010,emoji,body; person; tongue
+U+1F444,👄,mouth,2010,emoji,body; lips; mouth; person
+U+1F48B,💋,kiss mark,2010,emoji,emotion; heart; kiss; lips; mark; person; romance
+U+1F498,💘,heart with arrow,2010,emoji,arrow; cupid; emotion; heart; person; romance
+U+2764,❤️,heavy black heart,1995,text,emotion; heart; person
+U+1F493,💓,beating heart,2010,emoji,beating; emotion; heart; heartbeat; person; pulsating
+U+1F494,💔,broken heart,2010,emoji,break; broken; emotion; heart; person
+U+1F495,💕,two hearts,2010,emoji,emotion; heart; love; person
+U+1F496,💖,sparkling heart,2010,emoji,emotion; excited; heart; person; sparkle
+U+1F497,💗,growing heart,2010,emoji,emotion; excited; growing; heart; heartpulse; nervous; person
+U+1F499,💙,blue heart,2010,emoji,blue; emotion; heart; person
+U+1F49A,💚,green heart,2010,emoji,emotion; green; heart; person
+U+1F49B,💛,yellow heart,2010,emoji,emotion; heart; person; yellow
+U+1F49C,💜,purple heart,2010,emoji,emotion; heart; person; purple
+U+1F49D,💝,heart with ribbon,2010,emoji,emotion; heart; object; person; ribbon; valentine
+U+1F49E,💞,revolving hearts,2010,emoji,emotion; heart; person; revolving
+U+1F49F,💟,heart decoration,2010,emoji,emotion; heart; person; symbol
+U+1F48C,💌,love letter,2010,emoji,emotion; heart; letter; love; mail; person; romance
+U+1F4A4,💤,sleeping symbol,2010,emoji,comic; emotion; person; sleep; symbol; word; zzz
+U+1F4A2,💢,anger symbol,2010,emoji,angry; comic; emotion; mad; person; symbol
+U+1F4A3,💣,bomb,2010,emoji,bomb; comic; object
+U+1F4A5,💥,collision symbol,2010,emoji,boom; collision; comic; emotion; person
+U+1F4A6,💦,splashing sweat symbol,2010,emoji,comic; emotion; object; person; splashing; sweat
+U+1F4A8,💨,dash symbol,2010,emoji,comic; dash; emotion; object; person; running
+U+1F4AB,💫,dizzy symbol,2010,emoji,comic; dizzy; emotion; person; star
+U+1F4AC,💬,speech balloon,2010,emoji,balloon; bubble; comic; dialog; emotion; object; person; speech
+U+1F4AD,💭,thought balloon,2010,emoji,balloon; bubble; comic; emotion; object; person; thought
+U+1F453,👓,eyeglasses,2010,emoji,clothing; eye; eyeglasses; eyewear; glasses; object; person
+U+1F454,👔,necktie,2010,emoji,clothing; necktie; object; person
+U+1F455,👕,t-shirt,2010,emoji,clothing; object; person; shirt; tshirt
+U+1F456,👖,jeans,2010,emoji,clothing; jeans; object; pants; person; trousers
+U+1F457,👗,dress,2010,emoji,clothing; dress; object; person
+U+1F458,👘,kimono,2010,emoji,clothing; kimono; object; person
+U+1F459,👙,bikini,2010,emoji,bikini; clothing; object; person; swim
+U+1F45A,👚,womans clothes,2010,emoji,clothing; object; person; woman
+U+1F45B,👛,purse,2010,emoji,clothing; coin; object; person; purse
+U+1F45C,👜,handbag,2010,emoji,bag; clothing; handbag; object; person
+U+1F45D,👝,pouch,2010,emoji,bag; clothing; object; person; pouch
+U+1F392,🎒,school satchel,2010,emoji,activity; bag; education; object; satchel; school
+U+1F45E,👞,mans shoe,2010,emoji,clothing; man; object; person; shoe
+U+1F45F,👟,athletic shoe,2010,emoji,athletic; clothing; object; person; shoe; sneaker
+U+1F460,👠,high-heeled shoe,2010,emoji,clothing; heel; object; person; shoe; woman
+U+1F461,👡,womans sandal,2010,emoji,clothing; object; person; sandal; shoe; woman
+U+1F462,👢,womans boots,2010,emoji,boot; clothing; object; person; shoe; woman
+U+1F451,👑,crown,2010,emoji,clothing; crown; king; object; person; queen
+U+1F452,👒,womans hat,2010,emoji,clothing; hat; object; person; woman
+U+1F3A9,🎩,top hat,2010,emoji,activity; clothing; entertainment; hat; object; person; top; tophat
+U+1F393,🎓,graduation cap,2010,emoji,activity; cap; celebration; clothing; education; graduation; hat;object
+U+1F484,💄,lipstick,2010,emoji,cosmetics; lipstick; makeup; object; person
+U+1F48D,💍,ring,2010,emoji,diamond; emotion; object; person; ring; romance
+U+1F48E,💎,gem stone,2010,emoji,diamond; emotion; gem; jewel; object; person; romance
+U+1F435,🐵,monkey face,2010,emoji,animal; face; monkey; nature
+U+1F412,🐒,monkey,2010,emoji,animal; monkey; nature
+U+1F436,🐶,dog face,2010,emoji,animal; dog; face; nature; pet
+U+1F415,🐕,dog,2010,emoji,animal; dog; nature; pet
+U+1F429,🐩,poodle,2010,emoji,animal; dog; nature; poodle
+U+1F43A,🐺,wolf face,2010,emoji,animal; face; nature; wolf
+U+1F431,🐱,cat face,2010,emoji,animal; cat; face; nature; pet
+U+1F408,🐈,cat,2010,emoji,animal; cat; nature; pet
+U+1F42F,🐯,tiger face,2010,emoji,animal; face; nature; tiger
+U+1F405,🐅,tiger,2010,emoji,animal; nature; tiger
+U+1F406,🐆,leopard,2010,emoji,animal; leopard; nature
+U+1F434,🐴,horse face,2010,emoji,animal; face; horse; nature
+U+1F40E,🐎,horse,2010,emoji,animal; horse; nature; place; racehorse; racing
+U+1F42E,🐮,cow face,2010,emoji,animal; cow; face; nature
+U+1F402,🐂,ox,2010,emoji,animal; bull; nature; ox; taurus; zodiac
+U+1F403,🐃,water buffalo,2010,emoji,animal; buffalo; nature; water
+U+1F404,🐄,cow,2010,emoji,animal; cow; nature
+U+1F437,🐷,pig face,2010,emoji,animal; face; nature; pig
+U+1F416,🐖,pig,2010,emoji,animal; nature; pig; sow
+U+1F417,🐗,boar,2010,emoji,animal; boar; nature; pig
+U+1F43D,🐽,pig nose,2010,emoji,animal; face; nature; nose; pig
+U+1F40F,🐏,ram,2010,emoji,animal; aries; nature; ram; sheep; zodiac
+U+1F411,🐑,sheep,2010,emoji,animal; ewe; nature; sheep
+U+1F410,🐐,goat,2010,emoji,animal; capricorn; goat; nature; zodiac
+U+1F42A,🐪,dromedary camel,2010,emoji,animal; camel; dromedary; hump; nature
+U+1F42B,🐫,bactrian camel,2010,emoji,animal; bactrian; camel; hump; nature
+U+1F418,🐘,elephant,2010,emoji,animal; elephant; nature
+U+1F42D,🐭,mouse face,2010,emoji,animal; face; mouse; nature
+U+1F401,🐁,mouse,2010,emoji,animal; mouse; nature
+U+1F400,🐀,rat,2010,emoji,animal; nature; rat
+U+1F439,🐹,hamster face,2010,emoji,animal; face; hamster; nature; pet
+U+1F430,🐰,rabbit face,2010,emoji,animal; bunny; face; nature; pet; rabbit
+U+1F407,🐇,rabbit,2010,emoji,animal; bunny; nature; pet; rabbit
+U+1F43B,🐻,bear face,2010,emoji,animal; bear; face; nature
+U+1F428,🐨,koala,2010,emoji,animal; bear; koala; nature
+U+1F43C,🐼,panda face,2010,emoji,animal; face; nature; panda
+U+1F43E,🐾,paw prints,2010,emoji,animal; feet; nature; paw; print
+U+1F414,🐔,chicken,2010,emoji,animal; chicken; nature
+U+1F413,🐓,rooster,2010,emoji,animal; nature; rooster
+U+1F423,🐣,hatching chick,2010,emoji,animal; baby; chick; hatching; nature
+U+1F424,🐤,baby chick,2010,emoji,animal; baby; chick; nature
+U+1F425,🐥,front-facing baby chick,2010,emoji,animal; baby; chick; nature
+U+1F426,🐦,bird,2010,emoji,animal; bird; nature
+U+1F427,🐧,penguin,2010,emoji,animal; nature; penguin
+U+1F438,🐸,frog face,2010,emoji,animal; face; frog; nature
+U+1F40A,🐊,crocodile,2010,emoji,animal; crocodile; nature
+U+1F422,🐢,turtle,2010,emoji,animal; nature; turtle
+U+1F40D,🐍,snake,2010,emoji,animal; bearer; nature; ophiuchus; serpent; snake; zodiac
+U+1F432,🐲,dragon face,2010,emoji,animal; dragon; face; fairy tale; nature
+U+1F409,🐉,dragon,2010,emoji,animal; dragon; fairy tale; nature
+U+1F433,🐳,spouting whale,2010,emoji,animal; face; nature; spouting; whale
+U+1F40B,🐋,whale,2010,emoji,animal; nature; whale
+U+1F42C,🐬,dolphin,2010,emoji,animal; dolphin; flipper; nature
+U+1F41F,🐟,fish,2010,emoji,animal; fish; nature; pisces; zodiac
+U+1F420,🐠,tropical fish,2010,emoji,animal; fish; nature; tropical
+U+1F421,🐡,blowfish,2010,emoji,animal; blowfish; fish; nature
+U+1F419,🐙,octopus,2010,emoji,animal; nature; octopus
+U+1F41A,🐚,spiral shell,2010,emoji,animal; nature; shell; spiral
+U+1F40C,🐌,snail,2010,emoji,animal; nature; snail
+U+1F41B,🐛,bug,2010,emoji,animal; bug; insect; nature
+U+1F41C,🐜,ant,2010,emoji,animal; ant; insect; nature
+U+1F41D,🐝,honeybee,2010,emoji,animal; bee; honeybee; insect; nature
+U+1F41E,🐞,lady beetle,2010,emoji,animal; beetle; insect; lady beetle; ladybird; ladybug; nature
+U+1F490,💐,bouquet,2010,emoji,bouquet; flower; nature; object; place; plant; romance
+U+1F338,🌸,cherry blossom,2010,emoji,blossom; cherry; flower; nature; plant
+U+1F4AE,💮,white flower,2010,emoji,flower; object; symbol
+U+1F339,🌹,rose,2010,emoji,flower; nature; plant; rose
+U+1F33A,🌺,hibiscus,2010,emoji,flower; hibiscus; nature; plant
+U+1F33B,🌻,sunflower,2010,emoji,flower; nature; plant; sun; sunflower
+U+1F33C,🌼,blossom,2010,emoji,blossom; flower; nature; plant
+U+1F337,🌷,tulip,2010,emoji,flower; nature; plant; tulip
+U+1F331,🌱,seedling,2010,emoji,nature; plant; seedling; young
+U+1F332,🌲,evergreen tree,2010,emoji,evergreen; nature; plant; tree
+U+1F333,🌳,deciduous tree,2010,emoji,deciduous; nature; plant; shedding; tree
+U+1F334,🌴,palm tree,2010,emoji,nature; palm; plant; tree
+U+1F335,🌵,cactus,2010,emoji,cactus; nature; plant
+U+1F33E,🌾,ear of rice,2010,emoji,ear; nature; plant; rice
+U+1F33F,🌿,herb,2010,emoji,herb; leaf; nature; plant
+U+1F340,🍀,four leaf clover,2010,emoji,4; clover; four; leaf; nature; plant
+U+1F341,🍁,maple leaf,2010,emoji,falling; leaf; maple; nature; plant
+U+1F342,🍂,fallen leaf,2010,emoji,falling; leaf; nature; plant
+U+1F343,🍃,leaf fluttering in wind,2010,emoji,blow; flutter; leaf; nature; plant; wind
+U+1F347,🍇,grapes,2010,emoji,food; fruit; grape; nature; object; plant
+U+1F348,🍈,melon,2010,emoji,food; fruit; melon; nature; object; plant
+U+1F349,🍉,watermelon,2010,emoji,food; fruit; nature; object; plant; watermelon
+U+1F34A,🍊,tangerine,2010,emoji,food; fruit; nature; object; orange; plant; tangerine
+U+1F34B,🍋,lemon,2010,emoji,citrus; food; fruit; lemon; nature; object; plant
+U+1F34C,🍌,banana,2010,emoji,banana; food; fruit; nature; object; plant
+U+1F34D,🍍,pineapple,2010,emoji,food; fruit; nature; object; pineapple; plant
+U+1F34E,🍎,red apple,2010,emoji,apple; food; fruit; nature; object; plant; red
+U+1F34F,🍏,green apple,2010,emoji,apple; food; fruit; green; nature; object; plant
+U+1F350,🍐,pear,2010,emoji,food; fruit; nature; object; pear; plant
+U+1F351,🍑,peach,2010,emoji,food; fruit; nature; object; peach; plant
+U+1F352,🍒,cherries,2010,emoji,cherry; food; fruit; nature; object; plant
+U+1F353,🍓,strawberry,2010,emoji,berry; food; fruit; nature; object; plant; strawberry
+U+1F345,🍅,tomato,2010,emoji,food; nature; object; plant; tomato; vegetable
+U+1F346,🍆,aubergine,2010,emoji,aubergine; eggplant; food; nature; object; plant; vegetable
+U+1F33D,🌽,ear of maize,2010,emoji,corn; ear; maize; maze; nature; object; plant
+U+1F344,🍄,mushroom,2010,emoji,mushroom; nature; plant
+U+1F330,🌰,chestnut,2010,emoji,chestnut; nature; plant
+U+1F35E,🍞,bread,2010,emoji,bread; food; loaf; nature; object
+U+1F356,🍖,meat on bone,2010,emoji,bone; food; meat; nature; object
+U+1F357,🍗,poultry leg,2010,emoji,bone; chicken; food; leg; nature; object; poultry
+U+1F354,🍔,hamburger,2010,emoji,burger; food; hamburger; nature; object
+U+1F35F,🍟,french fries,2010,emoji,food; french; fries; nature; object
+U+1F355,🍕,slice of pizza,2010,emoji,cheese; food; nature; object; pizza; slice
+U+1F372,🍲,pot of food,2010,emoji,food; nature; object; pot; stew
+U+1F371,🍱,bento box,2010,emoji,bento; box; food; nature; object
+U+1F358,🍘,rice cracker,2010,emoji,cracker; food; nature; object; rice
+U+1F359,🍙,rice ball,2010,emoji,ball; food; japanese; nature; object; rice
+U+1F35A,🍚,cooked rice,2010,emoji,cooked; food; nature; object; rice
+U+1F35B,🍛,curry and rice,2010,emoji,curry; food; nature; object; rice
+U+1F35C,🍜,steaming bowl,2010,emoji,bowl; food; nature; noodle; object; ramen; steaming
+U+1F35D,🍝,spaghetti,2010,emoji,food; nature; object; pasta; spaghetti
+U+1F360,🍠,roasted sweet potato,2010,emoji,food; nature; object; potato; roasted; sweet
+U+1F362,🍢,oden,2010,emoji,food; kebab; nature; object; oden; seafood; skewer; stick
+U+1F363,🍣,sushi,2010,emoji,food; nature; object; sushi
+U+1F364,🍤,fried shrimp,2010,emoji,food; fried; nature; object; prawn; shrimp; tempura
+U+1F365,🍥,fish cake with swirl design,2010,emoji,cake; fish; food; nature; object; pastry; swirl
+U+1F361,🍡,dango,2010,emoji,dango; dessert; food; japanese; nature; object; skewer; stick; sweet
+U+1F366,🍦,soft ice cream,2010,emoji,cream; dessert; food; ice; icecream; nature; object; soft; sweet
+U+1F367,🍧,shaved ice,2010,emoji,dessert; food; ice; nature; object; shaved; sweet
+U+1F368,🍨,ice cream,2010,emoji,cream; dessert; food; ice; nature; object; sweet
+U+1F369,🍩,doughnut,2010,emoji,dessert; donut; doughnut; food; nature; object; sweet
+U+1F36A,🍪,cookie,2010,emoji,cookie; dessert; food; nature; object; sweet
+U+1F382,🎂,birthday cake,2010,emoji,birthday; cake; celebration; dessert; food; object; pastry; sweet
+U+1F370,🍰,shortcake,2010,emoji,cake; dessert; food; nature; object; pastry; shortcake; slice; sweet
+U+1F36B,🍫,chocolate bar,2010,emoji,bar; chocolate; dessert; food; nature; object; sweet
+U+1F36C,🍬,candy,2010,emoji,candy; dessert; food; nature; object; sweet
+U+1F36D,🍭,lollipop,2010,emoji,candy; dessert; food; lollipop; nature; object; sweet
+U+1F36E,🍮,custard,2010,emoji,custard; dessert; food; nature; object; pudding; sweet
+U+1F36F,🍯,honey pot,2010,emoji,food; honey; honeypot; nature; object; pot; sweet
+U+1F37C,🍼,baby bottle,2010,emoji,baby; bottle; drink; milk; nature; object
+U+2615,☕️,hot beverage,2003,emoji,beverage; coffee; drink; hot; nature; object; steaming; tea
+U+1F375,🍵,teacup without handle,2010,emoji,beverage; cup; drink; nature; object; tea; teacup
+U+1F376,🍶,sake bottle and cup,2010,emoji,bar; beverage; bottle; cup; drink; nature; object; sake
+U+1F377,🍷,wine glass,2010,emoji,bar; beverage; drink; glass; nature; object; wine
+U+1F378,🍸,cocktail glass,2010,emoji,bar; cocktail; drink; glass; nature; object
+U+1F379,🍹,tropical drink,2010,emoji,bar; drink; nature; object; tropical
+U+1F37A,🍺,beer mug,2010,emoji,bar; beer; drink; mug; nature; object
+U+1F37B,🍻,clinking beer mugs,2010,emoji,bar; beer; clink; drink; mug; nature; object
+U+1F374,🍴,fork and knife,2010,emoji,cooking; food; fork; knife; nature; object
+U+1F373,🍳,cooking,2010,emoji,cooking; egg; food; frying; nature; object; pan
+U+1F30D,🌍,earth globe europe-africa,2010,emoji,africa; earth; europe; globe; nature; place; world
+U+1F30E,🌎,earth globe americas,2010,emoji,americas; earth; globe; nature; place; world
+U+1F30F,🌏,earth globe asia-australia,2010,emoji,asia; australia; earth; globe; nature; place; world
+U+1F310,🌐,globe with meridians,2010,emoji,earth; globe; meridians; nature; place; world
+U+1F30B,🌋,volcano,2010,emoji,eruption; mountain; nature; place; volcano; weather
+U+1F5FB,🗻,mount fuji,2010,emoji,fuji; mountain; nature; place
+U+1F3E0,🏠,house building,2010,emoji,building; home; house; place
+U+1F3E1,🏡,house with garden,2010,emoji,building; garden; home; house; place
+U+26EA,⛪️,church,2009,emoji,building; christian; church; cross; place; religion
+U+1F3E2,🏢,office building,2010,emoji,building; office; place
+U+1F3E3,🏣,japanese post office,2010,emoji,building; japanese; office; place; post
+U+1F3E4,🏤,european post office,2010,emoji,building; european; office; place; post
+U+1F3E5,🏥,hospital,2010,emoji,building; doctor; hospital; medicine; place
+U+1F3E6,🏦,green bank,2010,emoji,bank; building; place
+U+1F3E8,🏨,hotel,2010,emoji,building; hotel; place
+U+1F3E9,🏩,love hotel,2010,emoji,building; hotel; love; place
+U+1F3EA,🏪,convenience store,2010,emoji,building; convenience; place; store
+U+1F3EB,🏫,school,2010,emoji,building; education; place; school
+U+1F3EC,🏬,department store,2010,emoji,building; department; place; store
+U+1F3ED,🏭,factory,2010,emoji,building; factory; place
+U+1F3EF,🏯,japanese castle,2010,emoji,building; castle; japanese; place
+U+1F3F0,🏰,european castle,2010,emoji,building; castle; european; place
+U+1F492,💒,wedding,2010,emoji,activity; chapel; place; romance; wedding
+U+1F5FC,🗼,tokyo tower,2010,emoji,place; tokyo; tower
+U+1F5FD,🗽,statue of liberty,2010,emoji,liberty; place; statue
+U+1F5FE,🗾,silhouette of japan,2010,emoji,japan; map; place
+U+26F2,⛲️,fountain,2009,emoji,fountain; object; place
+U+26FA,⛺️,tent,2009,emoji,camping; object; place; tent
+U+1F301,🌁,foggy,2010,emoji,fog; nature; place; weather
+U+1F303,🌃,night with stars,2010,emoji,nature; night; place; star; weather
+U+1F304,🌄,sunrise over mountains,2010,emoji,morning; mountain; nature; place; sun; sunrise; time; weather
+U+1F305,🌅,sunrise,2010,emoji,morning; nature; place; sun; sunrise; time; weather
+U+1F306,🌆,cityscape at dusk,2010,emoji,building; city; dusk; evening; landscape; nature; place; sun; sunset;time; weather
+U+1F307,🌇,sunset over buildings,2010,emoji,building; dusk; nature; place; sun; sunset; time; weather
+U+1F309,🌉,bridge at night,2010,emoji,bridge; nature; night; place; weather
+U+2668,♨️,hot springs,1995,text,hot; hotsprings; place; springs; steaming
+U+1F30C,🌌,milky way,2010,emoji,milky way; nature; place; space; weather
+U+1F3A0,🎠,carousel horse,2010,emoji,activity; carousel; entertainment; horse; place
+U+1F3A1,🎡,ferris wheel,2010,emoji,activity; amusement park; entertainment; ferris; place; wheel
+U+1F3A2,🎢,roller coaster,2010,emoji,activity; amusement park; coaster; entertainment; place; roller
+U+1F488,💈,barber pole,2010,emoji,barber; haircut; place; pole
+U+1F3AA,🎪,circus tent,2010,emoji,activity; circus; entertainment; place; tent
+U+1F3AD,🎭,performing arts,2010,emoji,activity; art; entertainment; mask; object; performing; place;theater; theatre
+U+1F3A8,🎨,artist palette,2010,emoji,activity; art; entertainment; museum; object; painting; palette
+U+1F3B0,🎰,slot machine,2010,emoji,activity; game; object; place; slot
+U+1F682,🚂,steam locomotive,2010,emoji,engine; locomotive; place; railway; steam; train; travel; vehicle
+U+1F683,🚃,railway car,2010,emoji,car; electric; place; railway; train; tram; travel; trolleybus; vehicle
+U+1F684,🚄,high-speed train,2010,emoji,place; railway; shinkansen; speed; train; travel; vehicle
+U+1F685,🚅,high-speed train with bullet nose,2010,emoji,bullet; place; railway; shinkansen; speed; train; travel; vehicle
+U+1F686,🚆,train,2010,emoji,place; railway; train; travel; vehicle
+U+1F687,🚇,metro,2010,emoji,metro; place; subway; travel; vehicle
+U+1F688,🚈,light rail,2010,emoji,place; railway; travel; vehicle
+U+1F689,🚉,station,2010,emoji,place; railway; station; train; travel; vehicle
+U+1F68A,🚊,tram,2010,emoji,place; tram; travel; trolleybus; vehicle
+U+1F69D,🚝,monorail,2010,emoji,monorail; place; travel; vehicle
+U+1F69E,🚞,mountain railway,2010,emoji,car; mountain; place; railway; travel; vehicle
+U+1F68B,🚋,tram car,2010,emoji,car; place; tram; travel; trolleybus; vehicle
+U+1F68C,🚌,bus,2010,emoji,bus; place; travel; vehicle
+U+1F68D,🚍,oncoming bus,2010,emoji,bus; oncoming; place; travel; vehicle
+U+1F68E,🚎,trolleybus,2010,emoji,bus; place; tram; travel; trolley; trolleybus; vehicle
+U+1F68F,🚏,bus stop,2010,emoji,bus; busstop; place; stop; travel
+U+1F690,🚐,minibus,2010,emoji,bus; minibus; place; travel; vehicle
+U+1F691,🚑,ambulance,2010,emoji,ambulance; place; travel; vehicle
+U+1F692,🚒,fire engine,2010,emoji,engine; fire; place; travel; truck; vehicle
+U+1F693,🚓,police car,2010,emoji,car; patrol; place; police; travel; vehicle
+U+1F694,🚔,oncoming police car,2010,emoji,car; oncoming; place; police; travel; vehicle
+U+1F695,🚕,taxi,2010,emoji,place; taxi; travel; vehicle
+U+1F696,🚖,oncoming taxi,2010,emoji,oncoming; place; taxi; travel; vehicle
+U+1F697,🚗,automobile icon,2010,emoji,automobile; car; place; travel; vehicle
+U+1F698,🚘,oncoming automobile,2010,emoji,automobile; car; oncoming; place; travel; vehicle
+U+1F699,🚙,recreational vehicle,2010,emoji,place; recreational; rv; travel; vehicle
+U+1F69A,🚚,delivery truck,2010,emoji,delivery; place; travel; truck; vehicle
+U+1F69B,🚛,articulated lorry,2010,emoji,lorry; place; semi; travel; truck; vehicle
+U+1F69C,🚜,tractor,2010,emoji,place; tractor; travel; vehicle
+U+1F6B2,🚲,bicycle,2010,emoji,bicycle; bike; place; sport; travel; vehicle
+U+26FD,⛽️,fuel pump,2009,emoji,fuel; fuelpump; gas; place; pump; station; travel
+U+1F6A8,🚨,police cars revolving light,2010,emoji,beacon; car; light; place; police; revolving; travel; vehicle
+U+1F6A5,🚥,horizontal traffic light,2010,emoji,light; place; signal; traffic; travel
+U+1F6A6,🚦,vertical traffic light,2010,emoji,light; place; signal; traffic; travel
+U+1F6A7,🚧,construction sign,2010,emoji,barrier; construction; place; travel
+U+2693,⚓️,anchor sign,2005,emoji,anchor; place; ship; tool; travel
+U+26F5,⛵️,sailboat,2009,emoji,boat; place; resort; sailboat; sea; travel; vehicle; yacht
+U+1F6A3,🚣,rowboat,2010,emoji,boat; place; rowboat; travel; vehicle
+U+1F6A4,🚤,speedboat,2010,emoji,boat; place; speedboat; travel; vehicle
+U+1F6A2,🚢,ship,2010,emoji,place; ship; travel; vehicle
+U+2708,✈️,airplane,1995,text,airplane; place; travel; vehicle
+U+1F4BA,💺,seat,2010,emoji,chair; object; office; place; seat; travel
+U+1F681,🚁,helicopter,2010,emoji,helicopter; place; travel; vehicle
+U+1F69F,🚟,suspension railway,2010,emoji,place; railway; suspension; travel; vehicle
+U+1F6A0,🚠,mountain cableway,2010,emoji,cable; gondola; mountain; place; travel; vehicle
+U+1F6A1,🚡,aerial tramway,2010,emoji,aerial; cable; car; gondola; place; ropeway; tramway; travel;vehicle
+U+1F680,🚀,rocket,2010,emoji,place; rocket; space; travel; vehicle
+U+1F6AA,🚪,door,2010,emoji,door; object; travel
+U+1F6BD,🚽,toilet,2010,emoji,object; place; toilet; travel
+U+1F6BF,🚿,shower,2010,emoji,object; place; shower; travel; water
+U+1F6C0,🛀,bath,2010,emoji,bath; bathtub; object; place; travel
+U+1F6C1,🛁,bathtub,2010,emoji,bath; bathtub; object; place; travel
+U+231B,⌛️,hourglass,1995,emoji,hourglass; object; sand; time; timer
+U+23F3,⏳,hourglass with flowing sand,2010,emoji,hourglass; object; sand; time; timer
+U+231A,⌚️,watch,1995,emoji,clock; object; time; watch
+U+23F0,⏰,alarm clock,2010,emoji,alarm; clock; object; time
+U+1F55B,🕛,clock face twelve oclock,2010,emoji,00; 12; 12:00; clock; o’clock; symbol; time; twelve
+U+1F567,🕧,clock face twelve-thirty,2010,emoji,12; 12:30; 30; clock; symbol; thirty; time; twelve
+U+1F550,🕐,clock face one oclock,2010,emoji,00; 1; 1:00; clock; o’clock; one; symbol; time
+U+1F55C,🕜,clock face one-thirty,2010,emoji,1; 1:30; 30; clock; one; symbol; thirty; time
+U+1F551,🕑,clock face two oclock,2010,emoji,00; 2; 2:00; clock; o’clock; symbol; time; two
+U+1F55D,🕝,clock face two-thirty,2010,emoji,2; 2:30; 30; clock; symbol; thirty; time; two
+U+1F552,🕒,clock face three oclock,2010,emoji,00; 3; 3:00; clock; o’clock; symbol; three; time
+U+1F55E,🕞,clock face three-thirty,2010,emoji,3; 3:30; 30; clock; symbol; thirty; three; time
+U+1F553,🕓,clock face four oclock,2010,emoji,00; 4; 4:00; clock; four; o’clock; symbol; time
+U+1F55F,🕟,clock face four-thirty,2010,emoji,30; 4; 4:30; clock; four; symbol; thirty; time
+U+1F554,🕔,clock face five oclock,2010,emoji,00; 5; 5:00; clock; five; o’clock; symbol; time
+U+1F560,🕠,clock face five-thirty,2010,emoji,30; 5; 5:30; clock; five; symbol; thirty; time
+U+1F555,🕕,clock face six oclock,2010,emoji,00; 6; 6:00; clock; o’clock; six; symbol; time
+U+1F561,🕡,clock face six-thirty,2010,emoji,30; 6; 6:30; clock; six; symbol; thirty; time
+U+1F556,🕖,clock face seven oclock,2010,emoji,00; 7; 7:00; clock; o’clock; seven; symbol; time
+U+1F562,🕢,clock face seven-thirty,2010,emoji,30; 7; 7:30; clock; seven; symbol; thirty; time
+U+1F557,🕗,clock face eight oclock,2010,emoji,00; 8; 8:00; clock; eight; o’clock; symbol; time
+U+1F563,🕣,clock face eight-thirty,2010,emoji,30; 8; 8:30; clock; eight; symbol; thirty; time
+U+1F558,🕘,clock face nine oclock,2010,emoji,00; 9; 9:00; clock; nine; o’clock; symbol; time
+U+1F564,🕤,clock face nine-thirty,2010,emoji,30; 9; 9:30; clock; nine; symbol; thirty; time
+U+1F559,🕙,clock face ten oclock,2010,emoji,00; 10; 10:00; clock; o’clock; symbol; ten; time
+U+1F565,🕥,clock face ten-thirty,2010,emoji,10; 10:30; 30; clock; symbol; ten; thirty; time
+U+1F55A,🕚,clock face eleven oclock,2010,emoji,00; 11; 11:00; clock; eleven; o’clock; symbol; time
+U+1F566,🕦,clock face eleven-thirty,2010,emoji,11; 11:30; 30; clock; eleven; symbol; thirty; time
+U+1F311,🌑,new moon symbol,2010,emoji,dark; moon; nature; place; space; time; weather
+U+1F312,🌒,waxing crescent moon symbol,2010,emoji,crescent; moon; nature; place; space; time; waxing; weather
+U+1F313,🌓,first quarter moon symbol,2010,emoji,moon; nature; place; quarter; space; time; weather
+U+1F314,🌔,waxing gibbous moon symbol,2010,emoji,gibbous; moon; nature; place; space; time; waxing; weather
+U+1F315,🌕,full moon symbol,2010,emoji,full; moon; nature; place; space; time; weather
+U+1F316,🌖,waning gibbous moon symbol,2010,emoji,gibbous; moon; nature; place; space; time; waning; weather
+U+1F317,🌗,last quarter moon symbol,2010,emoji,moon; nature; place; quarter; space; time; weather
+U+1F318,🌘,waning crescent moon symbol,2010,emoji,crescent; moon; nature; place; space; time; waning; weather
+U+1F319,🌙,crescent moon,2010,emoji,crescent; moon; nature; place; space; time; weather
+U+1F31A,🌚,new moon with face,2010,emoji,face; moon; nature; place; space; time; weather
+U+1F31B,🌛,first quarter moon with face,2010,emoji,face; moon; nature; place; quarter; space; weather
+U+1F31C,🌜,last quarter moon with face,2010,emoji,face; moon; nature; place; quarter; space; weather
+U+2600,☀️,black sun with rays,1995,text,bright; nature; rays; space; sun; sunny; weather
+U+1F31D,🌝,full moon with face,2010,emoji,bright; face; full; moon; nature; place; space; weather
+U+1F31E,🌞,sun with face,2010,emoji,bright; face; nature; place; space; sun; weather
+U+2B50,⭐️,white medium star,2008,emoji,nature; place; star
+U+1F31F,🌟,glowing star,2010,emoji,glittery; glow; object; place; shining; sparkle; star
+U+1F320,🌠,shooting star,2010,emoji,activity; falling; nature; place; shooting; space; star
+U+2601,☁️,cloud,1995,text,cloud; nature; weather
+U+26C5,⛅️,sun behind cloud,2009,emoji,cloud; nature; sun; weather
+U+1F300,🌀,cyclone,2010,emoji,cyclone; dizzy; nature; twister; typhoon; weather
+U+1F308,🌈,rainbow,2010,emoji,nature; rain; rainbow; weather
+U+1F302,🌂,closed umbrella,2010,emoji,clothing; nature; person; rain; umbrella; weather
+U+2614,☔️,umbrella with rain drops,2003,emoji,clothing; drop; nature; rain; umbrella; weather
+U+26A1,⚡️,high voltage sign,2003,emoji,danger; electric; electricity; lightning; nature; symbol; voltage; zap
+U+2744,❄️,snowflake,1995,text,cold; nature; snow; snowflake; weather
+U+26C4,⛄️,snowman without snow,2009,emoji,cold; nature; snow; snowman; weather
+U+1F525,🔥,fire,2010,emoji,fire; flame; object; tool
+U+1F4A7,💧,droplet,2010,emoji,cold; comic; drop; emotion; nature; object; person; sweat; weather
+U+1F30A,🌊,water wave,2010,emoji,nature; ocean; place; water; wave; weather
+U+1F383,🎃,jack-o-lantern,2010,emoji,activity; celebration; entertainment; halloween; jack; lantern;object
+U+1F384,🎄,christmas tree,2010,emoji,activity; celebration; christmas; entertainment; object; tree
+U+1F386,🎆,fireworks,2010,emoji,activity; celebration; entertainment; fireworks; object
+U+1F387,🎇,firework sparkler,2010,emoji,activity; celebration; entertainment; fireworks; object; sparkle
+U+2728,✨,sparkles,2010,emoji,emotion; entertainment; object; sign; sparkle; star
+U+1F388,🎈,red balloon,2010,emoji,activity; balloon; celebration; entertainment; object
+U+1F389,🎉,party popper,2010,emoji,activity; celebration; entertainment; object; party; popper; tada
+U+1F38A,🎊,confetti ball,2010,emoji,activity; ball; celebration; confetti; entertainment; object
+U+1F38B,🎋,tanabata tree,2010,emoji,activity; banner; celebration; entertainment; japanese; object; tree
+U+1F38C,🎌,crossed flags,2010,emoji,activity; celebration; cross; crossed; flag; japanese; object
+U+1F38D,🎍,pine decoration,2010,emoji,activity; bamboo; celebration; japanese; object; pine; plant
+U+1F38E,🎎,japanese dolls,2010,emoji,activity; celebration; doll; entertainment; festival; japanese; object
+U+1F38F,🎏,carp streamer,2010,emoji,activity; carp; celebration; entertainment; flag; object; streamer
+U+1F390,🎐,wind chime,2010,emoji,activity; bell; celebration; chime; entertainment; object; wind
+U+1F391,🎑,moon viewing ceremony,2010,emoji,activity; celebration; ceremony; entertainment; moon; nature;object
+U+1F380,🎀,ribbon,2010,emoji,celebration; emotion; object; person; ribbon
+U+1F381,🎁,wrapped present,2010,emoji,box; celebration; entertainment; gift; object; present; wrapped
+U+1F3AB,🎫,ticket,2010,emoji,activity; admission; entertainment; object; place; ticket
+U+26BD,⚽️,soccer ball,2009,emoji,ball; object; place; soccer; sport
+U+26BE,⚾️,baseball,2009,emoji,ball; baseball; object; place; sport
+U+1F3C0,🏀,basketball and hoop,2010,emoji,ball; basketball; hoop; object; place; sport
+U+1F3C8,🏈,american football,2010,emoji,american; ball; football; object; place; sport
+U+1F3C9,🏉,rugby football,2010,emoji,ball; football; object; place; rugby; sport
+U+1F3BE,🎾,tennis racquet and ball,2010,emoji,ball; object; place; racquet; sport; tennis
+U+1F3B1,🎱,billiards,2010,emoji,8; 8 ball; ball; billiard; eight; game; object; place; sport
+U+1F3B3,🎳,bowling,2010,emoji,ball; bowling; game; object; place; sport
+U+26F3,⛳️,flag in hole,2009,emoji,flag; golf; hole; object; place; sport; travel
+U+1F3A3,🎣,fishing pole and fish,2010,emoji,entertainment; fish; object; place; pole; sport
+U+1F3BD,🎽,running shirt with sash,2010,emoji,person; place; running; sash; shirt; sport
+U+1F3BF,🎿,ski and ski boot,2010,emoji,object; ski; snow; sport
+U+1F3C2,🏂,snowboarder,2010,emoji,person; ski; snow; snowboard; sport
+U+1F3C4,🏄,surfer,2010,emoji,person; sport; surfer; surfing
+U+1F3C7,🏇,horse racing,2010,emoji,horse; jockey; person; racehorse; racing; sport; travel
+U+1F3CA,🏊,swimmer,2010,emoji,person; sport; swim; swimmer; travel
+U+1F6B4,🚴,bicyclist,2010,emoji,bicycle; bicyclist; bike; cyclist; person; place; sport; travel
+U+1F6B5,🚵,mountain bicyclist,2010,emoji,bicycle; bicyclist; bike; cyclist; mountain; person; place; sport;travel
+U+1F3C6,🏆,trophy,2010,emoji,object; place; prize; sport; trophy
+U+1F3AF,🎯,direct hit,2010,emoji,activity; bull; bullseye; dart; entertainment; eye; game; hit; object;target
+U+1F3AE,🎮,video game,2010,emoji,controller; entertainment; game; object; video game
+U+1F3B2,🎲,game die,2010,emoji,dice; die; entertainment; game; object
+U+2660,♠️,black spade suit,1995,text,card; game; spade; suit; symbol
+U+2665,♥️,black heart suit,1995,text,card; emotion; game; heart; hearts; suit; symbol
+U+2666,♦️,black diamond suit,1995,text,card; diamond; diamonds; game; suit; symbol
+U+2663,♣️,black club suit,1995,text,card; club; clubs; game; suit; symbol
+U+1F0CF,🃏,playing card black joker,2010,emoji,card; entertainment; game; joker; object; playing
+U+1F004,🀄️,mahjong tile red dragon,2008,emoji,game; mahjong; object; red
+U+1F3B4,🎴,flower playing cards,2010,emoji,activity; card; entertainment; flower; game; japanese; object;playing
+U+1F507,🔇,speaker with cancellation stroke,2010,emoji,mute; object; quiet; silent; sound; speaker; volume
+U+1F508,🔈,speaker,2010,emoji,object; sound; speaker; volume
+U+1F509,🔉,speaker with one sound wave,2010,emoji,low; object; sound; speaker; volume; wave
+U+1F50A,🔊,speaker with three sound waves,2010,emoji,3; entertainment; high; loud; object; sound; speaker; three; volume
+U+1F4E2,📢,public address loudspeaker,2010,emoji,communication; loud; loudspeaker; object; public address; sound
+U+1F4E3,📣,cheering megaphone,2010,emoji,cheering; communication; megaphone; object; sound
+U+1F4EF,📯,postal horn,2010,emoji,communication; entertainment; horn; object; post; postal; sound
+U+1F514,🔔,bell,2010,emoji,bell; object; sound
+U+1F515,🔕,bell with cancellation stroke,2010,emoji,bell; forbidden; mute; no; not; object; prohibited; quiet; silent;sound
+U+1F3BC,🎼,musical score,2010,emoji,activity; entertainment; music; object; score; sound
+U+1F3B5,🎵,musical note,2010,emoji,activity; entertainment; music; note; object; sound
+U+1F3B6,🎶,multiple musical notes,2010,emoji,activity; entertainment; music; note; notes; object; sound
+U+1F3A4,🎤,microphone,2010,emoji,activity; entertainment; karaoke; mic; microphone; object; sound
+U+1F3A7,🎧,headphone,2010,emoji,activity; earbud; entertainment; headphone; object; sound
+U+1F3B7,🎷,saxophone,2010,emoji,activity; entertainment; instrument; music; object; sax; saxophone;sound
+U+1F3B8,🎸,guitar,2010,emoji,activity; entertainment; guitar; instrument; music; object; sound
+U+1F3B9,🎹,musical keyboard,2010,emoji,activity; entertainment; instrument; keyboard; music; object;piano; sound
+U+1F3BA,🎺,trumpet,2010,emoji,activity; entertainment; instrument; music; object; sound; trumpet
+U+1F3BB,🎻,violin,2010,emoji,activity; entertainment; instrument; music; object; sound; violin
+U+1F4FB,📻,radio,2010,emoji,entertainment; object; radio; video
+U+1F4F1,📱,mobile phone,2010,emoji,cell; communication; mobile; object; phone; telephone
+U+1F4F2,📲,mobile phone with rightwards arrow at left,2010,emoji,arrow; call; cell; communication; mobile; object; phone; receive;telephone
+U+260E,☎️,black telephone,1995,text,object; office; phone; sound; telephone
+U+1F4DE,📞,telephone receiver,2010,emoji,communication; object; phone; receiver; sound; telephone
+U+1F4DF,📟,pager,2010,emoji,communication; object; office; pager
+U+1F4E0,📠,fax machine,2010,emoji,communication; fax; object; office
+U+1F50B,🔋,battery,2010,emoji,battery; object
+U+1F50C,🔌,electric plug,2010,emoji,electric; electricity; object; plug
+U+1F4BB,💻,personal computer,2010,emoji,computer; object; office; pc; personal
+U+1F4BD,💽,minidisc,2010,emoji,computer; disk; entertainment; minidisk; object; office; optical
+U+1F4BE,💾,floppy disk,2010,emoji,computer; disk; floppy; object; office
+U+1F4BF,💿,optical disc,2010,emoji,blu-ray; cd; computer; disk; dvd; object; office; optical
+U+1F4C0,📀,dvd,2010,emoji,blu-ray; cd; computer; disk; dvd; entertainment; object; office;optical
+U+1F3A5,🎥,movie camera,2010,emoji,activity; camera; cinema; entertainment; movie; object
+U+1F3AC,🎬,clapper board,2010,emoji,activity; clapper; entertainment; movie; object
+U+1F4FA,📺,television,2010,emoji,entertainment; object; television; tv; video
+U+1F4F7,📷,camera,2010,emoji,camera; entertainment; object; video
+U+1F4F9,📹,video camera,2010,emoji,camera; entertainment; object; video
+U+1F4FC,📼,videocassette,2010,emoji,entertainment; object; tape; vhs; video; videocassette
+U+1F50D,🔍,left-pointing magnifying glass,2010,emoji,glass; magnifying; object; search; tool
+U+1F50E,🔎,right-pointing magnifying glass,2010,emoji,glass; magnifying; object; search; tool
+U+1F52C,🔬,microscope,2010,emoji,microscope; object; tool
+U+1F52D,🔭,telescope,2010,emoji,object; telescope; tool
+U+1F4E1,📡,satellite antenna,2010,emoji,antenna; communication; dish; object; office; satellite
+U+1F4A1,💡,electric light bulb,2010,emoji,bulb; comic; electric; idea; light; object
+U+1F526,🔦,electric torch,2010,emoji,electric; flashlight; light; object; tool; torch
+U+1F3EE,🏮,izakaya lantern,2010,emoji,bar; japanese; lantern; light; place; red
+U+1F4D4,📔,notebook with decorative cover,2010,emoji,book; cover; decorated; education; notebook; object; office
+U+1F4D5,📕,closed book,2010,emoji,book; closed; education; object; office
+U+1F4D6,📖,open book,2010,emoji,book; education; object; office; open
+U+1F4D7,📗,green book,2010,emoji,book; education; green; object; office
+U+1F4D8,📘,blue book,2010,emoji,blue; book; education; object; office
+U+1F4D9,📙,orange book,2010,emoji,book; education; object; office; orange
+U+1F4DA,📚,books,2010,emoji,book; books; education; object; office
+U+1F4D3,📓,notebook,2010,emoji,notebook; object; office
+U+1F4D2,📒,ledger,2010,emoji,ledger; notebook; object; office
+U+1F4C3,📃,page with curl,2010,emoji,curl; document; object; office; page
+U+1F4DC,📜,scroll,2010,emoji,object; office; paper; scroll
+U+1F4C4,📄,page facing up,2010,emoji,document; object; office; page
+U+1F4F0,📰,newspaper,2010,emoji,communication; news; newspaper; object; paper
+U+1F4D1,📑,bookmark tabs,2010,emoji,bookmark; mark; marker; object; office; tabs
+U+1F516,🔖,bookmark,2010,emoji,bookmark; mark; object
+U+1F4B0,💰,money bag,2010,emoji,bag; dollar; money; moneybag; object; office
+U+1F4B4,💴,banknote with yen sign,2010,emoji,bank; banknote; bill; currency; money; note; object; office; yen
+U+1F4B5,💵,banknote with dollar sign,2010,emoji,bank; banknote; bill; currency; dollar; money; note; object; office
+U+1F4B6,💶,banknote with euro sign,2010,emoji,bank; banknote; bill; currency; euro; money; note; object; office
+U+1F4B7,💷,banknote with pound sign,2010,emoji,bank; banknote; bill; currency; money; note; object; office; pound
+U+1F4B8,💸,money with wings,2010,emoji,bank; banknote; bill; dollar; fly; money; note; object; office; wings
+U+1F4B3,💳,credit card,2010,emoji,bank; card; credit; money; object; office
+U+1F4B9,💹,chart with upwards trend and yen sign,2010,emoji,bank; chart; currency; graph; growth; market; money; object;office; rise; symbol; trend; upward; yen
+U+2709,✉️,envelope,1995,text,e-mail; email; envelope; object; office
+U+1F4E7,📧,e-mail symbol,2010,emoji,communication; e-mail; email; letter; mail; object; office
+U+1F4E8,📨,incoming envelope,2010,emoji,communication; e-mail; email; envelope; incoming; letter; mail;object; office; receive
+U+1F4E9,📩,envelope with downwards arrow above,2010,emoji,arrow; communication; down; e-mail; email; envelope; letter;mail; object; office; outgoing; sent
+U+1F4E4,📤,outbox tray,2010,emoji,box; communication; letter; mail; object; office; outbox; sent; tray
+U+1F4E5,📥,inbox tray,2010,emoji,box; communication; inbox; letter; mail; object; office; receive;tray
+U+1F4E6,📦,package,2010,emoji,box; communication; object; office; package; parcel
+U+1F4EB,📫,closed mailbox with raised flag,2010,emoji,closed; communication; flag; mail; mailbox; object; office;postbox
+U+1F4EA,📪,closed mailbox with lowered flag,2010,emoji,closed; communication; flag; lowered; mail; mailbox; object;office; postbox
+U+1F4EC,📬,open mailbox with raised flag,2010,emoji,communication; flag; mail; mailbox; object; office; open; postbox
+U+1F4ED,📭,open mailbox with lowered flag,2010,emoji,communication; flag; lowered; mail; mailbox; object; office; open;postbox
+U+1F4EE,📮,postbox,2010,emoji,communication; mail; mailbox; object; office; postbox
+U+270F,✏️,pencil,1995,text,object; office; pencil
+U+2712,✒️,black nib,1995,text,nib; object; office; pen
+U+1F4DD,📝,memo,2010,emoji,communication; memo; object; office; pencil
+U+1F4BC,💼,briefcase,2010,emoji,briefcase; object; office; person
+U+1F4C1,📁,file folder,2010,emoji,file; folder; object; office
+U+1F4C2,📂,open file folder,2010,emoji,file; folder; object; office; open
+U+1F4C5,📅,calendar,2010,emoji,calendar; date; object; office
+U+1F4C6,📆,tear-off calendar,2010,emoji,calendar; object; office
+U+1F4C7,📇,card index,2010,emoji,card; index; object; office; rolodex
+U+1F4C8,📈,chart with upwards trend,2010,emoji,chart; graph; growth; object; office; trend; upward
+U+1F4C9,📉,chart with downwards trend,2010,emoji,chart; down; graph; object; office; trend
+U+1F4CA,📊,bar chart,2010,emoji,bar; chart; graph; object; office
+U+1F4CB,📋,clipboard,2010,emoji,clipboard; object; office
+U+1F4CC,📌,pushpin,2010,emoji,object; office; pin; pushpin
+U+1F4CD,📍,round pushpin,2010,emoji,object; office; pin; place; pushpin
+U+1F4CE,📎,paperclip,2010,emoji,object; office; paperclip
+U+1F4CF,📏,straight ruler,2010,emoji,object; office; ruler; straight edge
+U+1F4D0,📐,triangular ruler,2010,emoji,object; office; ruler; set; triangle
+U+2702,✂️,black scissors,1995,text,object; office; scissors; tool
+U+1F512,🔒,lock,2010,emoji,closed; lock; object
+U+1F513,🔓,open lock,2010,emoji,lock; object; open; unlock
+U+1F50F,🔏,lock with ink pen,2010,emoji,ink; lock; nib; object; pen; privacy
+U+1F510,🔐,closed lock with key,2010,emoji,closed; key; lock; object; secure
+U+1F511,🔑,key,2010,emoji,key; lock; object; password
+U+1F528,🔨,hammer,2010,emoji,hammer; object; tool
+U+1F527,🔧,wrench,2010,emoji,object; tool; wrench
+U+1F529,🔩,nut and bolt,2010,emoji,bolt; nut; object; tool
+U+1F517,🔗,link symbol,2010,emoji,link; object; symbol
+U+1F489,💉,syringe,2010,emoji,doctor; medicine; needle; object; shot; sick; syringe; tool
+U+1F48A,💊,pill,2010,emoji,doctor; medicine; object; pill; sick
+U+1F52A,🔪,hocho,2010,emoji,cooking; hocho; knife; object; tool; weapon
+U+1F52B,🔫,pistol,2010,emoji,gun; object; pistol; revolver; tool; weapon
+U+1F3C1,🏁,chequered flag,2010,emoji,checkered; chequered; flag; object; place; racing; sport
+U+1F6A9,🚩,triangular flag on post,2010,emoji,flag; object; place; post; travel
+U+1F6AC,🚬,smoking symbol,2010,emoji,activity; object; smoking
+U+1F5FF,🗿,moyai,2010,emoji,face; moyai; place; statue; travel
+U+1F52E,🔮,crystal ball,2010,emoji,ball; crystal; fairy tale; fantasy; fortune; object; tool
+U+1F3E7,🏧,automated teller machine,2010,emoji,atm; automated; bank; place; sign; symbol; teller
+U+1F6AE,🚮,put litter in its place symbol,2010,emoji,litter; litterbox; place; symbol; travel
+U+1F6B0,🚰,potable water symbol,2010,emoji,drink; potable; sign; symbol; travel; water
+U+267F,♿️,wheelchair symbol,2005,emoji,access; sign; symbol; travel; wheelchair
+U+1F6B9,🚹,mens symbol,2010,emoji,lavatory; man; restroom; sign; symbol; travel; wc
+U+1F6BA,🚺,womens symbol,2010,emoji,lavatory; restroom; sign; symbol; travel; wc; woman
+U+1F6BB,🚻,restroom,2010,emoji,lavatory; restroom; sign; symbol; travel; wc
+U+1F6BC,🚼,orange baby symbol,2010,emoji,baby; changing; sign; symbol; travel
+U+1F6BE,🚾,water closet,2010,emoji,closet; lavatory; place; restroom; sign; symbol; travel; water; wc
+U+1F6C2,🛂,passport control,2010,emoji,control; passport; place; sign; symbol; travel
+U+1F6C3,🛃,customs,2010,emoji,customs; place; sign; symbol; travel
+U+1F6C4,🛄,baggage claim,2010,emoji,baggage; claim; place; sign; symbol; travel
+U+1F6C5,🛅,left luggage,2010,emoji,baggage; left luggage; locker; luggage; place; sign; symbol; travel
+U+26A0,⚠️,warning sign,2003,text,place; symbol; travel; warning
+U+1F6B8,🚸,children crossing,2010,emoji,child; crossing; pedestrian; place; sign; symbol; traffic; travel
+U+26D4,⛔️,no entry,2009,emoji,entry; forbidden; no; not; prohibited; symbol; traffic; travel
+U+1F6AB,🚫,no entry sign,2010,emoji,entry; forbidden; no; not; prohibited; symbol; travel
+U+1F6B3,🚳,no bicycles,2010,emoji,bicycle; bike; forbidden; no; not; place; prohibited; sign; sport;symbol; travel; vehicle
+U+1F6AD,🚭,no smoking symbol,2010,emoji,forbidden; no; not; prohibited; sign; smoking; symbol; travel
+U+1F6AF,🚯,do not litter symbol,2010,emoji,forbidden; litter; no; not; prohibited; sign; symbol; travel
+U+1F6B1,🚱,non-potable water symbol,2010,emoji,drink; forbidden; no; not; potable; prohibited; sign; symbol; travel;water
+U+1F6B7,🚷,no pedestrians,2010,emoji,forbidden; no; not; pedestrian; place; prohibited; sign; symbol;travel
+U+2B06,⬆️,upwards black arrow,2003,text,arrow; cardinal; direction; north; symbol
+U+2197,↗️,north east arrow,1995,text,arrow; direction; intercardinal; northeast; symbol
+U+27A1,➡️,black rightwards arrow,1995,text,arrow; cardinal; direction; east; symbol
+U+2198,↘️,south east arrow,1995,text,arrow; direction; intercardinal; southeast; symbol
+U+2B07,⬇️,downwards black arrow,2003,text,arrow; cardinal; direction; down; south; symbol
+U+2199,↙️,south west arrow,1995,text,arrow; direction; intercardinal; southwest; symbol
+U+2B05,⬅️,leftwards black arrow,2003,text,arrow; cardinal; direction; symbol; west
+U+2196,↖️,north west arrow,1995,text,arrow; direction; intercardinal; northwest; symbol
+U+2195,↕️,up down arrow,1995,text,arrow; symbol
+U+2194,↔️,left right arrow,1995,text,arrow; symbol
+U+21A9,↩️,leftwards arrow with hook,1995,text,arrow; symbol
+U+21AA,↪️,rightwards arrow with hook,1995,text,arrow; symbol
+U+2934,⤴️,arrow pointing rightwards then curving upwards,2002,text,arrow; symbol
+U+2935,⤵️,arrow pointing rightwards then curving downwards,2002,text,arrow; down; symbol
+U+1F503,🔃,clockwise downwards and upwards open circle arrows,2010,emoji,arrow; clockwise; reload; symbol
+U+1F504,🔄,anticlockwise downwards and upwards open circle arrows,2010,emoji,anticlockwise; arrow; counterclockwise; symbol; withershins
+U+1F519,🔙,back with leftwards arrow above,2010,emoji,arrow; back; symbol
+U+1F51A,🔚,end with leftwards arrow above,2010,emoji,arrow; end; symbol
+U+1F51B,🔛,on with exclamation mark with left right arrow above,2010,emoji,arrow; mark; on; symbol
+U+1F51C,🔜,soon with rightwards arrow above,2010,emoji,arrow; soon; symbol
+U+1F51D,🔝,top with upwards arrow above,2010,emoji,arrow; symbol; top; up
+U+1F52F,🔯,six pointed star with middle dot,2010,emoji,fortune; object; star; symbol
+U+267B,♻️,black universal recycling symbol,2002,text,recycle; sign; symbol
+U+1F4DB,📛,name badge,2010,emoji,badge; name; object; office
+U+1F530,🔰,japanese symbol for beginner,2010,emoji,beginner; chevron; green; japanese; leaf; object; tool; yellow
+U+1F531,🔱,trident emblem,2010,emoji,anchor; emblem; object; ship; symbol; tool; trident
+U+2B55,⭕️,heavy large circle,2009,emoji,circle; o; symbol; travel
+U+2705,✅,white heavy check mark,2010,emoji,check; mark; sign; symbol
+U+2611,☑️,ballot box with check,1995,text,ballot; box; check; sign; symbol
+U+2714,✔️,heavy check mark,1995,text,check; mark; sign; symbol
+U+2716,✖️,heavy multiplication x,1995,text,cancel; multiplication; multiply; sign; symbol; x
+U+274C,❌,cross mark,2010,emoji,cancel; mark; multiplication; multiply; sign; symbol; x
+U+274E,❎,negative squared cross mark,2010,emoji,mark; sign; square; symbol
+U+2795,➕,heavy plus sign,2010,emoji,math; plus; sign; symbol
+U+2796,➖,heavy minus sign,2010,emoji,math; minus; sign; symbol
+U+2797,➗,heavy division sign,2010,emoji,division; math; sign; symbol
+U+27B0,➰,curly loop,2010,emoji,curl; loop; sign; symbol
+U+27BF,➿,double curly loop,2010,emoji,curl; double; loop; sign; symbol
+U+303D,〽️,part alternation mark,2002,text,mark; part; sign; symbol
+U+2733,✳️,eight spoked asterisk,1995,text,asterisk; sign; symbol
+U+2734,✴️,eight pointed black star,1995,text,sign; star; symbol
+U+2747,❇️,sparkle,1995,text,sign; sparkle; symbol
+U+1F4B1,💱,currency exchange,2010,emoji,bank; currency; exchange; money; object; office; symbol
+U+1F4B2,💲,heavy dollar sign,2010,emoji,currency; dollar; money; object; office; symbol
+U+203C,‼️,double exclamation mark,1995,text,bangbang; exclamation; mark; punctuation; symbol; word
+U+2049,⁉️,exclamation question mark,2000,text,exclamation; interrobang; mark; punctuation; question; symbol;word
+U+2753,❓,black question mark ornament,2010,emoji,mark; punctuation; question; symbol; word
+U+2754,❔,white question mark ornament,2010,emoji,mark; outlined; punctuation; question; symbol; word
+U+2755,❕,white exclamation mark ornament,2010,emoji,exclamation; mark; outlined; punctuation; symbol; word
+U+2757,❗️,heavy exclamation mark symbol,2009,emoji,exclamation; mark; punctuation; symbol; word
+U+3030,〰️,wavy dash,1995,text,dash; punctuation; sound; symbol; wavy
+U+00A9,©️,copyright sign,1995,text,copyright; symbol; word
+U+00AE,®️,registered sign,1995,text,registered; symbol; word
+U+2122,™️,trade mark sign,1995,text,mark; symbol; tm; trademark; word
+U+2648,♈️,aries,1995,emoji,aries; ram; symbol; time; zodiac
+U+2649,♉️,taurus,1995,emoji,bull; ox; symbol; taurus; time; zodiac
+U+264A,♊️,gemini,1995,emoji,gemini; symbol; time; twins; zodiac
+U+264B,♋️,cancer,1995,emoji,cancer; crab; symbol; time; zodiac
+U+264C,♌️,leo,1995,emoji,leo; lion; symbol; time; zodiac
+U+264D,♍️,virgo,1995,emoji,maiden; symbol; time; virgin; virgo; zodiac
+U+264E,♎️,libra,1995,emoji,balance; justice; libra; scales; symbol; time; zodiac
+U+264F,♏️,scorpius,1995,emoji,scorpio; scorpion; scorpius; symbol; time; zodiac
+U+2650,♐️,sagittarius,1995,emoji,archer; sagittarius; symbol; time; zodiac
+U+2651,♑️,capricorn,1995,emoji,capricorn; goat; symbol; time; zodiac
+U+2652,♒️,aquarius,1995,emoji,aquarius; bearer; symbol; time; water; zodiac
+U+2653,♓️,pisces,1995,emoji,fish; pisces; symbol; time; zodiac
+U+26CE,⛎,ophiuchus,2010,emoji,bearer; ophiuchus; serpent; snake; symbol; zodiac
+U+1F500,🔀,twisted rightwards arrows,2010,emoji,arrow; crossed; symbol
+U+1F501,🔁,clockwise rightwards and leftwards open circle arrows,2010,emoji,arrow; clockwise; repeat; symbol
+U+1F502,🔂,clockwise rightwards and leftwards open circle arrows with circled one overlay,2010,emoji,arrow; clockwise; once; symbol
+U+25B6,▶️,black right-pointing triangle,1995,text,arrow; play; right; sound; symbol; triangle
+U+23E9,⏩,black right-pointing double triangle,2010,emoji,arrow; double; fast; forward; sound; symbol
+U+25C0,◀️,black left-pointing triangle,1995,text,arrow; left; reverse; sound; symbol; triangle
+U+23EA,⏪,black left-pointing double triangle,2010,emoji,arrow; double; rewind; sound; symbol
+U+1F53C,🔼,up-pointing small red triangle,2010,emoji,arrow; button; red; symbol
+U+23EB,⏫,black up-pointing double triangle,2010,emoji,arrow; double; sound; symbol
+U+1F53D,🔽,down-pointing small red triangle,2010,emoji,arrow; button; down; red; symbol
+U+23EC,⏬,black down-pointing double triangle,2010,emoji,arrow; double; down; sound; symbol
+U+1F3A6,🎦,cinema,2010,emoji,activity; camera; cinema; entertainment; film; movie; object;symbol
+U+1F505,🔅,low brightness symbol,2010,emoji,brightness; dim; low; sign; symbol
+U+1F506,🔆,high brightness symbol,2010,emoji,bright; brightness; sign; symbol
+U+1F4F6,📶,antenna with bars,2010,emoji,antenna; bar; cell; communication; mobile; object; phone; signal;symbol; telephone
+U+1F4F5,📵,no mobile phones,2010,emoji,cell; communication; forbidden; mobile; no; not; object; phone;prohibited; symbol; telephone
+U+1F4F3,📳,vibration mode,2010,emoji,cell; communication; mobile; mode; object; phone; symbol;telephone; vibration
+U+1F4F4,📴,mobile phone off,2010,emoji,cell; communication; mobile; object; off; phone; symbol;telephone
+U+0023 U+20E3,#️⃣,keycap number sign,2000,text,hash; keycap; pound; symbol; word
+U+0030 U+20E3,0️⃣,keycap digit zero,2000,text,0; keycap; symbol; word; zero
+U+0031 U+20E3,1️⃣,keycap digit one,2000,text,1; keycap; one; symbol; word
+U+0032 U+20E3,2️⃣,keycap digit two,2000,text,2; keycap; symbol; two; word
+U+0033 U+20E3,3️⃣,keycap digit three,2000,text,3; keycap; symbol; three; word
+U+0034 U+20E3,4️⃣,keycap digit four,2000,text,4; four; keycap; symbol; word
+U+0035 U+20E3,5️⃣,keycap digit five,2000,text,5; five; keycap; symbol; word
+U+0036 U+20E3,6️⃣,keycap digit six,2000,text,6; keycap; six; symbol; word
+U+0037 U+20E3,7️⃣,keycap digit seven,2000,text,7; keycap; seven; symbol; word
+U+0038 U+20E3,8️⃣,keycap digit eight,2000,text,8; eight; keycap; symbol; word
+U+0039 U+20E3,9️⃣,keycap digit nine,2000,text,9; keycap; nine; symbol; word
+U+1F51F,🔟,keycap ten,2010,emoji,10; keycap; symbol; ten; word
+U+1F4AF,💯,hundred points symbol,2010,emoji,100; full; hundred; office; score; symbol
+U+1F51E,🔞,no one under eighteen symbol,2010,emoji,18; age restriction; eighteen; forbidden; no; not; prohibited;symbol; underage; word
+U+1F520,🔠,input symbol for latin capital letters,2010,emoji,input; latin; letters; symbol; uppercase; word
+U+1F521,🔡,input symbol for latin small letters,2010,emoji,abcd; input; latin; letters; lowercase; symbol; word
+U+1F522,🔢,input symbol for numbers,2010,emoji,1234; input; numbers; symbol; word
+U+1F523,🔣,input symbol for symbols,2010,emoji,input; symbol; word
+U+1F524,🔤,input symbol for latin letters,2010,emoji,abc; alphabet; input; latin; letters; symbol; word
+U+1F170,🅰️,negative squared latin capital letter a,2010,text,a; blood; symbol; word
+U+1F18E,🆎,negative squared ab,2010,emoji,ab; blood; symbol; word
+U+1F171,🅱️,negative squared latin capital letter b,2010,text,b; blood; symbol; word
+U+1F191,🆑,squared cl,2010,emoji,cl; symbol; word
+U+1F192,🆒,squared cool,2010,emoji,cool; symbol; word
+U+1F193,🆓,squared free,2010,emoji,free; symbol; word
+U+2139,ℹ️,information source,2000,text,i; information; symbol; word
+U+1F194,🆔,squared id,2010,emoji,id; identity; symbol; word
+U+24C2,Ⓜ️,circled latin capital letter m,1995,text,circle; m; place; symbol; word
+U+1F195,🆕,squared new,2010,emoji,new; symbol; word
+U+1F196,🆖,squared ng,2010,emoji,ng; symbol; word
+U+1F17E,🅾️,negative squared latin capital letter o,2010,text,blood; o; symbol; word
+U+1F197,🆗,squared ok,2010,emoji,ok; symbol; word
+U+1F17F,🅿️,negative squared latin capital letter p,2009,text,parking; place; sign; symbol; word
+U+1F198,🆘,squared sos,2010,emoji,help; sos; symbol; word
+U+1F199,🆙,squared up with exclamation mark,2010,emoji,mark; symbol; up; word
+U+1F19A,🆚,squared vs,2010,emoji,symbol; versus; vs; word
+U+1F201,🈁,squared katakana koko,2010,emoji,japanese; symbol; word
+U+1F202,🈂️,squared katakana sa,2010,text,japanese; symbol; word
+U+1F237,🈷️,squared cjk unified ideograph-6708,2010,text,japanese; symbol; word
+U+1F236,🈶,squared cjk unified ideograph-6709,2010,emoji,japanese; symbol; word
+U+1F22F,🈯️,squared cjk unified ideograph-6307,2009,emoji,japanese; symbol; word
+U+1F250,🉐,circled ideograph advantage,2010,emoji,japanese; symbol; word
+U+1F239,🈹,squared cjk unified ideograph-5272,2010,emoji,japanese; symbol; word
+U+1F21A,🈚️,squared cjk unified ideograph-7121,2009,emoji,japanese; symbol; word
+U+1F232,🈲,squared cjk unified ideograph-7981,2010,emoji,japanese; symbol; word
+U+1F251,🉑,circled ideograph accept,2010,emoji,chinese; symbol; word
+U+1F238,🈸,squared cjk unified ideograph-7533,2010,emoji,chinese; symbol; word
+U+1F234,🈴,squared cjk unified ideograph-5408,2010,emoji,chinese; symbol; word
+U+1F233,🈳,squared cjk unified ideograph-7a7a,2010,emoji,chinese; symbol; word
+U+3297,㊗️,circled ideograph congratulation,1995,text,chinese; congratulation; congratulations; ideograph; symbol; word
+U+3299,㊙️,circled ideograph secret,1995,text,chinese; ideograph; secret; symbol; word
+U+1F23A,🈺,squared cjk unified ideograph-55b6,2010,emoji,chinese; symbol; word
+U+1F235,🈵,squared cjk unified ideograph-6e80,2010,emoji,chinese; symbol; word
+U+25AA,▪️,black small square,1995,text,geometric; sign; square; symbol
+U+25AB,▫️,white small square,1995,text,geometric; sign; square; symbol
+U+25FB,◻️,white medium square,2002,text,geometric; sign; square; symbol
+U+25FC,◼️,black medium square,2002,text,geometric; sign; square; symbol
+U+25FD,◽️,white medium small square,2002,emoji,geometric; sign; square; symbol
+U+25FE,◾️,black medium small square,2002,emoji,geometric; sign; square; symbol
+U+2B1B,⬛️,black large square,2008,emoji,geometric; sign; square; symbol
+U+2B1C,⬜️,white large square,2008,emoji,geometric; sign; square; symbol
+U+1F536,🔶,large orange diamond,2010,emoji,diamond; geometric; orange; sign; symbol
+U+1F537,🔷,large blue diamond,2010,emoji,blue; diamond; geometric; sign; symbol
+U+1F538,🔸,small orange diamond,2010,emoji,diamond; geometric; orange; sign; symbol
+U+1F539,🔹,small blue diamond,2010,emoji,blue; diamond; geometric; sign; symbol
+U+1F53A,🔺,up-pointing red triangle,2010,emoji,geometric; red; sign; symbol
+U+1F53B,🔻,down-pointing red triangle,2010,emoji,down; geometric; red; sign; symbol
+U+1F4A0,💠,diamond shape with a dot inside,2010,emoji,comic; diamond; geometric; inside; sign; symbol
+U+1F518,🔘,radio button,2010,emoji,button; geometric; radio; sign; symbol
+U+1F532,🔲,black square button,2010,emoji,button; geometric; sign; square; symbol
+U+1F533,🔳,white square button,2010,emoji,button; geometric; outlined; sign; square; symbol
+U+26AA,⚪️,medium white circle,2005,emoji,circle; geometric; sign; symbol
+U+26AB,⚫️,medium black circle,2005,emoji,circle; geometric; sign; symbol
+U+1F534,🔴,large red circle,2010,emoji,circle; geometric; red; sign; symbol
+U+1F535,🔵,large blue circle,2010,emoji,blue; circle; geometric; sign; symbol
+U+1F1E8 U+1F1F3,🇨🇳,flag for China,2010,emoji,china; flag; other
+U+1F1E9 U+1F1EA,🇩🇪,flag for Germany,2010,emoji,flag; germany; other
+U+1F1EA U+1F1F8,🇪🇸,flag for Spain,2010,emoji,flag; other; spain
+U+1F1EB U+1F1F7,🇫🇷,flag for France,2010,emoji,flag; france; other
+U+1F1EC U+1F1E7,🇬🇧,flag for United Kingdom,2010,emoji,britain; british; cornwall; england; flag; great britain; ireland;northern ireland; other; scotland; uk; union jack; united; united kingdom; wales
+U+1F1EE U+1F1F9,🇮🇹,flag for Italy,2010,emoji,flag; italy; other
+U+1F1EF U+1F1F5,🇯🇵,flag for Japan,2010,emoji,flag; japan; other
+U+1F1F0 U+1F1F7,🇰🇷,flag for South Korea,2010,emoji,flag; korea; other; south; south korea
+U+1F1F7 U+1F1FA,🇷🇺,flag for Russia,2010,emoji,flag; other; russia
+U+1F1FA U+1F1F8,🇺🇸,flag for United States,2010,emoji,america; flag; other; stars and stripes; united; united states

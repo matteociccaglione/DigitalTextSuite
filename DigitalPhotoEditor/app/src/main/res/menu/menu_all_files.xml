@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/it_pdf"
+        android:icon="@drawable/ic_baseline_picture_as_pdf_24"
+        android:title="@string/pdf_dir"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/it_filter"
+        android:icon="@drawable/ic_baseline_filter_alt_24"
+        android:title="ciao"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/it_preview"
+        android:icon="@drawable/ic_baseline_grid_view_24"
+        android:title="@string/mswitch"
+        android:visibility="gone"
+        app:showAsAction="always" />
+</menu>

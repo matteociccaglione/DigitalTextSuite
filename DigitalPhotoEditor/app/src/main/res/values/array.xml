@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortingTypes">
+        <item>@string/sort_by_Alphabetic</item>
+        <item>@string/sort_by_date</item>
+        <item>@string/sort_by_Alphabetic_desc</item>
+        <item>@string/sort_by_date_desc</item>
+    </string-array>
+    <string-array name="filterTypes">
+        <item>@string/filter_by_title</item>
+        <item>@string/filter_by_country</item>
+    </string-array>
+</resources>
