@@ -82,14 +82,9 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent): Boolean {
         performClick()
-        Log.d("HERE","HERE")
         val action = event.actionMasked
         val x = event.x
         val y = event.y
-//        if(canvasBitmap!=null)
-//            manager.writingArea = WritingArea(canvasBitmap!!.width.toFloat(), canvasBitmap!!.height.toFloat())
-//        else
-//            Log.d("NOCANVAS","NOCANVAS")
         if(drawingMode == DrawingMode.DRAW) {
             when (action) {
                 MotionEvent.ACTION_DOWN -> currentStroke.moveTo(x, y)
