@@ -1,8 +1,6 @@
 package it.trentabitplus.digitaltextsuite.activities
 
-import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
+import android.content.*
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -251,6 +249,12 @@ class TextResultActivity : AppCompatActivity() {
                     dialogInterface.cancel()
                 }
                 alert.show()
+            }
+            R.id.it_copy -> {
+                val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val clip = ClipData.newPlainText("note",textResult)
+                clipboard.setPrimaryClip(clip)
+                Toast.makeText(this,getString(R.string.copied),Toast.LENGTH_SHORT).show()
             }
         }
         return super.onOptionsItemSelected(item)

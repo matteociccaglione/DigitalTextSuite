@@ -99,4 +99,6 @@
     <string name="lose_emoji">You have lose</string>
     <string name="highscore">Highscore: %d</string>
     <string name="actual_score">Actual score: %d</string>
+    <string name="copy">Copy</string>
+    <string name="copied">Copied</string>
 </resources>
