@@ -25,7 +25,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\matte\.android\avd\3.4_WQVGA_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@4e0a9fab]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -54,6 +54,9 @@
     <property name="android-custom-viewC:/Users/matte/AndroidStudioProjects/progetto_finale_vero/trunk/DigitalTextSuite/app/src/main/java/it/trentabitplus/digitaltextsuite/view/Whiteboard.kt_SELECTED" value="Whiteboard" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -148,6 +151,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="200" y="110" key="#PSD" timestamp="1623950652588">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="200" y="110" key="#PSD/0.0.1366.728@0.0.1366.728" timestamp="1623950652588" />
     <state x="223" y="336" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1623865010131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -13,7 +13,7 @@ import it.trentabitplus.digitaltextsuite.databinding.ChooseLanguageDialogBinding
 class LanguageDialogFragment(private val languages : List<String>): DialogFragment() {
     /*
     This attribute must be set using setOnLanguageSelected
-    If not set the Dialog do nothing with the selected string
+    If not set, the Dialog does nothing with the selected string
      */
     private var languageSelectedListener: (language: String) -> Unit = {
 
@@ -66,7 +66,7 @@ class LanguageDialogFragment(private val languages : List<String>): DialogFragme
     }
 
     /**
-     * To handle the cancel request in a different way you can set this listener using the set method
+     * To handle the cancel request in a different way you can set the listener using the set method
      * setOnCancelRequest
      * For example if you want to customize this dialog by adding a confirmation message you can set it up
      */

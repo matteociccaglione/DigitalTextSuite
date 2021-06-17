@@ -66,10 +66,11 @@ class TextAnalyzer(private val context: Context,
      */
     private fun recognizeText(inputImage: InputImage): Task<Text> {
         return textDetector.process(inputImage).addOnSuccessListener { text ->
-            //update mutableLiveData result
+
             val words = text.text.split(" ")
 
             if (compareResult(words)) {
+                //update mutableLiveData result
                 result.value = text.text
             }
         }.addOnFailureListener { exception ->
@@ -91,6 +92,7 @@ class TextAnalyzer(private val context: Context,
         val size = Math.min(words.size, actualWords.size)
         val maxSize = Math.max(words.size, actualWords.size)
 
+        // reference value of number of words
         val ref = (size * DIFFERENCE_PERCENTAGE)
         val refInt: Int
         if (ref - ref.toInt() >= 0.5f)
@@ -98,12 +100,15 @@ class TextAnalyzer(private val context: Context,
         else
             refInt = ref.toInt()
         var count = 0
+        // checking differences among words
         for (i in 0 until size) {
             if (!words[i].equals(actualWords[i]))
                 count++
+            // if enough different ...
             if (count >= refInt)
                 return true
         }
+        // else if size is enough different ...
         if (maxSize - size + count >= refInt)
             return true
         return false

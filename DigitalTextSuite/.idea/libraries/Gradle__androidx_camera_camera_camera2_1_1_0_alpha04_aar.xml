@@ -2,15 +2,15 @@
   <library name="Gradle: androidx.camera:camera-camera2:1.1.0-alpha04@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a53b699385c79898cb0216453aad05e/camera-camera2-1.1.0-alpha04/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7eb07e27a00e2fbf6720196e2daf8a96/camera-camera2-1.1.0-alpha04/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/835190f1095b2fc129121061d0d9a581/camera-camera2-1.1.0-alpha04/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a53b699385c79898cb0216453aad05e/camera-camera2-1.1.0-alpha04/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a53b699385c79898cb0216453aad05e/camera-camera2-1.1.0-alpha04/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8a53b699385c79898cb0216453aad05e/camera-camera2-1.1.0-alpha04/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7eb07e27a00e2fbf6720196e2daf8a96/camera-camera2-1.1.0-alpha04/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7eb07e27a00e2fbf6720196e2daf8a96/camera-camera2-1.1.0-alpha04/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7eb07e27a00e2fbf6720196e2daf8a96/camera-camera2-1.1.0-alpha04/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/835190f1095b2fc129121061d0d9a581/camera-camera2-1.1.0-alpha04/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/835190f1095b2fc129121061d0d9a581/camera-camera2-1.1.0-alpha04/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/835190f1095b2fc129121061d0d9a581/camera-camera2-1.1.0-alpha04/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

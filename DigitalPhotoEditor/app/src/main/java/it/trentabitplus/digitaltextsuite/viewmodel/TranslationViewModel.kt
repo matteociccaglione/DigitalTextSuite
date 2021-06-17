@@ -27,7 +27,7 @@ import it.trentabitplus.digitaltextsuite.utils.SmoothedMutableLiveData
 class TranslationViewModel(application: Application) : AndroidViewModel(application) {
 
     companion object{
-        // Amount of time (in milliseconds) required for detected text to be stable to settle
+        // Amount of time (in milliseconds) of stability required for detected text to settle
         private const val SMOOTHING_DURATION = 1000L
 
         private const val NUM_TRANSLATORS = 1

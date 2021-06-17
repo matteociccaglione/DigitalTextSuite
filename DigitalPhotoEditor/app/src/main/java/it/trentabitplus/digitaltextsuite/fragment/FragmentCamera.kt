@@ -20,7 +20,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.File
 import java.lang.IllegalStateException
-import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -188,7 +187,7 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
     }
 
     /**
-     * Children class have to override this method to
+     * Children classes have to override this method to
      * set an Analyzer to ImageAnalysis use case.
      * If they don't override this method,
      * no analyzer will be set

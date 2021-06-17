@@ -73,7 +73,8 @@ class Translator {
 
         // register a watchdog to unblock long running downloads (>15 sec)
         Handler(Looper.getMainLooper())
-            .postDelayed({modelDownloading.setValue(false)}, 15000)
+            .postDelayed({modelDownloading.setValue(false)
+                         modelDownloadTask.}, 15000)
 
         // download language models if needed
         modelDownloadTask = translator.downloadModelIfNeeded().addOnCompleteListener {

@@ -98,8 +98,7 @@ class DeleteTranslationModulesActivity : AppCompatActivity() {
      */
     private fun deleteModule(modelManager: RemoteModelManager, code: String) {
         val model = TranslateRemoteModel.Builder(code).build()
-        modelManager.deleteDownloadedModel(model).addOnSuccessListener {
-        }.addOnFailureListener {
+        modelManager.deleteDownloadedModel(model).addOnFailureListener {
             Toast.makeText(this, "Deletion of model $code failed", Toast.LENGTH_SHORT).show()
         }
     }

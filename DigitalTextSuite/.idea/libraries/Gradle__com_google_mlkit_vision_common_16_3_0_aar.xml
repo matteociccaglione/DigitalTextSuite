@@ -3,8 +3,9 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1c9d7a41fd57308a8eb7a897d2b92eec/vision-common-16.3.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd729aa44a525d0c6a0891d79266f3a9/vision-common-16.3.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd729aa44a525d0c6a0891d79266f3a9/vision-common-16.3.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd729aa44a525d0c6a0891d79266f3a9/vision-common-16.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c8c59b69c23fa3215fdaf5a4a58bf7b7/vision-common-16.3.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c8c59b69c23fa3215fdaf5a4a58bf7b7/vision-common-16.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c8c59b69c23fa3215fdaf5a4a58bf7b7/vision-common-16.3.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/vision-common/16.3.0/c673d9c499b91aef216f8fc78ac7ecb3a76a6722/vision-common-16.3.0-javadoc.jar!/" />

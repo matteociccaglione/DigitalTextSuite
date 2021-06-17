@@ -2,9 +2,10 @@
   <library name="Gradle: com.google.mlkit:common:17.1.1@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ddd3bcee380ee48967e4070a3708e0c6/common-17.1.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a79265c25238ee80deeed0a0d88540b0/common-17.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a79265c25238ee80deeed0a0d88540b0/common-17.1.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a79265c25238ee80deeed0a0d88540b0/common-17.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d261d02c667c02017e1b89c62729fe/common-17.1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d261d02c667c02017e1b89c62729fe/common-17.1.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/62d261d02c667c02017e1b89c62729fe/common-17.1.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/common/17.1.1/da30d3248e4348162a9fe4bd66a419732fc1de77/common-17.1.1-javadoc.jar!/" />

@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.mlkit:digital-ink-recognition:16.2.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf1b626133111acba79f8ef6c3803cba/digital-ink-recognition-16.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf1b626133111acba79f8ef6c3803cba/digital-ink-recognition-16.2.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf1b626133111acba79f8ef6c3803cba/digital-ink-recognition-16.2.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfc531add409d96ef7772dd11fb95ffa/digital-ink-recognition-16.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfc531add409d96ef7772dd11fb95ffa/digital-ink-recognition-16.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfc531add409d96ef7772dd11fb95ffa/digital-ink-recognition-16.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/digital-ink-recognition/16.2.0/75755ff937e775b0ecd8ee51dc66a47f17e37ba6/digital-ink-recognition-16.2.0-javadoc.jar!/" />

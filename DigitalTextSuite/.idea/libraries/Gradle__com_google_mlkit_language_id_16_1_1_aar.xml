@@ -3,8 +3,9 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7279f5896d8d60e5e3b395905fd85e1c/language-id-16.1.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bae764311c322d72aeb5cba18389d97/language-id-16.1.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bae764311c322d72aeb5cba18389d97/language-id-16.1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bae764311c322d72aeb5cba18389d97/language-id-16.1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fbddbc993f2e8cfee0eac055a3e4f389/language-id-16.1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fbddbc993f2e8cfee0eac055a3e4f389/language-id-16.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fbddbc993f2e8cfee0eac055a3e4f389/language-id-16.1.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.mlkit/language-id/16.1.1/20354d07f8951be239997564ba1d391d5d6890f7/language-id-16.1.1-javadoc.jar!/" />
