@@ -232,6 +232,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
                     listName.add(dir.name)
                 }
                 pickerDirectory.setDirectoryList(listName)
+                pickerDirectory.isDirectoryShowed = false
                 pickerDirectory.setOnDirectorySelected { dir: String, title: String ->
                     saveListener(title, dir, listName,digitalize)
                 }

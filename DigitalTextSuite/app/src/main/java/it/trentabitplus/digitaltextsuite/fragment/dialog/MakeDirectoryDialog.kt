@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.DialogFragment
 import it.trentabitplus.digitaltextsuite.R
@@ -23,16 +24,14 @@ class MakeDirectoryDialog: DialogFragment() {
     private var directoryListener: (directory: String,title: String) -> Unit ={ s: String, s1: String ->
 
     }
+    var isDirectoryShowed : Boolean = true
+
     private var cancelListener: ()-> Boolean ={
        true
     }
     companion object{
-        private var instance : MakeDirectoryDialog? = null
         fun getInstance(): MakeDirectoryDialog{
-            if(instance==null){
-                instance= MakeDirectoryDialog()
-            }
-            return instance!!
+            return MakeDirectoryDialog()
         }
     }
 
@@ -47,6 +46,8 @@ class MakeDirectoryDialog: DialogFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.spinner.isVisible = isDirectoryShowed
+        binding.labelSpinner.isVisible = isDirectoryShowed
         val adapter = ArrayAdapter(requireContext(),R.layout.my_spinner,directoryList)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         if(!directoryList.contains(getString(R.string.default_dir)))
@@ -94,7 +95,6 @@ class MakeDirectoryDialog: DialogFragment() {
 
         }
     }
-
     /**
      * Set up a cancel listener to handle on cancel button pressed
      * The listener must return true if the dialog must be closed
