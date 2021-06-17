@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="cardView_margin">4dp</dimen>
+    <dimen name="language_dialog_distance">10dp</dimen>
+    <dimen name="fab_move_80">75dp</dimen>
+    <dimen name="fab_move_150">150dp</dimen>
+    <dimen name="top_distance_mkdir">15dp</dimen>
+    <dimen name="label_distance">10dp</dimen>
+    <dimen name="spinner_distance">50dp</dimen>
+    <dimen name="fab_move_225">225dp</dimen>
+    <dimen name="button_bar_top">10dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="Color_choose">30dp</dimen>
+    <dimen name="empty_files_desc_size">30sp</dimen>
+    <dimen name="draw_emoji_size">25sp</dimen>
+</resources>

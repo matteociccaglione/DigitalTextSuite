@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_big">
+
+    <it.trentabitplus.digitaltextsuite.view.Whiteboard
+        android:id="@+id/whiteboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verticalBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBar">
+
+        <ImageButton
+            android:id="@+id/btnPen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_edit_36"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnPickColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_baseline_color_lens_36"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selected2" />
+
+        <ImageButton
+            android:id="@+id/btnErase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/eraser"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selected" />
+
+        <!--        <View-->
+        <!--            android:id="@+id/acaso"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_marginBottom="8dp"-->
+        <!--            android:visibility="invisible"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/selected3" />-->
+
+        <View
+            android:id="@+id/selected"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@color/selected_blue"
+            app:layout_constraintEnd_toEndOf="@id/btnPen"
+            app:layout_constraintStart_toStartOf="@id/btnPen"
+            app:layout_constraintTop_toBottomOf="@+id/btnPen" />
+
+        <View
+            android:id="@+id/selected2"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@color/unselected"
+            app:layout_constraintEnd_toEndOf="@id/btnErase"
+            app:layout_constraintStart_toStartOf="@id/btnErase"
+            app:layout_constraintTop_toBottomOf="@+id/btnErase" />
+
+        <View
+            android:id="@+id/selected3"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:background="@color/unselected"
+            app:layout_constraintEnd_toEndOf="@id/btnPickColor"
+            app:layout_constraintStart_toStartOf="@id/btnPickColor"
+            app:layout_constraintTop_toBottomOf="@+id/btnPickColor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibDelPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/del_pg_white_36" />
+
+        <ImageButton
+            android:id="@+id/ibNewPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@android:color/transparent"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/ibPrevPage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/next_pg_white_36" />
+
+        <ImageButton
+            android:id="@+id/ibPrevPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/ibDelPage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/prev_pg_white_36" />
+
+
+        <ImageButton
+            android:id="@+id/buttonSaveWhiteboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@id/ibNewPage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_save_36" />
+
+
+
+        <Button
+            android:id="@+id/btnClearWhiteboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="7dp"
+            android:text="@string/clear"
+            android:textSize="10sp"
+            android:backgroundTint="@color/hint_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonSaveWhiteboard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDigitalizeWhiteboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="7dp"
+            android:text="@string/digitalize"
+            android:textSize="10sp"
+            android:backgroundTint="@color/hint_txt"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnClearWhiteboard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/whiteboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/whiteboard" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recognize_text"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteboard"
+        app:layout_constraintEnd_toEndOf="@+id/whiteboard"
+        app:layout_constraintStart_toStartOf="@+id/whiteboard"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
