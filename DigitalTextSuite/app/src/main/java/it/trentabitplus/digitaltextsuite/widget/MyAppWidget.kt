@@ -24,10 +24,6 @@ class MyAppWidget : AppWidgetProvider() {
             for (appWidgetId in appWidgetIds) {
                 val remoteViews = RemoteViews(context?.packageName, R.layout.layout_my_app_widget)
                 val thisWidget = context?.let { ComponentName(it, MyAppWidget::class.java) }
-//                remoteViews.setOnClickPendingIntent(R.id.btn_digital_link, getPendingSelfIntent(context, "b1"))
-//                remoteViews.setOnClickPendingIntent(R.id.btn_all_files, getPendingSelfIntent(context, "b2"))
-//                remoteViews.setOnClickPendingIntent(R.id.btn_traslate, getPendingSelfIntent(context, "b3"))
-//                remoteViews.setOnClickPendingIntent(R.id.btn_digitalizer, getPendingSelfIntent(context, "b4"))
 
                 remoteViews.setOnClickPendingIntent(R.id.btnWhiteboard, getPendingSelfIntent(context, "b1"))
                 remoteViews.setOnClickPendingIntent(R.id.btnAllFiles, getPendingSelfIntent(context, "b2"))

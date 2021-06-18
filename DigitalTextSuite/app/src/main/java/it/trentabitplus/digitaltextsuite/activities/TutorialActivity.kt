@@ -10,19 +10,39 @@ import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.google.android.material.tabs.TabLayoutMediator
 import it.trentabitplus.digitaltextsuite.R
 import it.trentabitplus.digitaltextsuite.databinding.ActivityTutorialBinding
 
 class TutorialActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityTutorialBinding
-    private var listFragment = listOf(R.layout.all_files_frag_tutorial,R.layout.whiteboard_frag_tutorial,
-    R.layout.whiteboard_activity_tutorial,R.layout.translate_frag_tutorial,R.layout.digital_recognize_frag_tutorial,
-    R.layout.text_result_activity_tutorial)
+    private var listFragment = listOf(R.layout.all_files_frag_tutorial,R.layout.whiteboard_frag_tutorial
+        ,R.layout.whiteboard_activity_tutorial,R.layout.translate_frag_tutorial,R.layout.digital_recognize_frag_tutorial
+        ,R.layout.text_result_activity_tutorial)
+
+    private var pageChangeCallback:
+            ViewPager2.OnPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+            super.onPageSelected(position)
+            when (position) {
+                listFragment.size - 1 -> {
+                    binding.btnSkip.text = getString(R.string.got_it)
+                }
+                0 -> {
+                    binding.ibPrevTutorial.isVisible = false
+                }
+                else -> {
+                    binding.btnSkip.text = getString(R.string.btn_skip)
+                    binding.ibPrevTutorial.isVisible = true
+                }
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTutorialBinding.inflate(layoutInflater)
@@ -32,12 +52,14 @@ class TutorialActivity : AppCompatActivity() {
     private fun launchApp(){
         val intent = Intent(this,RealMainActivity::class.java)
         startActivity(intent)
+        finish()
     }
     private fun init(){
-        binding.imageButton3.isVisible = false
+        binding.ibPrevTutorial.isVisible = false
         binding.viewPager.adapter = TutorialAdapter()
+        binding.viewPager.registerOnPageChangeCallback(pageChangeCallback)
+
         binding.ibNextTutorial.setOnClickListener{
-            binding.imageButton3.isVisible = true
             val current = binding.viewPager.currentItem+1
             if(current<listFragment.size){
                 binding.viewPager.currentItem = current
@@ -46,18 +68,27 @@ class TutorialActivity : AppCompatActivity() {
                 launchApp()
             }
         }
-        binding.imageButton3.setOnClickListener{
+
+        binding.ibPrevTutorial.setOnClickListener{
             val current = binding.viewPager.currentItem-1
             if(current >= 0){
                 binding.viewPager.currentItem = current
 
             }
-            binding.imageButton3.isVisible = current!=0
         }
+
         binding.btnSkip.setOnClickListener{
             launchApp()
         }
+
+        // setting the tab layout with viewPager to show dots
+        val tabLayoutMediator = TabLayoutMediator(binding.tabDots, binding.viewPager
+        ) { _, _ ->
+
+        }
+        tabLayoutMediator.attach()
     }
+
     inner class TutorialAdapter: RecyclerView.Adapter<TutorialAdapter.ViewHolder>(){
 
         inner class ViewHolder(val view: View): RecyclerView.ViewHolder(view){

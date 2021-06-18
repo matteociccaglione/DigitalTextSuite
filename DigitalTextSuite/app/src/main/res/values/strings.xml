@@ -1,21 +1,21 @@
 <resources>
     <string name="app_name">Digital Text Suite</string>
-    <string name="btn_next">Next</string>
-    <string name="btn_skip">Skip</string>
+    <string name="btn_next" translatable="false">Next</string>
+    <string name="btn_skip" translatable="false">Skip</string>
     <string name="tutorial_camera_sample">Camera Sample</string>
     <string name="btnTakePhoto">Take Photo</string>
     <string name="btnsetflash">Set Flash</string>
-    <string name="starting_zoom">x 1.0</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="starting_zoom" translatable="false">x 1.0</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="mswitch">switch</string>
-    <string name="ok">OK</string>
-    <string name="canc">Canc</string>
+    <string name="mswitch" translatable="false">switch</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="canc" translatable="false">Canc</string>
     <string name="permission_not_granted">Permissions not granted from the user</string>
     <string name="error_camera">An error has occurred</string>
     <string name="save">save</string>
     <string name="delete">delete</string>
-    <string name="undo">Undo</string>
+    <string name="undo" translatable="false">Undo</string>
     <string name="editable">Editable</string>
     <string name="alert_delete_title">Delete note</string>
     <string name="alert_delete_message">Are you sure you want to delete this note?</string>
@@ -23,7 +23,7 @@
     <string name="no">NO</string>
     <string name="mkdir_label">Directory: </string>
     <string name="new_dir">New directory</string>
-    <string name="default_dir">Default</string>
+    <string name="default_dir" translatable="false">Default</string>
     <string name="not_saved_edit">You have to save first if you want to edit </string>
     <string name="title_hint">Title</string>
     <string name="dir_name_hint">Directory name</string>
@@ -48,22 +48,22 @@
     <string name="label_sort_by">Sort by:</string>
     <string name="label_filter_by">Filter by:</string>
     <string name="filter_by_title">Title</string>
-    <string name="filter_by_country">Country</string>
-    <string name="chooseLanguage">Click the button below to select a target language</string>
-    <string name="no_country_directory">You can\'t filter directories by country \n filter mode by title activated</string>
+    <string name="filter_by_country">Language</string>
+    <string name="chooseLanguage">Click the button at the bottom left to select a target language</string>
+    <string name="no_country_directory">You can\'t filter directories by language \n filter mode by title activated</string>
     <string name="str_res_select_lang">Click here to select language</string>
-    <string name="downloading_modules">Downloading modules ...</string>
-    <string name="files">"Files: "</string>
+    <string name="downloading_modules">Downloading models …</string>
+    <string name="files" translatable="false">"Files: "</string>
     <string name="new_whiteboard">Add new whiteboard</string>
     <string name="clear">Clear</string>
     <string name="digitalize">Digitalize</string>
-    <string name="digitink_error">Something went wrong...</string>
-    <string name="digitink_no_lang">We are sorry there are no languages for your whiteboard</string>
-    <string name="downloading_lan">Downloading language...</string>
+    <string name="digitink_error">Something went wrong…</string>
+    <string name="digitink_no_lang">Sorry, there are no languages for your whiteboard</string>
+    <string name="downloading_lan">Downloading language …</string>
     <string name="recognize_text">Recognizing text</string>
-    <string name="pdf_dir">pdf</string>
-    <string name="whiteboard_dir">whiteboard</string>
-    <string name="start">Start...</string>
+    <string name="pdf_dir" translatable="false">pdf</string>
+    <string name="whiteboard_dir" translatable="false">whiteboard</string>
+    <string name="start">Start…</string>
     <string name="shared_key_no_remember">remember</string>
     <string name="no_ask_me">Don\'t ask me anymore</string>
     <string name="digitalized_alert_title">Overwrite warning</string>
@@ -77,7 +77,7 @@
     <string name="delete_files_alert_title">Delete files alert</string>
     <string name="delete_directories_alert_title">Delete directory alert</string>
     <string name="delete_directories_alert_message">Are you sure you want to remove these directories and all files inside them?</string>
-    <string name="performing_translation">Performing translation ...</string>
+    <string name="performing_translation">Performing translation …</string>
     <string name="ivColorChoose">Choose Color</string>
     <string name="select_pdf_to_open">Select pdf file</string>
     <string name="open">OPEN</string>
@@ -86,22 +86,23 @@
     <string name="empty_favourite_files_desc">There is nothing here, start adding notes to your favorites!</string>
     <string name="notification_title">Play with emoji</string>
     <string name="notification_message">Try to draw an emoji</string>
-    <string name="channel_name">DigitalPhotoEditor</string>
-    <string name="channel_description">Fun with emoji</string>
+    <string name="channel_name" translatable="false">DigitalPhotoEditor</string>
+    <string name="channel_description" translatable="false">Fun with emoji</string>
     <string name="go">Go</string>
     <string name="draw_emoji">Try to draw this emoji: %s</string>
     <string name="emoji_attempts">Attempts: %d</string>
-    <string name="emoji_insert">Error you have insert: %s</string>
-    <string name="win_emoji">You have win with: %s</string>
+    <string name="emoji_insert">Error, you have insert: %s</string>
+    <string name="win_emoji">You have won with: %s</string>
     <string name="share">Share</string>
     <string name="close">Close</string>
     <string name="new_game">New Game</string>
     <string name="lose_emoji">You have lose</string>
-    <string name="highscore">Highscore: %d</string>
+    <string name="highscore" translatable="false">Highscore: %d</string>
     <string name="actual_score">Actual score: %d</string>
     <string name="copy">Copy</string>
-    <string name="copied">Copied</string>
+    <string name="copied">Copied to clipboard</string>
     <string name="note_click_desc">Here you can open a note</string>
     <string name="btn_whiteboad_desc">Here you can see the associated whiteboard</string>
     <string name="menu_allfiles_desc">Here you can apply new filter or view your pdf</string>
+    <string name="got_it" translatable="false">Got It</string>
 </resources>
