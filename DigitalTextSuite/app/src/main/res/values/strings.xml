@@ -63,7 +63,7 @@
     <string name="recognize_text">Recognizing text</string>
     <string name="pdf_dir" translatable="false">pdf</string>
     <string name="whiteboard_dir" translatable="false">whiteboard</string>
-    <string name="start">Start…</string>
+    <string name="start" translatable="false">Start…</string>
     <string name="shared_key_no_remember">remember</string>
     <string name="no_ask_me">Don\'t ask me anymore</string>
     <string name="digitalized_alert_title">Overwrite warning</string>
@@ -88,14 +88,14 @@
     <string name="notification_message">Try to draw an emoji</string>
     <string name="channel_name" translatable="false">DigitalPhotoEditor</string>
     <string name="channel_description" translatable="false">Fun with emoji</string>
-    <string name="go">Go</string>
+    <string name="go" translatable="false">Go</string>
     <string name="draw_emoji">Try to draw this emoji: %s</string>
     <string name="emoji_attempts">Attempts: %d</string>
     <string name="emoji_insert">Error, you have insert: %s</string>
     <string name="win_emoji">You have won with: %s</string>
     <string name="share">Share</string>
     <string name="close">Close</string>
-    <string name="new_game">New Game</string>
+    <string name="new_game">Retry</string>
     <string name="lose_emoji">You have lose</string>
     <string name="highscore" translatable="false">Highscore: %d</string>
     <string name="actual_score">Actual score: %d</string>
@@ -105,4 +105,7 @@
     <string name="btn_whiteboad_desc">Here you can see the associated whiteboard</string>
     <string name="menu_allfiles_desc">Here you can apply new filter or view your pdf</string>
     <string name="got_it" translatable="false">Got It</string>
+    <string name="no_models_downloaded">No models downloaded</string>
+    <string name="delete_models">Delete Models</string>
+    <string name="select_models_to_delete">Select models to delete</string>
 </resources>

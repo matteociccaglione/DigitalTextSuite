@@ -52,7 +52,6 @@
     <string name="digitink_no_lang">Ci dispiace, non ci sono lingue per la tua whiteboard</string>
     <string name="downloading_lan">Download delle lingue ...</string>
     <string name="recognize_text">Riconoscimento testo in corso</string>
-    <string name="start">Inizia...</string>
     <string name="shared_key_no_remember">ricorda</string>
     <string name="no_ask_me">Non chiedermelo più</string>
     <string name="digitalized_alert_title">Avviso di overwriting</string>
@@ -75,14 +74,13 @@
     <string name="empty_favourite_files_desc">Non c\'è ancora nulla qui, inizia ad aggiungere note ai tuoi preferiti!</string>
     <string name="notification_title">Gioca con emoji</string>
     <string name="notification_message">Disegna una emoji</string>
-    <string name="go">Vai</string>
     <string name="draw_emoji">Disegna questa emoji: %s</string>
     <string name="emoji_attempts">Tentativi: %d</string>
     <string name="emoji_insert">Errore, hai disegnato : %s</string>
     <string name="win_emoji">Hai vinto con : %s</string>
     <string name="share">Condividi</string>
     <string name="close">Chiudi</string>
-    <string name="new_game">Nuova Partita</string>
+    <string name="new_game">Riprova</string>
     <string name="lose_emoji">Hai perso</string>
     <string name="actual_score">Score attuale: %d</string>
     <string name="copy">Copia</string>
@@ -90,4 +88,7 @@
     <string name="note_click_desc">Qui si può aprire una nota</string>
     <string name="btn_whiteboad_desc">Qui si può visualizzare la whiteboard associata</string>
     <string name="menu_allfiles_desc">Qui si può applicare un filtro o visualizzare i tuoi pdf</string>
+    <string name="no_models_downloaded">Nessun modello scaricato</string>
+    <string name="delete_models">Elimina modelli</string>
+    <string name="select_models_to_delete">Seleziona i modelli da eliminare</string>
 </resources>
