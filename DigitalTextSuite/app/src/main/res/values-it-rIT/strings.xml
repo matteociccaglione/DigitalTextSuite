@@ -80,7 +80,7 @@
     <string name="win_emoji">Hai vinto con : %s</string>
     <string name="share">Condividi</string>
     <string name="close">Chiudi</string>
-    <string name="new_game">Riprova</string>
+    <string name="new_game">Nuova partita</string>
     <string name="lose_emoji">Hai perso</string>
     <string name="actual_score">Score attuale: %d</string>
     <string name="copy">Copia</string>

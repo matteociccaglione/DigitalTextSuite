@@ -95,7 +95,7 @@
     <string name="win_emoji">You have won with: %s</string>
     <string name="share">Share</string>
     <string name="close">Close</string>
-    <string name="new_game">Retry</string>
+    <string name="new_game">New Game</string>
     <string name="lose_emoji">You have lose</string>
     <string name="highscore" translatable="false">Highscore: %d</string>
     <string name="actual_score">Actual score: %d</string>
