@@ -101,4 +101,7 @@
     <string name="actual_score">Actual score: %d</string>
     <string name="copy">Copy</string>
     <string name="copied">Copied</string>
+    <string name="note_click_desc">Here you can open a note</string>
+    <string name="btn_whiteboad_desc">Here you can see the associated whiteboard</string>
+    <string name="menu_allfiles_desc">Here you can apply new filter or view your pdf</string>
 </resources>

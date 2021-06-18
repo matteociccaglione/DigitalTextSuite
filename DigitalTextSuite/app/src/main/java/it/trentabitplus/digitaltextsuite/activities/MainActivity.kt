@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         }
         val imageUri = intent.getParcelableExtra<Parcelable>(Intent.EXTRA_STREAM) as? Uri
         if (imageUri != null) {
-            Log.d("TESTINTENTENTRY", "HERE")
             val intent = Intent(this, RealMainActivity::class.java)
             intent.putExtra("image", imageUri)
             startActivity(intent)
@@ -63,11 +62,20 @@ class MainActivity : AppCompatActivity() {
             // we used the postDelayed(Runnable, time) method
             // to send a message with a delayed time.
             else {
-                Handler(Looper.getMainLooper()).postDelayed({
-                    val intent = Intent(this, RealMainActivity::class.java)
+                val sharedPref = getPreferences(Context.MODE_PRIVATE)
+                val isFirst = sharedPref.getBoolean("isFirst",true)
+                if(isFirst){
+                    val intent = Intent(this,TutorialActivity::class.java)
+                    sharedPref.edit().putBoolean("isFirst",false).apply()
                     startActivity(intent)
-                    finish()
-                }, SPLASH_SCREEN_DURATION)
+                }
+                else {
+                    Handler(Looper.getMainLooper()).postDelayed({
+                        val intent = Intent(this, RealMainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }, SPLASH_SCREEN_DURATION)
+                }
             }
         }
     }
