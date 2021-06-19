@@ -1,6 +1,7 @@
 package it.trentabitplus.digitaltextsuite.activities
 
 import android.content.*
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -269,10 +270,23 @@ class TextResultActivity : AppCompatActivity() {
                 closeFabMenu()
             }
             else{
-                //val fabDimen = binding.fabMore.layoutParams.height
-                binding.fabTranslate.animate().translationY(-resources.getDimension(R.dimen.fab_move_80))
-                binding.fabPrintPdf.animate().translationY(-resources.getDimension(R.dimen.fab_move_150))
-                binding.fabFavourite.animate().translationY(-resources.getDimension(R.dimen.fab_move_225))
+                val orientation = resources.configuration.orientation
+                if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+                    binding.fabTranslate.animate()
+                        .translationX(-resources.getDimension(R.dimen.fab_move_80))
+                    binding.fabPrintPdf.animate()
+                        .translationX(-resources.getDimension(R.dimen.fab_move_150))
+                    binding.fabFavourite.animate()
+                        .translationX(-resources.getDimension(R.dimen.fab_move_225))
+                }
+                else {
+                    binding.fabTranslate.animate()
+                        .translationY(-resources.getDimension(R.dimen.fab_move_80))
+                    binding.fabPrintPdf.animate()
+                        .translationY(-resources.getDimension(R.dimen.fab_move_150))
+                    binding.fabFavourite.animate()
+                        .translationY(-resources.getDimension(R.dimen.fab_move_225))
+                }
                 fabMenuShowed=true
                 binding.fabMore.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.close_24))
             }
@@ -388,9 +402,17 @@ class TextResultActivity : AppCompatActivity() {
         binding.scrollView2.isEnabled = enabled
     }
     private fun closeFabMenu(){
-        binding.fabPrintPdf.animate().translationY(0f)
-        binding.fabTranslate.animate().translationY(0f)
-        binding.fabFavourite.animate().translationY(0f)
+        val orientation = resources.configuration.orientation
+        if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+            binding.fabPrintPdf.animate().translationX(0f)
+            binding.fabTranslate.animate().translationX(0f)
+            binding.fabFavourite.animate().translationX(0f)
+        }
+        else {
+            binding.fabPrintPdf.animate().translationY(0f)
+            binding.fabTranslate.animate().translationY(0f)
+            binding.fabFavourite.animate().translationY(0f)
+        }
         binding.fabMore.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_baseline_add_24))
         fabMenuShowed=false
     }

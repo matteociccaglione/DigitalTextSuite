@@ -11,6 +11,7 @@ import androidx.camera.core.ImageCapture
 import androidx.camera.core.ImageCaptureException
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
+import com.bumptech.glide.load.ImageHeaderParser.UNKNOWN_ORIENTATION
 import it.trentabitplus.digitaltextsuite.R
 import it.trentabitplus.digitaltextsuite.animation.ZoomAnimationListener
 import it.trentabitplus.digitaltextsuite.databinding.FragmentCameraDigitalRecBinding
@@ -38,6 +39,29 @@ class FragmentCameraDigitalize: CameraFragment(){
         setHasOptionsMenu(true)
     }
 
+    override fun onStop() {
+        super.onStop()
+        orientationEventListener.disable()
+    }
+    private val orientationEventListener by lazy {
+        object : OrientationEventListener(requireContext()) {
+            override fun onOrientationChanged(orientation: Int) {
+                if (orientation == UNKNOWN_ORIENTATION) {
+                    return
+                }
+
+                val rotation = when (orientation) {
+                    in 45 until 135 -> Surface.ROTATION_270
+                    in 135 until 225 -> Surface.ROTATION_180
+                    in 225 until 315 -> Surface.ROTATION_90
+                    else -> Surface.ROTATION_0
+                }
+                if(imageCapture!=null)
+                    imageCapture!!.targetRotation = rotation
+            }
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         for(it in menu.children){
             it.isVisible = false
@@ -47,7 +71,9 @@ class FragmentCameraDigitalize: CameraFragment(){
     override fun onResume(){
         super.onResume()
         show(binding.vfCamera)
+        orientationEventListener.enable()
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //show(binding.vfCamera)

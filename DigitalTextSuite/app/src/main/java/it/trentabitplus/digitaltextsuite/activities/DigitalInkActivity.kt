@@ -32,6 +32,7 @@ import it.trentabitplus.digitaltextsuite.utils.Language
 import it.trentabitplus.digitaltextsuite.utils.digitalink.DigitalInkManager
 import it.trentabitplus.digitaltextsuite.utils.digitalink.RecognitionTask
 import it.trentabitplus.digitaltextsuite.utils.digitalink.SaveManager
+import it.trentabitplus.digitaltextsuite.view.Whiteboard
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -259,18 +260,24 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
                 "digitaltextsuite" + File.separator + "whiteboards" + File.separator + dir + File.separator + title+"_"+whiteboard.id + ".json"
             )
             val imgUri = File(photoDir.absolutePath,title+"_"+whiteboard.id+".png")
-            binding.whiteboard.saveBoard(
-                jsonUri,
-                imgUri
-            )
-            whiteboard.path=jsonUri.absolutePath
-            whiteboard.imgPath = imgUri.absolutePath
-            whiteboard.title=title
-            dao.updateWhiteboard(whiteboard)
-            CoroutineScope(Dispatchers.Main).launch{
-                Toast.makeText(this@DigitalInkActivity,"SAVED",Toast.LENGTH_LONG).show()
-                if(digitalize){
-                    digitalizeNote()
+            try {
+                binding.whiteboard.saveBoard(
+                    jsonUri,
+                    imgUri
+                )
+                whiteboard.path = jsonUri.absolutePath
+                whiteboard.imgPath = imgUri.absolutePath
+                whiteboard.title = title
+                dao.updateWhiteboard(whiteboard)
+                CoroutineScope(Dispatchers.Main).launch {
+                    Toast.makeText(this@DigitalInkActivity, "SAVED", Toast.LENGTH_LONG).show()
+                    if (digitalize) {
+                        digitalizeNote()
+                    }
+                }
+            }catch(exception: Whiteboard.EmptyWhiteboardException){
+                CoroutineScope(Dispatchers.Main).launch{
+                    Toast.makeText(this@DigitalInkActivity,"EMPTY WHITEBOARD",Toast.LENGTH_SHORT).show()
                 }
             }
         }

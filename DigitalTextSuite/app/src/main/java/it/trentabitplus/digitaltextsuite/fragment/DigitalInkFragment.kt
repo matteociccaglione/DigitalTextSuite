@@ -112,9 +112,9 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
         binding.rvWhiteboards.adapter = null
         spanCount = 3
         Log.d("DPVALUE","height: "+conf!!.screenHeightDp.toString()+" width: "+conf.screenWidthDp)
-//        if(conf!!.screenHeightDp<conf.screenWidthDp)
-//            //Landscape mode
-//            spanCount=5
+        if(conf!!.screenHeightDp<conf.screenWidthDp)
+            //Landscape mode
+            spanCount=5
         defaultSize = (conf.screenWidthDp * dm!!.density / spanCount).toInt()
         try {
             binding.rvWhiteboards.layoutManager = GridLayoutManager(requireContext(), spanCount)

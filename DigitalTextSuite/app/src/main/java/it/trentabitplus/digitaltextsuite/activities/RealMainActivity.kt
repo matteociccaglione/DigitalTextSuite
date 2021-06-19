@@ -1,9 +1,11 @@
 package it.trentabitplus.digitaltextsuite.activities
 
 import android.Manifest
+import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.Menu
 import android.view.View
 import android.widget.Toast
@@ -13,6 +15,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import it.trentabitplus.digitaltextsuite.R
@@ -86,7 +89,17 @@ class RealMainActivity : AppCompatActivity() {
             }
         }
     }
-
+    private var pageChangeCallback:
+            ViewPager2.OnPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+            super.onPageSelected(position)
+            requestedOrientation = if(position==2 || position==3){
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            } else{
+                ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
+            }
+        }
+    }
     override fun onResume() {
         super.onResume()
 
@@ -107,6 +120,7 @@ class RealMainActivity : AppCompatActivity() {
         binding.tvRec.visibility = View.GONE
         binding.viewPagerMain.isUserInputEnabled=false
         binding.viewPagerMain.adapter = ViewPagerAdapter(this)
+        binding.viewPagerMain.registerOnPageChangeCallback(pageChangeCallback)
         val icons = arrayOf(R.drawable.database,R.drawable.square_edit_outline,R.drawable.ic_baseline_translate_24,R.drawable.text_recognition,R.drawable.favourite_icon_24)
         TabLayoutMediator(
             binding.tabLayout, binding.viewPagerMain

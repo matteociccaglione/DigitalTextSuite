@@ -17,6 +17,7 @@ class AllFilesViewModel(application: Application): AndroidViewModel(application)
 
     val listNotes: MutableLiveData<MutableList<Note>> = MutableLiveData()
     val listDirectory: MutableLiveData<MutableList<Directory>> = MutableLiveData()
+    val selectedNote : MutableLiveData<Note> = MutableLiveData()
     private var sortType: SortingType = SortingType.ALPHABETIC_ASC
 
     fun filter(value: String?,mode: FilterMode,directory: String){

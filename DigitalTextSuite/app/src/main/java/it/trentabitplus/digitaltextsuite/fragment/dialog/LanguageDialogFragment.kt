@@ -28,12 +28,8 @@ class LanguageDialogFragment(private val languages : List<String>): DialogFragme
     }
     private lateinit var binding : ChooseLanguageDialogBinding
     companion object{
-        private var instance : LanguageDialogFragment? = null
         fun getInstance(languages: List<String>): LanguageDialogFragment{
-            if(instance == null){
-                instance = LanguageDialogFragment(languages)
-            }
-            return instance as LanguageDialogFragment
+            return  LanguageDialogFragment(languages)
         }
     }
 
@@ -48,6 +44,7 @@ class LanguageDialogFragment(private val languages : List<String>): DialogFragme
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        languages.toMutableList().sort()
         binding.stringPicker.minValue=0
         binding.stringPicker.maxValue=languages.size-1
         binding.stringPicker.displayedValues=languages.toTypedArray()

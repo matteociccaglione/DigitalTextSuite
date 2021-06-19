@@ -16,6 +16,7 @@ import it.trentabitplus.digitaltextsuite.utils.digitalink.SaveManager
 import it.trentabitplus.digitaltextsuite.utils.digitalink.WhiteboardMetadata
 import java.io.File
 import java.io.FileOutputStream
+import java.lang.Exception
 
 /**
  * This class is a view representing a whiteboard where the user can write using their fingers or a suitable pen
@@ -211,14 +212,24 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
     }
 
     /**
+     * This exception is throw when a whiteboard is empty
+     *
+     */
+    class EmptyWhiteboardException(): Exception(){
+
+    }
+    /**
      * This method allows you to save the current whiteboard (and all its pages)
      * @param path is the file that must contain the metadata used to restore the whiteboard
      * @param imagePath is the file that must contain the whiteboard preview (Usually a front page image)
+     * @throws EmptyWhiteboardException if all pages in the whiteboard are empty
      */
-    fun saveBoard(path: File,imagePath: File){
+    fun saveBoard(path: File,imagePath: File) {
         val listOfStrokes = mutableListOf<MutableList<Ink.Stroke>>()
         val listPaints = mutableListOf<MutableList<Paint>>()
         for(page in pathToStroke.indices) {
+            if(pathToStroke[page].isEmpty())
+                continue
             listOfStrokes.add(mutableListOf())
             listPaints.add(mutableListOf())
             Log.d("PAGESTROKESIZE",pathToStroke[page].size.toString())
@@ -226,6 +237,9 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
                 listOfStrokes[page].add(pathToStroke[page][i].stroke)
                 listPaints[page].add(pathToStroke[page][i].paint)
             }
+        }
+        if(listOfStrokes.isEmpty()){
+            throw EmptyWhiteboardException()
         }
         val saveManager = SaveManager()
         saveManager.path = path.absolutePath

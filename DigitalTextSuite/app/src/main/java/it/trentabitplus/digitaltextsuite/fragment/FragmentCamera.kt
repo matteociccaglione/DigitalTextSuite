@@ -34,7 +34,7 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
     protected var imageAnalysis: ImageAnalysis? = null
     protected var lensFacing = CameraSelector.DEFAULT_BACK_CAMERA
     protected lateinit var captureHandler: CaptureHandler
-    protected lateinit var imageCapture : ImageCapture
+    protected var imageCapture : ImageCapture? = null
     protected lateinit var preview : Preview
     protected lateinit var cameraProvider: ProcessCameraProvider
     protected var camera : Camera? = null
@@ -136,7 +136,7 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
         cameraExecutor.shutdown()
     }
     fun setFlash(mode: Int){
-        imageCapture.flashMode=mode
+        imageCapture!!.flashMode=mode
     }
     fun takePhoto(save: Boolean){
         Log.d("SAVE?",save.toString())
@@ -163,7 +163,7 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
         else
             outputFileOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
 
-        imageCapture.takePicture(outputFileOptions, cameraExecutor, object : ImageCapture.OnImageSavedCallback {
+        imageCapture!!.takePicture(outputFileOptions, cameraExecutor, object : ImageCapture.OnImageSavedCallback {
             override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
                 captureHandler.saveImage(Uri.fromFile(photoFile),!save)
             }

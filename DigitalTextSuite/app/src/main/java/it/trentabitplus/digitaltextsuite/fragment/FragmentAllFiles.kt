@@ -3,6 +3,7 @@ package it.trentabitplus.digitaltextsuite.fragment
 import android.app.Activity
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -49,7 +50,7 @@ import java.util.*
 class FragmentAllFiles : Fragment(), SelectedHandler{
     private lateinit var binding: FragmentAllFilesBinding
     private var showMode = FilesShowMode.DIR_BIG
-    private val viewModel: AllFilesViewModel by viewModels()
+    val viewModel: AllFilesViewModel by viewModels()
     private lateinit var adapter: AllFilesBigAdapter
     private var mActionMode: ActionMode? = null
     private lateinit var adapterSmall: AllFilesSmallAdapter
@@ -61,7 +62,6 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
     private var sortingType = SortingType.ALPHABETIC_ASC
     private lateinit var menu: Menu
     private var actualDirectory = "Default"
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,6 +81,14 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         this.menu = menu
         for(it in menu.children){
             it.isVisible=true
+            if(it.itemId == R.id.it_preview){
+                val drawableId = if(showMode == FilesShowMode.BIG || showMode == FilesShowMode.DIR_BIG){
+                    R.drawable.ic_baseline_format_list_bulleted_24
+                }
+                else
+                    R.drawable.ic_baseline_grid_view_24
+                it.icon = ContextCompat.getDrawable(requireContext(),drawableId)
+            }
         }
         super.onCreateOptionsMenu(menu, inflater)
     }
@@ -94,7 +102,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
                     Log.d("HERE", "HERE")
                     item.icon = ContextCompat.getDrawable(
                         requireContext(),
-                        R.drawable.ic_baseline_format_list_bulleted_24
+                        R.drawable.ic_baseline_grid_view_24
                     )
                     if (showMode == FilesShowMode.DIR_BIG) {
                         showMode = FilesShowMode.DIR_SMALL
@@ -109,7 +117,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
                     item.icon =
                         ContextCompat.getDrawable(
                             requireContext(),
-                            R.drawable.ic_baseline_grid_view_24
+                            R.drawable.ic_baseline_format_list_bulleted_24
                         )
                     if (showMode == FilesShowMode.DIR_SMALL) {
                         showMode = FilesShowMode.DIR_BIG
@@ -175,10 +183,22 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        if(savedInstanceState!=null){
+            val mode = savedInstanceState.getInt("showMode")
+            showMode = when(mode){
+                FilesShowMode.BIG.ordinal -> FilesShowMode.BIG
+                FilesShowMode.SMALL.ordinal -> FilesShowMode.SMALL
+                FilesShowMode.DIR_BIG.ordinal -> FilesShowMode.DIR_BIG
+                FilesShowMode.DIR_SMALL.ordinal -> FilesShowMode.DIR_SMALL
+                else -> FilesShowMode.DIR_BIG
+            }
+            val note = Note()
+            note.id = -1
+            viewModel.selectedNote.value = note
+        }
         setLiveData()
         setUI()
         //loadData()
-
     }
 
 
@@ -203,7 +223,6 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
     }
     override fun onResume(){
         super.onResume()
-        showMode = FilesShowMode.DIR_BIG
         setUI()
         loadData()
     }
@@ -214,7 +233,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             adapterDirectoryBig = DirectoryBigAdapter(listDirectory, requireContext(),this,spanCount)
             binding.rvFiles.adapter = adapterDirectoryBig
         }
-        else{
+        else if (showMode == FilesShowMode.DIR_SMALL){
             adapterDirectorySmall = DirectorySmallAdapter(listDirectory,requireContext(),this)
             binding.rvFiles.adapter = adapterDirectorySmall
         }
@@ -225,7 +244,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             binding.rvFiles.adapter=adapter
         }
         else{
-            adapterSmall = AllFilesSmallAdapter(listFiles,requireContext(),this)
+            adapterSmall = AllFilesSmallAdapter(listFiles,requireContext(),this,this)
             binding.rvFiles.adapter=adapterSmall
         }
     }
@@ -258,6 +277,11 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             }
         }
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("showMode",showMode.ordinal)
+        super.onSaveInstanceState(outState)
+    }
     private fun setUI(){
         binding.rvFiles.invalidate()
         binding.rvFiles.invalidateItemDecorations()
@@ -267,15 +291,35 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         for(i in 0 until binding.rvFiles.itemDecorationCount){
             binding.rvFiles.removeItemDecorationAt(i)
         }
+        val orientation = requireContext().resources.configuration.orientation
+        if(orientation == Configuration.ORIENTATION_LANDSCAPE && showMode == FilesShowMode.SMALL){
+            binding.previewLayout!!.isVisible = true
+            binding.guidelineAllFiles!!.setGuidelinePercent(0.5f)
+           childFragmentManager.beginTransaction()
+                .replace(binding.previewLayout!!.id, FragmentNoteDetails(), DETAILS_FRAGMENT_TAG )
+                .commit()
+        }
+        else{
+            if(orientation == Configuration.ORIENTATION_LANDSCAPE){
+                binding.previewLayout!!.isVisible = false
+                binding.guidelineAllFiles!!.setGuidelinePercent(1f)
+            }
+        }
         when(showMode) {
             FilesShowMode.BIG -> {
-                spanCount = 2
+                spanCount = if(orientation == Configuration.ORIENTATION_LANDSCAPE)
+                    4
+                else
+                    2
                 layoutManager =
                     StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL)
                 (layoutManager as StaggeredGridLayoutManager).gapStrategy=StaggeredGridLayoutManager.GAP_HANDLING_NONE
             }
             FilesShowMode.DIR_BIG -> {
-                spanCount = 3
+                spanCount =  if(orientation == Configuration.ORIENTATION_LANDSCAPE)
+                    5
+                else
+                    3
                 layoutManager =
                     StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL)
                 (layoutManager as StaggeredGridLayoutManager).gapStrategy=StaggeredGridLayoutManager.GAP_HANDLING_NONE
@@ -313,6 +357,8 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             binding.imageButton.visibility=View.GONE
         }
         else{
+            if(viewModel.listNotes.value != null)
+            setAdapterFiles(viewModel.listNotes.value!!)
             binding.imageButton.visibility=View.VISIBLE
         }
         binding.imageButton.setOnClickListener{
@@ -341,9 +387,9 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         }
     }
     companion object {
-
+        const val DETAILS_FRAGMENT_TAG = "details"
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             FragmentAllFiles()
     }
 
