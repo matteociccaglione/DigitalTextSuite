@@ -283,6 +283,9 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         super.onSaveInstanceState(outState)
     }
     private fun setUI(){
+        val note = Note()
+        note.id = -1
+        viewModel.selectedNote.value = note
         binding.rvFiles.invalidate()
         binding.rvFiles.invalidateItemDecorations()
         binding.rvFiles.adapter = null
@@ -394,8 +397,10 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
     }
 
     override fun selectedHandler(element: Any): Boolean {
+        var isFirst = false
         if(selectedItem.isEmpty()){
             mActionMode = requireActivity().startActionMode(AllFilesActionModeCallback())
+            isFirst = true
         }
         if(selectedItem.contains(element)) {
             selectedItem.remove(element)
@@ -404,9 +409,23 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             return false
         }
         selectedItem.add(element)
+        if(isFirst){
+            val note = Note()
+            note.id = -1
+            viewModel.selectedNote.value = note
+            (childFragmentManager.findFragmentByTag(DETAILS_FRAGMENT_TAG) as FragmentNoteDetails).reset()
+        }
         return true
     }
-
+    fun isSelected(note: Note): Boolean{
+        for(any in selectedItem){
+            if(any is Note){
+                if(any.id == note.id)
+                    return true
+            }
+        }
+        return false
+    }
     override fun isAnItemSelected(): Boolean {
         return selectedItem.isNotEmpty()
     }

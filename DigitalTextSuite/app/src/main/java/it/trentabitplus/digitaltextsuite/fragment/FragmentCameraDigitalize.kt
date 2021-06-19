@@ -115,7 +115,8 @@ class FragmentCameraDigitalize: CameraFragment(){
     }
     private fun setIconFlash(){
         binding.imgBtnFlash.setImageDrawable(when(flashMode){
-            ImageCapture.FLASH_MODE_ON -> ContextCompat.getDrawable(requireContext(), R.drawable.flash_on_48)
+            ImageCapture.FLASH_MODE_ON ->
+                ContextCompat.getDrawable(requireContext(), R.drawable.flash_on_48)
             ImageCapture.FLASH_MODE_OFF -> ContextCompat.getDrawable(requireContext(), R.drawable.flash_off_48)
             else -> ContextCompat.getDrawable(requireContext(), R.drawable.flash_auto_48)
         })

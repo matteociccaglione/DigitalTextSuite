@@ -90,6 +90,8 @@ class SmallFileViewHolder(val binding: ItemFileSmallBinding,val context: Context
         field = value
         val observer = Observer<Note>{
             binding.cv.isSelected = it.id == note.id
+            if(fragment.isSelected(note))
+                binding.cv.isSelected = true
         }
         fragment.viewModel.selectedNote.observe(fragment,observer)
         binding.tvTitleSmall.text=field.title

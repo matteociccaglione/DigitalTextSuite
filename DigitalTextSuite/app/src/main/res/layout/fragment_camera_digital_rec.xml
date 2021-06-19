@@ -50,11 +50,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/btnsetflash"
         app:layout_constraintBottom_toBottomOf="@+id/imgBtnCamera"
         app:layout_constraintEnd_toStartOf="@+id/imgBtnCamera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imgBtnCamera"
-        app:srcCompat="@drawable/flash_on_48"
-        android:contentDescription="@string/btnsetflash" />
+        app:srcCompat="@drawable/flash_off_48" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

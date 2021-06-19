@@ -270,14 +270,14 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
                 whiteboard.title = title
                 dao.updateWhiteboard(whiteboard)
                 CoroutineScope(Dispatchers.Main).launch {
-                    Toast.makeText(this@DigitalInkActivity, "SAVED", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@DigitalInkActivity, getString(R.string.saved_whiteboard), Toast.LENGTH_LONG).show()
                     if (digitalize) {
                         digitalizeNote()
                     }
                 }
             }catch(exception: Whiteboard.EmptyWhiteboardException){
                 CoroutineScope(Dispatchers.Main).launch{
-                    Toast.makeText(this@DigitalInkActivity,"EMPTY WHITEBOARD",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@DigitalInkActivity,getString(R.string.not_saved_whiteboard),Toast.LENGTH_SHORT).show()
                 }
             }
         }

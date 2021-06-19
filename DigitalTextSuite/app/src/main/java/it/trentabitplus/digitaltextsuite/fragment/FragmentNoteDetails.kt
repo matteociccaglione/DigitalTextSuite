@@ -35,6 +35,10 @@ class FragmentNoteDetails : Fragment() {
         binding = FragmentNoteDetailsBinding.inflate(inflater)
         return binding.root
     }
+    fun reset(){
+        note = null
+        setUI()
+    }
     fun setNote(note: Note){
         this.note = note
         CoroutineScope(Dispatchers.IO).launch {
@@ -49,6 +53,8 @@ class FragmentNoteDetails : Fragment() {
     private fun setUI(){
         if(note != null)
             binding.tvNoteDetails.text = note!!.text
+        else
+            binding.tvNoteDetails.text = ""
         binding.fbFullScreen.isVisible = binding.tvNoteDetails.text.isNotEmpty()
         binding.fbFullScreen.setOnClickListener{
             val intent = Intent(requireContext(),TextResultActivity::class.java)

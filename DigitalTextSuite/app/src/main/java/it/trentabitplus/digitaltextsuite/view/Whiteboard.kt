@@ -227,15 +227,18 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
     fun saveBoard(path: File,imagePath: File) {
         val listOfStrokes = mutableListOf<MutableList<Ink.Stroke>>()
         val listPaints = mutableListOf<MutableList<Paint>>()
+        var dirtyPage = 0
         for(page in pathToStroke.indices) {
-            if(pathToStroke[page].isEmpty())
+            if(pathToStroke[page].isEmpty()) {
+                dirtyPage ++
                 continue
+            }
             listOfStrokes.add(mutableListOf())
             listPaints.add(mutableListOf())
             Log.d("PAGESTROKESIZE",pathToStroke[page].size.toString())
             for (i in pathToStroke[page].indices) {
-                listOfStrokes[page].add(pathToStroke[page][i].stroke)
-                listPaints[page].add(pathToStroke[page][i].paint)
+                listOfStrokes[page-dirtyPage].add(pathToStroke[page][i].stroke)
+                listPaints[page-dirtyPage].add(pathToStroke[page][i].paint)
             }
         }
         if(listOfStrokes.isEmpty()){
