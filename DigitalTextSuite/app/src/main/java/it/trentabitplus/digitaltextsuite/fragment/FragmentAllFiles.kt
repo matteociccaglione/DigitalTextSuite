@@ -294,7 +294,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         val orientation = requireContext().resources.configuration.orientation
         if(orientation == Configuration.ORIENTATION_LANDSCAPE && showMode == FilesShowMode.SMALL){
             binding.previewLayout!!.isVisible = true
-            binding.guidelineAllFiles!!.setGuidelinePercent(0.5f)
+            binding.guidelineAllFiles!!.setGuidelinePercent(0.4f)
            childFragmentManager.beginTransaction()
                 .replace(binding.previewLayout!!.id, FragmentNoteDetails(), DETAILS_FRAGMENT_TAG )
                 .commit()

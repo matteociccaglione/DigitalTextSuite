@@ -2,12 +2,12 @@ package it.trentabitplus.digitaltextsuite.fragment.dialog
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.FileProvider
+import androidx.core.view.isVisible
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import it.trentabitplus.digitaltextsuite.R
@@ -51,7 +51,8 @@ class SelectPdfDialog(private var fileList : List<File>) : DialogFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.d("PDF", "Dialog: ${fileList.size}")
+
+        binding.tvNoPdfFound.isVisible = fileList.isEmpty()
         val rvAdapter = SelectPdfAdapter(fileList, requireContext())
         binding.rvPdfList.layoutManager = LinearLayoutManager(requireContext())
         binding.rvPdfList.adapter = rvAdapter

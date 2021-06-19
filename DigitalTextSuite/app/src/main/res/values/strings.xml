@@ -108,4 +108,5 @@
     <string name="no_models_downloaded">No models downloaded</string>
     <string name="delete_models">Delete Models</string>
     <string name="select_models_to_delete">Select models to delete</string>
+    <string name="no_pdf_file_has_been_found">No pdf file has been found</string>
 </resources>
