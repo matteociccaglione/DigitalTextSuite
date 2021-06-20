@@ -225,6 +225,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         super.onResume()
         setUI()
         loadData()
+        viewModel.refresh()
     }
     private fun setAdapterDirectory(listDirectory: List<Directory>){
         binding.rvFiles.invalidate()

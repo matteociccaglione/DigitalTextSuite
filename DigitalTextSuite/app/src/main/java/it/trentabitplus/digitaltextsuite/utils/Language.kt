@@ -1,4 +1,7 @@
 package it.trentabitplus.digitaltextsuite.utils
+import androidx.lifecycle.MutableLiveData
+import com.google.mlkit.nl.languageid.LanguageIdentification
+import com.google.mlkit.nl.languageid.LanguageIdentificationOptions
 import java.util.*
 
 /**
@@ -45,6 +48,23 @@ class Language(val code: String) : Comparable<Language> {
 
             return flag
 
+        }
+
+        /**
+         * Identify the language of a String and put the result into the value of result param
+         *
+         * @param text The string to be analyzed
+         * @param result The variable where the method must store the result. Put an observer on it
+         */
+        fun identifyLanguage(text: String,result: MutableLiveData<String>){
+            val languageIdentifier = LanguageIdentification.getClient(
+                LanguageIdentificationOptions
+                .Builder()
+                .setConfidenceThreshold(0.80f)
+                .build())
+            languageIdentifier.identifyLanguage(text).addOnSuccessListener { langCode ->
+                result.value = langCode
+            }
         }
 
         private fun getCharacter(character : Char) : String{

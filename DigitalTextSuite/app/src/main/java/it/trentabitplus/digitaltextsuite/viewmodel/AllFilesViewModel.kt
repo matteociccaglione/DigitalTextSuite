@@ -89,4 +89,15 @@ class AllFilesViewModel(application: Application): AndroidViewModel(application)
             }
         }
     }
+    fun refresh(){
+        if(listNotes.value!=null) {
+            val dao = DbDigitalPhotoEditor.getInstance(getApplication()).digitalPhotoEditorDAO()
+            CoroutineScope(Dispatchers.IO).launch {
+                val result = dao.loadAllByDirectory(listNotes.value!![0].directory)
+                CoroutineScope(Dispatchers.Main).launch{
+                    listNotes.value = result.toMutableList()
+                }
+            }
+        }
+    }
 }

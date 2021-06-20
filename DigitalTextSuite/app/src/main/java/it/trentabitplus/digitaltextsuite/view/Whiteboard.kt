@@ -111,7 +111,7 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
             invalidate()
             return true
         }
-        else{
+        else if(drawingMode == DrawingMode.ERASE){
             /**
              * Erase mode: Search among all the paths the one that contains the point corresponding to the touch event by
              * building a rectangle around it for each path and verifying that the rectangle contains the point
@@ -129,6 +129,9 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
                     break
                 }
             }
+            return false
+        }
+        else{
             return false
         }
     }

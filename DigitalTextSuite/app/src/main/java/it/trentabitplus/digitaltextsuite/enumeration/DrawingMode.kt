@@ -9,5 +9,9 @@ enum class DrawingMode {
     /**
      * Enable whiteboard erasing
      */
-    ERASE
+    ERASE,
+    /**
+     * Disable whiteboard
+     */
+    NO_DRAW
 }

@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import com.google.android.gms.tasks.Tasks
 import com.google.mlkit.nl.translate.TranslateLanguage
 import it.trentabitplus.digitaltextsuite.R
@@ -114,16 +116,26 @@ class TextResultActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             note.lastDateModify = System.currentTimeMillis()
             note.text = textResult
-            dao.updateNote(note)
-            if(whiteboard!=null){
-                whiteboard.idNote = null
-                dao.updateWhiteboard(whiteboard)
-            }
+            val result = MutableLiveData<String>()
             CoroutineScope(Dispatchers.Main).launch {
-                if (saved) {
-                    type = TextResultType.SAVED
-                    setType(menu)
+                val observer = Observer<String> {
+                    note.language = it
+                    CoroutineScope(Dispatchers.IO).launch {
+                        dao.updateNote(note)
+                        if (whiteboard != null) {
+                            whiteboard.idNote = null
+                            dao.updateWhiteboard(whiteboard)
+                        }
+                        CoroutineScope(Dispatchers.Main).launch {
+                            if (saved) {
+                                type = TextResultType.SAVED
+                                setType(menu)
+                            }
+                        }
+                    }
                 }
+                result.observe(this@TextResultActivity, observer)
+                Language.identifyLanguage(note.text, result)
             }
         }
     }

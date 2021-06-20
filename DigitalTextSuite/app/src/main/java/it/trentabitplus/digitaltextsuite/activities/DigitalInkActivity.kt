@@ -56,6 +56,10 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
     private fun setUI(){
         binding.textView5.visibility=View.GONE
         binding.progressBar2.visibility=View.GONE
+        binding.whiteboard.drawingMode = DrawingMode.DRAW
+        binding.selected2.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
+        binding.selected.setBackgroundColor(ContextCompat.getColor(this,R.color.selected_blue))
+        binding.selected3.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
         binding.whiteboard.refresh()
         manager = DigitalInkManager()
         manager.setStatusChangedListener(this)
@@ -75,6 +79,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         }
         binding.btnPen.setOnClickListener{
             binding.whiteboard.drawingMode= DrawingMode.DRAW
+            binding.whiteboard.isEnabled = true
             binding.selected2.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
             binding.selected.setBackgroundColor(ContextCompat.getColor(this,R.color.selected_blue))
             binding.selected3.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
@@ -126,9 +131,11 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
             }
         }
         binding.btnDigitalizeWhiteboard.setOnClickListener {
+            binding.whiteboard.drawingMode = DrawingMode.NO_DRAW
             digitalizeNote()
         }
         binding.buttonSaveWhiteboard.setOnClickListener{
+            binding.whiteboard.drawingMode = DrawingMode.NO_DRAW
             saveWhiteboard()
         }
     }
