@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.Toast
@@ -59,18 +60,21 @@ class RealMainActivity : AppCompatActivity() {
     private fun loadImageIntent(){
         binding.pbRec.visibility = View.VISIBLE
         binding.tvRec.visibility = View.VISIBLE
+        val recognizer = RecognizerUtil(this)
+        recognizer.setOnErrorHandler {
+            binding.pbRec.visibility = View.GONE
+            binding.tvRec.visibility = View.GONE
+        }
         val fileUri = intent.getParcelableExtra<Uri>("image")
         if(fileUri!=null){
-            RecognizerUtil(this).recognize(fileUri,false)
+            recognizer.recognize(fileUri,false)
         }
         else{
             val listUri = intent.getParcelableArrayListExtra<Uri>("images")
             if(listUri!=null){
-                RecognizerUtil(this).recognizeAll(listUri,false)
+                recognizer.recognizeAll(listUri,false)
             }
         }
-        binding.pbRec.visibility = View.GONE
-        binding.tvRec.visibility = View.GONE
     }
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(baseContext, it) == PackageManager.PERMISSION_GRANTED
@@ -102,7 +106,8 @@ class RealMainActivity : AppCompatActivity() {
     }
     override fun onResume() {
         super.onResume()
-
+        binding.pbRec.visibility = View.GONE
+        binding.tvRec.visibility = View.GONE
         if (widget_metadata!=-1)
             binding.viewPagerMain.currentItem = widget_metadata
     }
@@ -118,7 +123,6 @@ class RealMainActivity : AppCompatActivity() {
     private fun init(){
         binding.pbRec.visibility = View.GONE
         binding.tvRec.visibility = View.GONE
-        binding.viewPagerMain.isUserInputEnabled=false
         binding.viewPagerMain.adapter = ViewPagerAdapter(this)
         binding.viewPagerMain.registerOnPageChangeCallback(pageChangeCallback)
         val icons = arrayOf(R.drawable.database,R.drawable.square_edit_outline,R.drawable.ic_baseline_translate_24,R.drawable.text_recognition,R.drawable.favourite_icon_24)
@@ -132,7 +136,7 @@ class RealMainActivity : AppCompatActivity() {
 
         if(widget_metadata != -1)
             binding.viewPagerMain.currentItem = widget_metadata
-
+        binding.viewPagerMain.offscreenPageLimit=4
         loadImageIntent()
         rootDir = getOutputDirectory()
         pdfDir = File(rootDir, getString(R.string.pdf_dir)).apply { mkdir() }
@@ -143,12 +147,14 @@ class RealMainActivity : AppCompatActivity() {
             return fragmentNumber
         }
         override fun createFragment(position: Int): Fragment {
+            Log.d("POSITION",position.toString())
            val frag =when(position){
                0 -> FragmentAllFiles()
                1 -> DigitalInkFragment()
                2 -> FragmentCameraTranslate()
                3 ->  FragmentCameraDigitalize()
-               else -> FavouriteFragment()
+               4 -> FavouriteFragment()
+               else -> FragmentCameraDigitalize()
            }
          //   binding.viewPagerMain.isUserInputEnabled = frag !is DigitalInkFragment
             return frag

@@ -5,12 +5,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.autofill.AutofillValue
 import android.widget.SeekBar
 import it.trentabitplus.digitaltextsuite.databinding.ChoosePenDialogBinding
 
 class PenDialog : DialogFragment() {
     private var value : Int = 0
-    var stroke : Int = 3
+    private var stroke : Int = 3
     private var strokeListener: (stroke : Int) -> Unit = {
 
     }
@@ -35,10 +36,11 @@ class PenDialog : DialogFragment() {
     ): View {
         binding = ChoosePenDialogBinding.inflate(inflater)
         setSeek()
+        isCancelable = false
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.seekBarN
+        binding.seekBarN.progress=3
         setSeek()
         binding.btnOk.setOnClickListener{
             strokeListener(stroke)
@@ -77,5 +79,8 @@ class PenDialog : DialogFragment() {
     }
     fun setOnStrokeSelected(listener: (stroke: Int)-> Unit){
         this.strokeListener=listener
+    }
+    fun setOnCancelSelected(listener: () -> Boolean){
+        cancelListener = listener
     }
 }

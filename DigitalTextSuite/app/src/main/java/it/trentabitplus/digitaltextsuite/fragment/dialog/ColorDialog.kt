@@ -16,7 +16,7 @@ class ColorDialog : DialogFragment() {
     private var redValue : Int = 0
     private var greenValue : Int = 0
     private var blueValue : Int = 0
-    var colors : Int = Color.BLACK
+    private var colors : Int = Color.BLACK
     private var colorListener: (colors : Int) -> Unit = {
 
     }
@@ -43,6 +43,7 @@ class ColorDialog : DialogFragment() {
         binding = ChooseColorDialogBinding.inflate(inflater)
         colorImageView = binding.ColorPicker
         colorImageView!!.setBackgroundColor(Color.BLACK)
+        isCancelable = false
         setSeek()
         return binding.root
     }
@@ -96,6 +97,9 @@ class ColorDialog : DialogFragment() {
     }
     fun setOnColorSelected(listener: (color: Int)-> Unit){
         this.colorListener=listener
+    }
+    fun setOnCancelSelected(listener: () -> Boolean){
+        cancelListener = listener
     }
 }
 //fun setDrawWidth(dpWidth: Int){

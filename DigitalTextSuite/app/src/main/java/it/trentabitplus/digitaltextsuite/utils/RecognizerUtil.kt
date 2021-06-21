@@ -24,7 +24,9 @@ import java.lang.StringBuilder
  */
 class RecognizerUtil(val context: Context) {
     private var result : StringBuilder = StringBuilder()
+    private var errorHandler : () -> Unit ={
 
+    }
     /**
      * Perform a single image recognition
      * @param fileUri the uri of the image to be recognized
@@ -63,10 +65,20 @@ class RecognizerUtil(val context: Context) {
                 Toast.makeText(context,context.getString(R.string.error_recognition), Toast.LENGTH_LONG).show()
                 if(temp)
                     fileUri.toFile().delete()
+                errorHandler
             }
         }
     }
 
+    /**
+     * Set an error handler that is called by the recognizer when an error has occurred
+     * after showing an error message in a Toast
+     *
+     * @param handler The handler lambda-function
+     */
+    fun setOnErrorHandler(handler: () -> Unit){
+        errorHandler = handler
+    }
     /**
      * Perform a multiple image recognition
      * @param listUri the list of uri to be recognized
@@ -108,6 +120,7 @@ class RecognizerUtil(val context: Context) {
                 Toast.makeText(context,context.getString(R.string.error_recognition), Toast.LENGTH_LONG).show()
                 if(temp)
                     listUri[count].toFile().delete()
+                errorHandler
             }
         }
     }

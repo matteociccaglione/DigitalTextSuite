@@ -16,7 +16,6 @@ import it.trentabitplus.digitaltextsuite.interfaces.StatusChangedListener
  * @author Matteo Ciccaglione
  */
 class DigitalInkManager {
-
     private var strokeBuilder = Stroke.builder()
     private var listBuilder = ArrayList<Ink.Builder>()
     private var language = ""

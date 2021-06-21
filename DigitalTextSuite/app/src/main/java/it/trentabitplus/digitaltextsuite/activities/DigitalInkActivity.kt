@@ -43,6 +43,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
     private lateinit var whiteboard: DigitalizedWhiteboards
     private lateinit var manager: DigitalInkManager
     private lateinit var language: String
+    private var penTouch = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDigitalInkBinding.inflate(layoutInflater)
@@ -54,6 +55,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         setUI()
     }
     private fun setUI(){
+        penTouch = 1
         binding.textView5.visibility=View.GONE
         binding.progressBar2.visibility=View.GONE
         binding.whiteboard.drawingMode = DrawingMode.DRAW
@@ -72,6 +74,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
             binding.whiteboard.setContent(whiteboardMetadata.toMutableList())
         }
         binding.btnErase.setOnClickListener{
+            penTouch = 0
             binding.whiteboard.drawingMode= DrawingMode.ERASE
             binding.selected.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
             binding.selected2.setBackgroundColor(ContextCompat.getColor(this,R.color.selected_blue))
@@ -80,6 +83,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         binding.btnPen.setOnClickListener{
             binding.whiteboard.drawingMode= DrawingMode.DRAW
             binding.whiteboard.isEnabled = true
+            penTouch++
             binding.selected2.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
             binding.selected.setBackgroundColor(ContextCompat.getColor(this,R.color.selected_blue))
             binding.selected3.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
@@ -89,25 +93,32 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
             val penPick = PenDialog.getInstance()
             var value : Int
             penPick.setOnStrokeSelected {
-                value = penPick.stroke
-                Log.d("spessore","prima"+binding.whiteboard.stroke)
+                penTouch = 1
+                value = it
                 setStroke(value)
-                Log.d("spessore", penPick.stroke.toString())
-                Log.d("spessore", value.toString())
-                Log.d("spessore","dopo"+binding.whiteboard.stroke)
             }
-            penPick.show(supportFragmentManager,"PenDialog")
+            if(penTouch==2)
+                penPick.show(supportFragmentManager,"PenDialog")
         }
         binding.btnPickColor.setOnClickListener{
             val colorPick = ColorDialog.getInstance()
+            penTouch = 0
             var colore : Int
             colorPick.setOnColorSelected {
-                colore = colorPick.colors
-                Log.d("Colore", "prima"+binding.whiteboard.color.toString())
+                colore = it
+                penTouch = 1
+                binding.whiteboard.drawingMode = DrawingMode.DRAW
+                binding.selected2.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
+                binding.selected.setBackgroundColor(ContextCompat.getColor(this,R.color.selected_blue))
+                binding.selected3.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
                 setColor(colore)
-                Log.d("Colore", colorPick.colors.toString())
-                Log.d("Colore", colore.toString())
-                Log.d("Colore", "dopo"+binding.whiteboard.color.toString())
+            }
+            colorPick.setOnCancelSelected {
+                binding.whiteboard.drawingMode = DrawingMode.DRAW
+                binding.selected2.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
+                binding.selected.setBackgroundColor(ContextCompat.getColor(this,R.color.selected_blue))
+                binding.selected3.setBackgroundColor(ContextCompat.getColor(this,R.color.unselected))
+                true
             }
             colorPick.show(supportFragmentManager,"ColorDialog")
 

@@ -2,8 +2,10 @@ package it.trentabitplus.digitaltextsuite.utils.digitalink
 
 import android.graphics.Paint
 import android.graphics.Path
+import android.os.Parcelable
 import com.google.mlkit.vision.digitalink.Ink
 import it.trentabitplus.digitaltextsuite.view.Whiteboard
+import kotlinx.parcelize.Parcelize
 
 /**
  * This class represents the metadata associated with a whiteboard used in IO operations
