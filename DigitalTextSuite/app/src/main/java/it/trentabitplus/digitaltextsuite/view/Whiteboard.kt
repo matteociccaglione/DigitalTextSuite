@@ -3,12 +3,14 @@ package it.trentabitplus.digitaltextsuite.view
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
+import android.net.Uri
 import android.util.AttributeSet
 import android.util.DisplayMetrics
 import android.util.Log
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.net.toUri
 import com.google.mlkit.vision.digitalink.Ink
 import it.trentabitplus.digitaltextsuite.enumeration.DrawingMode
 import it.trentabitplus.digitaltextsuite.utils.digitalink.DigitalInkManager
@@ -366,6 +368,43 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
         }
         currentPage = 0
         currentStroke = Path()
+    }
+
+    /**
+     * Create a file in the cache dir and save the whiteboard metadata. This metadata can be used to restore a previous
+     * whiteboard instance. You should delete this file
+     *
+     * @return The uri of the json file with metadata
+     */
+    fun temporarySave(): Uri{
+        val outputDirectory = context.cacheDir
+        val filename = "Whiteboard_"+System.currentTimeMillis()
+        val extension = ".json"
+        val outputUri = File.createTempFile(filename,extension,outputDirectory)
+        val listOfStrokes = mutableListOf<MutableList<Ink.Stroke>>()
+        val listPaints = mutableListOf<MutableList<Paint>>()
+        var dirtyPage = 0
+        for(page in pathToStroke.indices) {
+            if(pathToStroke[page].isEmpty()) {
+                dirtyPage ++
+                continue
+            }
+            listOfStrokes.add(mutableListOf())
+            listPaints.add(mutableListOf())
+            Log.d("PAGESTROKESIZE",pathToStroke[page].size.toString())
+            for (i in pathToStroke[page].indices) {
+                listOfStrokes[page-dirtyPage].add(pathToStroke[page][i].stroke)
+                listPaints[page-dirtyPage].add(pathToStroke[page][i].paint)
+            }
+        }
+        if(listOfStrokes.isEmpty()){
+            throw EmptyWhiteboardException()
+        }
+        val saveManager = SaveManager()
+        saveManager.path = outputUri.absolutePath
+        saveManager.setMetadata(listOfStrokes,listPaints)
+        saveManager.fromMetadataToJson()
+        return outputUri.toUri()
     }
     init{
         paths.add(ArrayList())

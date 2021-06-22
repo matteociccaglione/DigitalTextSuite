@@ -4,15 +4,18 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import it.trentabitplus.digitaltextsuite.database.DigitalizedWhiteboards
 import android.os.Environment
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.core.net.toFile
 import com.google.mlkit.nl.translate.TranslateLanguage
 import it.trentabitplus.digitaltextsuite.R
 import it.trentabitplus.digitaltextsuite.database.DbDigitalPhotoEditor
@@ -43,16 +46,39 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
     private lateinit var whiteboard: DigitalizedWhiteboards
     private lateinit var manager: DigitalInkManager
     private lateinit var language: String
+    private var previousWhiteboard: String? = null
     private var penTouch = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDigitalInkBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.d("SAVEINSTANCESTATE",(savedInstanceState==null).toString())
+        if(savedInstanceState!= null){
+            previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!! as Uri).path
+        }
         whiteboard = intent.getParcelableExtra("whiteboard") ?: DigitalizedWhiteboards()
     }
     override fun onResume(){
         super.onResume()
+        Log.d("SAVEINSTANCESTATE","ONRESUME")
+        val pref = getPreferences(Context.MODE_PRIVATE)
+        previousWhiteboard = pref.getString("path",null)
+        pref.edit().putString("path",null).apply()
         setUI()
+    }
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        Log.d("SAVEINSTANCESTATE","ONRESTORE")
+        previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!! as Uri).path
+        setUI()
+        super.onRestoreInstanceState(savedInstanceState)
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        val uri = binding.whiteboard.temporarySave()
+        outState.putParcelable("prevWhiteboard",uri)
+        val sharedPref = getPreferences(Context.MODE_PRIVATE)
+        sharedPref.edit().putString("path",uri.path).apply()
+        Log.d("SAVEINSTANCESTATE","instancestate")
+        super.onSaveInstanceState(outState)
     }
     private fun setUI(){
         penTouch = 1
@@ -67,11 +93,22 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         manager.setStatusChangedListener(this)
         manager.setDigitalInkHandler(this)
         binding.whiteboard.setDigitalInkManager(manager)
-        if(!whiteboard.isEmpty()){
+        if(previousWhiteboard!=null){
             val saveManager = SaveManager()
-            saveManager.path = whiteboard.path
+            Log.d("URIPATH","I'MHERE")
+            Log.d("URIPATH",previousWhiteboard!!)
+            saveManager.path = previousWhiteboard!!
             val whiteboardMetadata = saveManager.fromJsonToMetadata()
             binding.whiteboard.setContent(whiteboardMetadata.toMutableList())
+            File(previousWhiteboard!!).delete()
+        }
+        else {
+            if (!whiteboard.isEmpty()) {
+                val saveManager = SaveManager()
+                saveManager.path = whiteboard.path
+                val whiteboardMetadata = saveManager.fromJsonToMetadata()
+                binding.whiteboard.setContent(whiteboardMetadata.toMutableList())
+            }
         }
         binding.btnErase.setOnClickListener{
             penTouch = 0
