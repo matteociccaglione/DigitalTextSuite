@@ -129,7 +129,7 @@ class RealMainActivity : AppCompatActivity() {
         adapter =  ViewPagerAdapter(this)
         binding.viewPagerMain.adapter =adapter
         binding.viewPagerMain.registerOnPageChangeCallback(pageChangeCallback)
-        binding.viewPagerMain.offscreenPageLimit = 4
+        //binding.viewPagerMain.offscreenPageLimit = 4
         val icons = arrayOf(R.drawable.database,R.drawable.square_edit_outline,R.drawable.ic_baseline_translate_24,R.drawable.text_recognition,R.drawable.favourite_icon_24)
         TabLayoutMediator(
             binding.tabLayout, binding.viewPagerMain
@@ -138,18 +138,17 @@ class RealMainActivity : AppCompatActivity() {
                 ContextCompat.getDrawable(this@RealMainActivity,
                     icons[position])
         }.attach()
-
         //If currentItem == 0 set currentItem == 1 and then switch to 0
         //With this operation the menu items are showed properly
         if(widget_metadata != -1) {
             if(widget_metadata == 0)
-                binding.viewPagerMain.currentItem = 1
+//
             binding.viewPagerMain.currentItem = widget_metadata
         }
-        else {
-            binding.viewPagerMain.currentItem = 1
-            binding.viewPagerMain.currentItem = 0
-        }
+//        else {
+////            binding.viewPagerMain.currentItem = 1
+//            binding.viewPagerMain.currentItem = 0
+//        }
         loadImageIntent()
         rootDir = getOutputDirectory()
         pdfDir = File(rootDir, getString(R.string.pdf_dir)).apply { mkdir() }
@@ -164,7 +163,7 @@ class RealMainActivity : AppCompatActivity() {
            val frag =when(position){
                0 -> FragmentAllFiles.newInstance()
                1 -> DigitalInkFragment.newInstance()
-               2 -> FragmentCameraTranslate()
+               2 -> FragmentCameraTranslate.newInstance()
                3 ->  FragmentCameraDigitalize.newInstance()
                4 -> FavouriteFragment.newInstance()
                else -> FragmentCameraDigitalize()

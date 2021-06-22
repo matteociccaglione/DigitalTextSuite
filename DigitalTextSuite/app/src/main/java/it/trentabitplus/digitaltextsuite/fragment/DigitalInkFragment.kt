@@ -60,12 +60,14 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
     }
     override fun onResume(){
         super.onResume()
+        Log.d("FRAGDEBUG","ONRESUMEDIGITALINK")
         setUI()
         setLiveData()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 //        setUI()
 //        setLiveData()
+        Log.d("FRAGDEBUG","ONVIEWCREATEDDIGITALINK")
     }
     private fun setLiveData(){
         val observer = Observer<List<DigitalizedWhiteboards>>{

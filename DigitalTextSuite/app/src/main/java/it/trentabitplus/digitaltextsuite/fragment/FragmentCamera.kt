@@ -44,7 +44,6 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
         const val CAMERA_MODE_TAG = "camera_mode"
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         val sharedPref = requireActivity().getPreferences(Context.MODE_PRIVATE)
         val cameraPref = sharedPref.getInt(CAMERA_MODE_TAG,0)
         if (cameraPref == 0)
@@ -59,7 +58,10 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
     fun show(vfCamera: PreviewView){
         startCamera(vfCamera)
     }
-
+    override fun onStart(){
+        super.onStart()
+        cameraExecutor = Executors.newSingleThreadExecutor()
+    }
     override fun onAttach(context: Context) {
         if(context is CaptureHandler){
             captureHandler = context

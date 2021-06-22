@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.camera.core.ImageAnalysis
 import androidx.core.view.children
 import androidx.fragment.app.viewModels
+import com.bumptech.glide.load.ImageHeaderParser
 import it.trentabitplus.digitaltextsuite.activities.DeleteTranslationModulesActivity
 import it.trentabitplus.digitaltextsuite.analyzer.TextAnalyzer
 import it.trentabitplus.digitaltextsuite.databinding.FragmentCameraTranslateBinding
@@ -33,6 +34,9 @@ class FragmentCameraTranslate : CameraFragment() {
     companion object {
         const val LANGUAGE_DIALOG= "LANGUAGE_DIALOG"
         private const val CROP_PERCENTAGE = 0.25f
+         @JvmStatic
+            fun newInstance() =
+                FragmentCameraTranslate()
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,17 +80,36 @@ class FragmentCameraTranslate : CameraFragment() {
 
         }
     }
-
+    override fun onStop() {
+        super.onStop()
+        orientationEventListener.disable()
+    }
     override fun onResume() {
         super.onResume()
+        Log.d("FRAGDEBUG","ONRESUMETRANSLATE")
+        orientationEventListener.enable()
         show(binding.vfCameraTranslate)
     }
+    private val orientationEventListener by lazy {
+        object : OrientationEventListener(requireContext()) {
+            override fun onOrientationChanged(orientation: Int) {
+                if (orientation == ImageHeaderParser.UNKNOWN_ORIENTATION) {
+                    return
+                }
 
+                val rotation = when (orientation) {
+                    in 45 until 135 -> Surface.ROTATION_270
+                    in 135 until 225 -> Surface.ROTATION_180
+                    in 225 until 315 -> Surface.ROTATION_90
+                    else -> Surface.ROTATION_0
+                }
+                if(imageCapture!=null)
+                    imageCapture!!.targetRotation = rotation
+            }
+        }
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        show(binding.vfCameraTranslate)
-
-
+        Log.d("FRAGDEBUG","ONVIEWCREATEDTRANSLATE")
         binding.fabChooseLanguage.setOnClickListener{
             val languages = viewModel.availableLanguages
             val stringLanguages = ArrayList<String>()

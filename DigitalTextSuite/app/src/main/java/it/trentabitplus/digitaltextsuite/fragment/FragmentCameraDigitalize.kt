@@ -4,6 +4,7 @@ import android.content.Context
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.view.animation.AnimationUtils
 import android.widget.Toast
@@ -70,15 +71,13 @@ class FragmentCameraDigitalize: CameraFragment(){
     }
     override fun onResume(){
         super.onResume()
-        show(binding.vfCamera)
-        orientationEventListener.enable()
-
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        Log.d("FRAGDEBUG","ONRESUMEDIGITALIZE")
         show(binding.vfCamera)
         setUI()
+        orientationEventListener.enable()
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        Log.d("FRAGDEBUG","ONVIEWCREATEDDIGITALIZE")
     }
     private fun setUI(){
         mediaPlayer = MediaPlayer.create(requireContext(), R.raw.camera_shutter_click)

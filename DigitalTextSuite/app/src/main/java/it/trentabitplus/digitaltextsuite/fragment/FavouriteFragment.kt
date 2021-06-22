@@ -2,6 +2,7 @@ package it.trentabitplus.digitaltextsuite.fragment
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.SearchView
 import androidx.core.view.children
@@ -49,10 +50,12 @@ class FavouriteFragment : Fragment(){
     override fun onResume(){
         super.onResume()
         setLiveData()
+        Log.d("FRAGDEBUG","ONRESUMEFAVOURITE")
         loadData()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        Log.d("FRAGDEBUG","ONVIEWCREATEDFAVOURITE")
+        setUI()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -106,7 +109,7 @@ class FavouriteFragment : Fragment(){
     }
 
     private fun setUI(){
-        binding.rvFilesFavourite.adapter = null
+        binding.rvFilesFavourite.adapter = AllFilesBigAdapter(emptyList(),requireContext(),null)
         binding.rvFilesFavourite.layoutManager = null
         val layoutManager =
             StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL)
