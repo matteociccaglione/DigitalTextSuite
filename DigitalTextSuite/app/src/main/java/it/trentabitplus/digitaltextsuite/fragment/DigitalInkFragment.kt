@@ -135,7 +135,7 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
     }
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             DigitalInkFragment()
     }
     private inner class MySearchListener(): SearchView.OnQueryTextListener{

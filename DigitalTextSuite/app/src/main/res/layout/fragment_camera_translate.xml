@@ -22,7 +22,7 @@
         app:layout_constraintGuide_percent="0.75"/>
 
     <androidx.camera.view.PreviewView
-        android:id="@+id/vfCamera"
+        android:id="@+id/vfCameraTranslate"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +42,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/vfCamera"
+        app:layout_constraintEnd_toEndOf="@+id/vfCameraTranslate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -79,12 +79,12 @@ class FragmentCameraTranslate : CameraFragment() {
 
     override fun onResume() {
         super.onResume()
-        show(binding.vfCamera)
+        show(binding.vfCameraTranslate)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        show(binding.vfCamera)
+        show(binding.vfCameraTranslate)
 
 
         binding.fabChooseLanguage.setOnClickListener{

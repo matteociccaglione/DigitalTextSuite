@@ -72,11 +72,12 @@ class FragmentCameraDigitalize: CameraFragment(){
         super.onResume()
         show(binding.vfCamera)
         orientationEventListener.enable()
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //show(binding.vfCamera)
+        show(binding.vfCamera)
         setUI()
     }
     private fun setUI(){
@@ -124,7 +125,12 @@ class FragmentCameraDigitalize: CameraFragment(){
     override fun saveImage(fileUri: Uri, temp: Boolean) {
         RecognizerUtil(requireContext()).recognize(fileUri,true)
     }
+    companion object {
 
+        @JvmStatic
+        fun newInstance() =
+            FragmentCameraDigitalize()
+    }
     override fun errorHandler(exception: ImageCaptureException) {
         CoroutineScope(Dispatchers.Main).launch{
             Toast.makeText(requireContext(),getString(R.string.error_camera), Toast.LENGTH_LONG).show()

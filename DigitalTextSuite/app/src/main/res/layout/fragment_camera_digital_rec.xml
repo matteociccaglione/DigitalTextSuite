@@ -41,9 +41,9 @@
         android:textSize="16sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/vfCamera"
-        app:layout_constraintStart_toStartOf="@+id/vfCamera"
-        app:layout_constraintTop_toTopOf="@+id/vfCamera" />
+        app:layout_constraintEnd_toEndOf="@+id/vfCameraTranslate"
+        app:layout_constraintStart_toStartOf="@+id/vfCameraTranslate"
+        app:layout_constraintTop_toTopOf="@+id/vfCameraTranslate" />
 
     <ImageButton
         android:id="@+id/imgBtnFlash"

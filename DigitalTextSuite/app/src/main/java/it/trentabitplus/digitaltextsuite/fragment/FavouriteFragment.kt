@@ -46,11 +46,13 @@ class FavouriteFragment : Fragment(){
         binding = FragmentFavouriteBinding.inflate(inflater)
         return binding.root
     }
+    override fun onResume(){
+        super.onResume()
+        setLiveData()
+        loadData()
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setLiveData()
-        setUI()
-        loadData()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -119,7 +121,7 @@ class FavouriteFragment : Fragment(){
     companion object {
 
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             FavouriteFragment()
     }
     private inner class MyQueryListener(): SearchView.OnQueryTextListener{

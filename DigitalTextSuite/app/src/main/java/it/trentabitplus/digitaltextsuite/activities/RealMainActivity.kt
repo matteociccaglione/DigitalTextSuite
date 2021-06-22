@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -29,7 +30,8 @@ import kotlin.properties.Delegates
 class RealMainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRealMainBinding
     private val fragmentNumber = 5
-    private lateinit var menu: Menu
+    private var menu: Menu? = null
+    private lateinit var  adapter: FragmentStateAdapter
     private var widget_metadata by Delegates.notNull<Int>()
 
     companion object{
@@ -55,6 +57,7 @@ class RealMainActivity : AppCompatActivity() {
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_all_files,menu)
+        this.menu = menu!!
         return super.onCreateOptionsMenu(menu)
     }
     private fun loadImageIntent(){
@@ -123,8 +126,10 @@ class RealMainActivity : AppCompatActivity() {
     private fun init(){
         binding.pbRec.visibility = View.GONE
         binding.tvRec.visibility = View.GONE
-        binding.viewPagerMain.adapter = ViewPagerAdapter(this)
+        adapter =  ViewPagerAdapter(this)
+        binding.viewPagerMain.adapter =adapter
         binding.viewPagerMain.registerOnPageChangeCallback(pageChangeCallback)
+        binding.viewPagerMain.offscreenPageLimit = 4
         val icons = arrayOf(R.drawable.database,R.drawable.square_edit_outline,R.drawable.ic_baseline_translate_24,R.drawable.text_recognition,R.drawable.favourite_icon_24)
         TabLayoutMediator(
             binding.tabLayout, binding.viewPagerMain
@@ -134,9 +139,17 @@ class RealMainActivity : AppCompatActivity() {
                     icons[position])
         }.attach()
 
-        if(widget_metadata != -1)
+        //If currentItem == 0 set currentItem == 1 and then switch to 0
+        //With this operation the menu items are showed properly
+        if(widget_metadata != -1) {
+            if(widget_metadata == 0)
+                binding.viewPagerMain.currentItem = 1
             binding.viewPagerMain.currentItem = widget_metadata
-        binding.viewPagerMain.offscreenPageLimit=4
+        }
+        else {
+            binding.viewPagerMain.currentItem = 1
+            binding.viewPagerMain.currentItem = 0
+        }
         loadImageIntent()
         rootDir = getOutputDirectory()
         pdfDir = File(rootDir, getString(R.string.pdf_dir)).apply { mkdir() }
@@ -149,16 +162,17 @@ class RealMainActivity : AppCompatActivity() {
         override fun createFragment(position: Int): Fragment {
             Log.d("POSITION",position.toString())
            val frag =when(position){
-               0 -> FragmentAllFiles()
-               1 -> DigitalInkFragment()
+               0 -> FragmentAllFiles.newInstance()
+               1 -> DigitalInkFragment.newInstance()
                2 -> FragmentCameraTranslate()
-               3 ->  FragmentCameraDigitalize()
-               4 -> FavouriteFragment()
+               3 ->  FragmentCameraDigitalize.newInstance()
+               4 -> FavouriteFragment.newInstance()
                else -> FragmentCameraDigitalize()
            }
          //   binding.viewPagerMain.isUserInputEnabled = frag !is DigitalInkFragment
             return frag
         }
+
 
     }
 }

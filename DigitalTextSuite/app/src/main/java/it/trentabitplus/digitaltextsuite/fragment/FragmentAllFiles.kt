@@ -60,7 +60,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
     private var spanCount: Int = 3
     private var filterMode = FilterMode.BY_TEXT
     private var sortingType = SortingType.ALPHABETIC_ASC
-    private lateinit var menu: Menu
+    private var menu: Menu? = null
     private var actualDirectory = "Default"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -410,11 +410,14 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             return false
         }
         selectedItem.add(element)
-        if(isFirst){
+        if(isFirst) {
             val note = Note()
             note.id = -1
             viewModel.selectedNote.value = note
-            (childFragmentManager.findFragmentByTag(DETAILS_FRAGMENT_TAG) as FragmentNoteDetails).reset()
+            //Invoke reset only if the fragment exists
+            (if (childFragmentManager.findFragmentByTag(DETAILS_FRAGMENT_TAG) == null) null
+            else
+                (childFragmentManager.findFragmentByTag(DETAILS_FRAGMENT_TAG) as FragmentNoteDetails))?.reset()
         }
         return true
     }
