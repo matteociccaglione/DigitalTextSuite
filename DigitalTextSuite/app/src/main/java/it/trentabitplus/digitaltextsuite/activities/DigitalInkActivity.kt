@@ -58,6 +58,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         }
         whiteboard = intent.getParcelableExtra("whiteboard") ?: DigitalizedWhiteboards()
     }
+
     override fun onResume(){
         super.onResume()
         Log.d("SAVEINSTANCESTATE","ONRESUME")

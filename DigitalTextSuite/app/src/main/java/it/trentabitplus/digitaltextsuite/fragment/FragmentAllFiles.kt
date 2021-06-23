@@ -192,12 +192,15 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
                 FilesShowMode.DIR_SMALL.ordinal -> FilesShowMode.DIR_SMALL
                 else -> FilesShowMode.DIR_BIG
             }
+            actualDirectory = savedInstanceState.getString("directory") ?: "Default"
             val note = Note()
             note.id = -1
             viewModel.selectedNote.value = note
         }
         setLiveData()
         setUI()
+        if(showMode == FilesShowMode.SMALL || showMode == FilesShowMode.BIG)
+            changeToFiles(actualDirectory)
         //loadData()
     }
 
@@ -265,10 +268,10 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         CoroutineScope(Dispatchers.IO).launch{
             val files = DbDigitalPhotoEditor.getInstance(requireContext()).digitalPhotoEditorDAO().loadAllByDirectory(directory)
             CoroutineScope(Dispatchers.Main).launch{
-                showMode = if(showMode == FilesShowMode.DIR_BIG)
-                    FilesShowMode.BIG
-                else
-                    FilesShowMode.SMALL
+                if(showMode == FilesShowMode.DIR_BIG)
+                    showMode = FilesShowMode.BIG
+                else if(showMode == FilesShowMode.DIR_SMALL)
+                    showMode = FilesShowMode.SMALL
                 setUI()
                 actualDirectory = directory
                 viewModel.listNotes.value=files.toMutableList()
@@ -281,6 +284,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
 
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putInt("showMode",showMode.ordinal)
+        outState.putString("directory",actualDirectory)
         super.onSaveInstanceState(outState)
     }
     private fun setUI(){

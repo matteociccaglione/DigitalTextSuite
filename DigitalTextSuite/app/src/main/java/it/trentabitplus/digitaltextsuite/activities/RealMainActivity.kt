@@ -77,6 +77,10 @@ class RealMainActivity : AppCompatActivity() {
             if(listUri!=null){
                 recognizer.recognizeAll(listUri,false)
             }
+            else{
+                binding.pbRec.visibility = View.GONE
+                binding.tvRec.visibility = View.GONE
+            }
         }
     }
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
@@ -100,7 +104,7 @@ class RealMainActivity : AppCompatActivity() {
             ViewPager2.OnPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             super.onPageSelected(position)
-            requestedOrientation = if(position==2 || position==3){
+            requestedOrientation = if(position==4 || position==3){
                 ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
             } else{
                 ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
@@ -129,7 +133,7 @@ class RealMainActivity : AppCompatActivity() {
         adapter =  ViewPagerAdapter(this)
         binding.viewPagerMain.adapter =adapter
         binding.viewPagerMain.registerOnPageChangeCallback(pageChangeCallback)
-        val icons = arrayOf(R.drawable.database,R.drawable.square_edit_outline,R.drawable.ic_baseline_translate_24,R.drawable.text_recognition,R.drawable.favourite_icon_24)
+        val icons = arrayOf(R.drawable.database,R.drawable.square_edit_outline,R.drawable.favourite_icon_24,R.drawable.ic_baseline_translate_24,R.drawable.text_recognition)
         TabLayoutMediator(
             binding.tabLayout, binding.viewPagerMain
         ) { tab: TabLayout.Tab, position: Int ->
@@ -156,9 +160,9 @@ class RealMainActivity : AppCompatActivity() {
            val frag =when(position){
                0 -> FragmentAllFiles.newInstance()
                1 -> DigitalInkFragment.newInstance()
-               2 -> FragmentCameraTranslate.newInstance()
-               3 ->  FragmentCameraDigitalize.newInstance()
-               4 -> FavouriteFragment.newInstance()
+               3 -> FragmentCameraTranslate.newInstance()
+               4 ->  FragmentCameraDigitalize.newInstance()
+               2 -> FavouriteFragment.newInstance()
                else -> FragmentCameraDigitalize()
            }
             return frag

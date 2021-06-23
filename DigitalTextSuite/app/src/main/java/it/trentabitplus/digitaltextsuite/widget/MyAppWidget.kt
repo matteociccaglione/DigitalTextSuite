@@ -49,7 +49,7 @@ class MyAppWidget : AppWidgetProvider() {
         {
             val i = Intent(context,RealMainActivity::class.java)
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            i.putExtra("fragment",2)
+            i.putExtra("fragment",3)
             context?.startActivity(i)
 
         }
@@ -74,7 +74,7 @@ class MyAppWidget : AppWidgetProvider() {
         {
             val i = Intent(context,RealMainActivity::class.java)
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            i.putExtra("fragment",3)
+            i.putExtra("fragment",4)
             context?.startActivity(i)
         }
         // Play with emoji activity
