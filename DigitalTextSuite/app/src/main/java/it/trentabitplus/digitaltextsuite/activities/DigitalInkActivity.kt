@@ -59,6 +59,11 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         whiteboard = intent.getParcelableExtra("whiteboard") ?: DigitalizedWhiteboards()
     }
 
+    override fun onDestroy() {
+        val pref = getPreferences(Context.MODE_PRIVATE)
+        pref.edit().putString("path",null).apply()
+        super.onDestroy()
+    }
     override fun onResume(){
         super.onResume()
         Log.d("SAVEINSTANCESTATE","ONRESUME")
