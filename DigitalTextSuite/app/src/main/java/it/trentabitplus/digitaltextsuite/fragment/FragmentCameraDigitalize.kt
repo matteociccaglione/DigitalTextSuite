@@ -71,17 +71,14 @@ class FragmentCameraDigitalize: CameraFragment(){
     }
     override fun onResume(){
         super.onResume()
-        Log.d("FRAGDEBUG","ONRESUMEDIGITALIZE")
         show(binding.vfCamera)
         setUI()
         orientationEventListener.enable()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.d("FRAGDEBUG","ONVIEWCREATEDDIGITALIZE")
     }
     private fun setUI(){
         mediaPlayer = MediaPlayer.create(requireContext(), R.raw.camera_shutter_click)
-        //show(binding.vfCamera)
         binding.imgBtnCamera.setOnClickListener{
             takePhoto(false)
             mediaPlayer = MediaPlayer.create(requireContext(), R.raw.camera_shutter_click)

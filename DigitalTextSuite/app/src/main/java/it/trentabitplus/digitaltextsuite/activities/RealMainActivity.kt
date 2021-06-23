@@ -129,7 +129,6 @@ class RealMainActivity : AppCompatActivity() {
         adapter =  ViewPagerAdapter(this)
         binding.viewPagerMain.adapter =adapter
         binding.viewPagerMain.registerOnPageChangeCallback(pageChangeCallback)
-        //binding.viewPagerMain.offscreenPageLimit = 4
         val icons = arrayOf(R.drawable.database,R.drawable.square_edit_outline,R.drawable.ic_baseline_translate_24,R.drawable.text_recognition,R.drawable.favourite_icon_24)
         TabLayoutMediator(
             binding.tabLayout, binding.viewPagerMain
@@ -142,13 +141,8 @@ class RealMainActivity : AppCompatActivity() {
         //With this operation the menu items are showed properly
         if(widget_metadata != -1) {
             if(widget_metadata == 0)
-//
             binding.viewPagerMain.currentItem = widget_metadata
         }
-//        else {
-////            binding.viewPagerMain.currentItem = 1
-//            binding.viewPagerMain.currentItem = 0
-//        }
         loadImageIntent()
         rootDir = getOutputDirectory()
         pdfDir = File(rootDir, getString(R.string.pdf_dir)).apply { mkdir() }
@@ -159,7 +153,6 @@ class RealMainActivity : AppCompatActivity() {
             return fragmentNumber
         }
         override fun createFragment(position: Int): Fragment {
-            Log.d("POSITION",position.toString())
            val frag =when(position){
                0 -> FragmentAllFiles.newInstance()
                1 -> DigitalInkFragment.newInstance()
@@ -168,7 +161,6 @@ class RealMainActivity : AppCompatActivity() {
                4 -> FavouriteFragment.newInstance()
                else -> FragmentCameraDigitalize()
            }
-         //   binding.viewPagerMain.isUserInputEnabled = frag !is DigitalInkFragment
             return frag
         }
 

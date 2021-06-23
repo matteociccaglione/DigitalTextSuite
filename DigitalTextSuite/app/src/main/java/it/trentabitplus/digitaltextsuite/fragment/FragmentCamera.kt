@@ -141,7 +141,6 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
         imageCapture!!.flashMode=mode
     }
     fun takePhoto(save: Boolean){
-        Log.d("SAVE?",save.toString())
         val outputDirectory = if(save)
         //store the image
             requireActivity().getExternalFilesDir(Environment.DIRECTORY_DCIM+File.separator+"effectscam")
