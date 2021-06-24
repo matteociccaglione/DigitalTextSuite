@@ -64,11 +64,7 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
         setUI()
         setLiveData()
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        setUI()
-//        setLiveData()
-        Log.d("FRAGDEBUG","ONVIEWCREATEDDIGITALINK")
-    }
+
     private fun setLiveData(){
         val observer = Observer<List<DigitalizedWhiteboards>>{
             try {
@@ -113,7 +109,6 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
         binding.rvWhiteboards.layoutManager = null
         binding.rvWhiteboards.adapter = null
         spanCount = 3
-        Log.d("DPVALUE","height: "+conf!!.screenHeightDp.toString()+" width: "+conf.screenWidthDp)
         if(conf!!.screenHeightDp<conf.screenWidthDp)
             //Landscape mode
             spanCount=5

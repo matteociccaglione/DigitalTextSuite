@@ -113,11 +113,6 @@ class BigViewHolder(var binding: ItemFileBigBinding,val context: Context): Recyc
                 binding.tvPreview.text = String.format(field.text.substring(0,limit)+"[...]")
             }
         }
-        Log.d("DEFSIZE",defaultSize.toString())
-        Log.d("HEIGHT",binding.tvPreview.minimumHeight.toString())
-//        if(binding.cv.layoutParams.height>defaultSize){
-//            binding.cv.layoutParams.height=defaultSize
-//        }
     }
     var whiteboard: DigitalizedWhiteboards = DigitalizedWhiteboards()
     set(value){

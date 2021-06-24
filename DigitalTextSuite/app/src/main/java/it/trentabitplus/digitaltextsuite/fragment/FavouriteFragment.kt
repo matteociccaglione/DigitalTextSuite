@@ -50,12 +50,10 @@ class FavouriteFragment : Fragment(){
     override fun onResume(){
         super.onResume()
         setLiveData()
-        Log.d("FRAGDEBUG","ONRESUMEFAVOURITE")
         loadData()
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setUI()
-        Log.d("FRAGDEBUG","ONVIEWCREATEDFAVOURITE")
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

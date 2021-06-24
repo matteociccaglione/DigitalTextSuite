@@ -86,7 +86,6 @@ class DigitalInkViewHolder(val binding: ItemWhiteboardCvBinding,val defaultSize:
             binding.tvTitleWhiteboard.text = whiteboard.title
             binding.imageView4.layoutParams.height=defaultSize
             binding.imageView4.layoutParams.width=defaultSize
-            Log.d("CIAO A TUTTI",whiteboard.imgPath.isEmpty().toString())
             if(whiteboard.idNote!=null){
                 binding.ibDb.visibility = View.VISIBLE
             }

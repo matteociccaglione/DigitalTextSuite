@@ -52,7 +52,6 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         super.onCreate(savedInstanceState)
         binding = ActivityDigitalInkBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Log.d("SAVEINSTANCESTATE",(savedInstanceState==null).toString())
         if(savedInstanceState!= null){
             previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!! as Uri).path
         }
@@ -61,19 +60,21 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
 
     override fun onDestroy() {
         val pref = getPreferences(Context.MODE_PRIVATE)
+        val uri = pref.getString("path",null)
+        if(uri!=null){
+            File(uri).delete()
+        }
         pref.edit().putString("path",null).apply()
         super.onDestroy()
     }
     override fun onResume(){
         super.onResume()
-        Log.d("SAVEINSTANCESTATE","ONRESUME")
         val pref = getPreferences(Context.MODE_PRIVATE)
         previousWhiteboard = pref.getString("path",null)
         pref.edit().putString("path",null).apply()
         setUI()
     }
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        Log.d("SAVEINSTANCESTATE","ONRESTORE")
         previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!! as Uri).path
         setUI()
         super.onRestoreInstanceState(savedInstanceState)
@@ -83,7 +84,6 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         outState.putParcelable("prevWhiteboard",uri)
         val sharedPref = getPreferences(Context.MODE_PRIVATE)
         sharedPref.edit().putString("path",uri.path).apply()
-        Log.d("SAVEINSTANCESTATE","instancestate")
         super.onSaveInstanceState(outState)
     }
     private fun setUI(){
@@ -101,8 +101,6 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         binding.whiteboard.setDigitalInkManager(manager)
         if(previousWhiteboard!=null){
             val saveManager = SaveManager()
-            Log.d("URIPATH","I'MHERE")
-            Log.d("URIPATH",previousWhiteboard!!)
             saveManager.path = previousWhiteboard!!
             val whiteboardMetadata = saveManager.fromJsonToMetadata()
             binding.whiteboard.setContent(whiteboardMetadata.toMutableList())

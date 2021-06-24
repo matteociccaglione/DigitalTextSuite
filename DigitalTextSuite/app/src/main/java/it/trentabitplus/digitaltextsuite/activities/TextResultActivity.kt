@@ -52,12 +52,10 @@ class TextResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTextResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Log.d("PROVA","PRIMA INTENT")
         note = intent.getParcelableExtra("result") ?: Note("","","","",System.currentTimeMillis(),false)
         textResult = note.text
         language = note.language
         originalText=textResult
-        Log.d("TEXTRECEIVED",textResult)
         whiteboard = intent.getParcelableExtra("whiteboard") ?: DigitalizedWhiteboards()
         val ordinal = intent.getIntExtra("type",TextResultType.NOT_SAVED.ordinal)
         type = when(ordinal){
@@ -65,9 +63,7 @@ class TextResultActivity : AppCompatActivity() {
             TextResultType.EDITABLE.ordinal -> TextResultType.EDITABLE
             else -> TextResultType.NOT_SAVED
         }
-        Log.d("PROVA","PRIMA DB")
         initializeDB()
-        Log.d("PROVA","PRIMA UI")
         setUI()
     }
 
@@ -158,6 +154,7 @@ class TextResultActivity : AppCompatActivity() {
                                     dao.insertNote(note)
                                     if(!whiteboard.isEmpty()){
                                         val lastNote = dao.loadLastIdNote()
+                                        note.id = lastNote
                                         whiteboard.idNote = lastNote
                                         dao.updateWhiteboard(whiteboard)
                                     }
@@ -376,7 +373,6 @@ class TextResultActivity : AppCompatActivity() {
                             }
                         }
                         if(targetLang != language){
-                            Log.d("Traduzione", "1")
                             setNormalLayoutEnable(false)
                             binding.grpTranslation.visibility = View.VISIBLE
                             CoroutineScope(Dispatchers.Default).launch {

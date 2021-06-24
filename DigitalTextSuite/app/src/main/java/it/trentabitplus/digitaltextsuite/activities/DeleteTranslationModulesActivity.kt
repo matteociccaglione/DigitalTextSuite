@@ -49,7 +49,6 @@ class DeleteTranslationModulesActivity : AppCompatActivity() {
                     }
                 }
                 .addOnFailureListener{
-                    Log.d("Modules", "Unable to detect downloaded modules")
                     finish()
                 })
             CoroutineScope(Dispatchers.Main).launch {
