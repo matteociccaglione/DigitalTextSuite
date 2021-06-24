@@ -141,10 +141,8 @@ class RealMainActivity : AppCompatActivity() {
                 ContextCompat.getDrawable(this@RealMainActivity,
                     icons[position])
         }.attach()
-        //If currentItem == 0 set currentItem == 1 and then switch to 0
-        //With this operation the menu items are showed properly
+
         if(widget_metadata != -1) {
-            if(widget_metadata == 0)
             binding.viewPagerMain.currentItem = widget_metadata
         }
         loadImageIntent()
