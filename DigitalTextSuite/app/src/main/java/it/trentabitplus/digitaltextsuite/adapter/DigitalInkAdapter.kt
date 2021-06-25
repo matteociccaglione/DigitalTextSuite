@@ -20,7 +20,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.File
 
-class DigitalInkAdapter(val context: Context, val whiteboards: List<DigitalizedWhiteboards>,val defaultSize: Int,val handler: SelectedHandler): RecyclerView.Adapter<DigitalInkViewHolder>() {
+class DigitalInkAdapter(val context: Context, private val whiteboards: List<DigitalizedWhiteboards>, val defaultSize: Int, val handler: SelectedHandler): RecyclerView.Adapter<DigitalInkViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DigitalInkViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemWhiteboardCvBinding.inflate(inflater)

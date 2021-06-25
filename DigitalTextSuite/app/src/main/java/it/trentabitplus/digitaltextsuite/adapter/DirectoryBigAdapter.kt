@@ -13,7 +13,7 @@ import it.trentabitplus.digitaltextsuite.fragment.FragmentAllFiles
 import it.trentabitplus.digitaltextsuite.utils.DateUtil
 import it.trentabitplus.digitaltextsuite.utils.Directory
 
-class DirectoryBigAdapter(val listDirectory: List<Directory>, val context: Context, val fragment: FragmentAllFiles, val spanCount: Int) : RecyclerView.Adapter<DirectoryBigViewHolder>(){
+class DirectoryBigAdapter(private val listDirectory: List<Directory>, val context: Context, val fragment: FragmentAllFiles, val spanCount: Int) : RecyclerView.Adapter<DirectoryBigViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DirectoryBigViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = ItemDirectoryBigBinding.inflate(layoutInflater)

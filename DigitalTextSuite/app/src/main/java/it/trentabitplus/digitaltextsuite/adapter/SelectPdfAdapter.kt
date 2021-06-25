@@ -11,7 +11,7 @@ import it.trentabitplus.digitaltextsuite.activities.RealMainActivity
 import it.trentabitplus.digitaltextsuite.databinding.ItemPdfBinding
 import java.io.File
 
-class SelectPdfAdapter(val listPdf : List<File>, val context: Context) : RecyclerView.Adapter<SelectPdfAdapter.SelectPdfViewHolder>(){
+class SelectPdfAdapter(private val listPdf : List<File>, val context: Context) : RecyclerView.Adapter<SelectPdfAdapter.SelectPdfViewHolder>(){
 
     var selectedFile: MutableLiveData<File?> = MutableLiveData(null)
 
@@ -44,7 +44,7 @@ class SelectPdfAdapter(val listPdf : List<File>, val context: Context) : Recycle
             }
 
         init {
-            val selectedObserver = Observer<File?>(){
+            val selectedObserver = Observer<File?>{
                 if (it != null){
                     binding.cvItem.isSelected = it.canonicalPath.equals(file.canonicalPath)
                 }else{

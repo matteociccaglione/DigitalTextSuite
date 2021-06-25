@@ -9,12 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import it.trentabitplus.digitaltextsuite.database.DigitalizedWhiteboards
 import android.os.Environment
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
-import androidx.core.net.toFile
 import com.google.mlkit.nl.translate.TranslateLanguage
 import it.trentabitplus.digitaltextsuite.R
 import it.trentabitplus.digitaltextsuite.database.DbDigitalPhotoEditor
@@ -52,7 +50,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         binding = ActivityDigitalInkBinding.inflate(layoutInflater)
         setContentView(binding.root)
         if(savedInstanceState!= null){
-            previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!! as Uri).path
+            previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!!).path
         }
         whiteboard = intent.getParcelableExtra("whiteboard") ?: DigitalizedWhiteboards()
     }
@@ -74,7 +72,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         setUI()
     }
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!! as Uri).path
+        previousWhiteboard = (savedInstanceState.getParcelable<Uri>("prevWhiteboard")!!).path
         setUI()
         super.onRestoreInstanceState(savedInstanceState)
     }
@@ -234,7 +232,7 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
                 alertDialog.setMessage(R.string.digitalized_alert_message)
                 val sharedPref = this.getPreferences(Context.MODE_PRIVATE)
                 val edit = sharedPref.edit()
-                checkbox.setOnCheckedChangeListener { buttonView, isChecked ->
+                checkbox.setOnCheckedChangeListener { _, isChecked ->
                     edit.putBoolean(getString(R.string.shared_key_no_remember), isChecked)
                     edit.apply()
                 }

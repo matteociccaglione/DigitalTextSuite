@@ -19,7 +19,6 @@ class SaveManager {
     var path: String = ""
     private val metadataType = object : TypeToken<MutableList<WhiteboardMetadata>>() {}.type
     val strokeMetadataType: Type = object : TypeToken<MutableList<WhiteboardMetadata.StrokeMetadata>>() {}.type
-    val pointMetadataType = object : TypeToken<MutableList<WhiteboardMetadata.StrokeMetadata>>() {}.type
     private var metadata: MutableList<WhiteboardMetadata> = mutableListOf()
     fun fromJsonToMetadata(): List<WhiteboardMetadata> {
         val gson = GsonBuilder()
@@ -60,7 +59,7 @@ class SaveManager {
     /**
      * This class is used by Gson to perform the IO operations
      */
-    class MetadataAdapter(): TypeAdapter<WhiteboardMetadata>(){
+    class MetadataAdapter: TypeAdapter<WhiteboardMetadata>(){
         override fun write(out: JsonWriter?, value: WhiteboardMetadata?) {
             out!!.beginObject()
             out.name("id")

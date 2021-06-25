@@ -29,7 +29,7 @@ class RealMainActivity : AppCompatActivity() {
     private val fragmentNumber = 5
     private var menu: Menu? = null
     private lateinit var  adapter: FragmentStateAdapter
-    private var widget_metadata by Delegates.notNull<Int>()
+    private var widgetMetadata by Delegates.notNull<Int>()
 
     companion object{
         private const val REQUEST_CODE_PERMISSIONS = 30
@@ -41,7 +41,7 @@ class RealMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRealMainBinding.inflate(layoutInflater)
-        widget_metadata = intent.getIntExtra("fragment",-1)
+        widgetMetadata = intent.getIntExtra("fragment",-1)
         setContentView(binding.root)
         if(allPermissionsGranted()){
             init()
@@ -112,8 +112,8 @@ class RealMainActivity : AppCompatActivity() {
         super.onResume()
         binding.pbRec.visibility = View.GONE
         binding.tvRec.visibility = View.GONE
-        if (widget_metadata!=-1)
-            binding.viewPagerMain.currentItem = widget_metadata
+        if (widgetMetadata!=-1)
+            binding.viewPagerMain.currentItem = widgetMetadata
     }
 
     private fun getOutputDirectory(): File {
@@ -139,8 +139,8 @@ class RealMainActivity : AppCompatActivity() {
                     icons[position])
         }.attach()
 
-        if(widget_metadata != -1) {
-            binding.viewPagerMain.currentItem = widget_metadata
+        if(widgetMetadata != -1) {
+            binding.viewPagerMain.currentItem = widgetMetadata
         }
         loadImageIntent()
         rootDir = getOutputDirectory()
@@ -152,15 +152,14 @@ class RealMainActivity : AppCompatActivity() {
             return fragmentNumber
         }
         override fun createFragment(position: Int): Fragment {
-           val frag =when(position){
-               0 -> FragmentAllFiles.newInstance()
-               1 -> DigitalInkFragment.newInstance()
-               3 -> FragmentCameraTranslate.newInstance()
-               4 ->  FragmentCameraDigitalize.newInstance()
-               2 -> FavouriteFragment.newInstance()
-               else -> FragmentCameraDigitalize()
-           }
-            return frag
+            return when (position) {
+                0 -> FragmentAllFiles.newInstance()
+                1 -> DigitalInkFragment.newInstance()
+                3 -> FragmentCameraTranslate.newInstance()
+                4 -> FragmentCameraDigitalize.newInstance()
+                2 -> FavouriteFragment.newInstance()
+                else -> FragmentCameraDigitalize()
+            }
         }
 
 

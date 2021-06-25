@@ -24,7 +24,7 @@ class Translator {
 
 
     // the following variables handle the downloading of language models, if needed
-    val modelDownloading = SmoothedMutableLiveData<Boolean>(SMOOTHING_DURATION)
+    private val modelDownloading = SmoothedMutableLiveData<Boolean>(SMOOTHING_DURATION)
     private var modelDownloadTask: Task<Void> = Tasks.forCanceled()
 
     // translators object of the MLKit libraries that really perform translation

@@ -20,7 +20,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.File
 import java.lang.IllegalStateException
-import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -38,7 +37,6 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
     protected lateinit var preview : Preview
     protected lateinit var cameraProvider: ProcessCameraProvider
     protected var camera : Camera? = null
-    private var effect = 0
     companion object {
         const val CAMERA_TAG = "CAM FRAGMENT"
         const val CAMERA_MODE_TAG = "camera_mode"
@@ -46,10 +44,10 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val sharedPref = requireActivity().getPreferences(Context.MODE_PRIVATE)
         val cameraPref = sharedPref.getInt(CAMERA_MODE_TAG,0)
-        if (cameraPref == 0)
-            lensFacing = CameraSelector.DEFAULT_BACK_CAMERA
+        lensFacing = if (cameraPref == 0)
+            CameraSelector.DEFAULT_BACK_CAMERA
         else
-            lensFacing = CameraSelector.DEFAULT_FRONT_CAMERA
+            CameraSelector.DEFAULT_FRONT_CAMERA
     }
 
     /**
@@ -63,11 +61,10 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
         cameraExecutor = Executors.newSingleThreadExecutor()
     }
     override fun onAttach(context: Context) {
-        if(context is CaptureHandler){
-            captureHandler = context
-        }
-        else
-            captureHandler = this
+        captureHandler = if(context is CaptureHandler){
+            context
+        } else
+            this
         super.onAttach(context)
     }
 
@@ -143,7 +140,7 @@ abstract class CameraFragment : Fragment(), CaptureHandler {
     fun takePhoto(save: Boolean){
         val outputDirectory = if(save)
         //store the image
-            requireActivity().getExternalFilesDir(Environment.DIRECTORY_DCIM+File.separator+"effectscam")
+            requireActivity().getExternalFilesDir(Environment.DIRECTORY_DCIM+File.separator+"digitaltextsuite")
         else
         //cache the image
             requireContext().cacheDir

@@ -78,8 +78,7 @@ class ColorDialog : DialogFragment() {
             progress: Int,
             fromUser: Boolean
         ) {
-            val viewId = seekBar
-            when (viewId) {
+            when (seekBar) {
                 binding.seekBarR -> redValue = progress
                 binding.seekBarG -> greenValue = progress
                 binding.seekBarB -> blueValue = progress

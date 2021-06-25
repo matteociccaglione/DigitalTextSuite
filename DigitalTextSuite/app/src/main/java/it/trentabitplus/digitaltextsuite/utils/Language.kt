@@ -22,7 +22,7 @@ class Language(val code: String) : Comparable<Language> {
          * @author Adrian Petru Baba
          */
         fun getFlag(code : String) : String {
-            var flag=""
+            val flag: String
             when(code){
                 "sq" -> flag="🇦🇱"
                 "ar" -> flag="🇸🇦"

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import it.trentabitplus.digitaltextsuite.databinding.ItemModuleBinding
 import it.trentabitplus.digitaltextsuite.utils.Language
 
-class ModuleAdapter(val listModules : MutableList<Language>, val context: Context)
+class ModuleAdapter(private val listModules : MutableList<Language>, val context: Context)
     :RecyclerView.Adapter<ModuleAdapter.ModuleViewHolder>(){
 
     var selectedLanguages = mutableListOf<Language>()
@@ -51,9 +51,6 @@ class ModuleAdapter(val listModules : MutableList<Language>, val context: Contex
 
     inner class ModuleViewHolder(val binding: ItemModuleBinding, val context: Context) : RecyclerView.ViewHolder(binding.root){
         var code = "und"
-        set(value) {
-            field = value
-        }
 
         var displayName = "Undefined"
         set(value) {

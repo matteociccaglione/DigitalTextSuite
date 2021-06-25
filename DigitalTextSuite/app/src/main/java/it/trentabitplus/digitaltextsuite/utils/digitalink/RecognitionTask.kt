@@ -13,8 +13,8 @@ import java.util.concurrent.atomic.AtomicBoolean
  * @author Matteo Ciccaglione */
 class RecognitionTask(private val recognizer: DigitalInkRecognizer?, private val ink: Ink,private val context: RecognitionContext,private val page: Int) {
     private var currentResult: RecognizedInk? = null
-    private val cancelled: AtomicBoolean
-    private val done: AtomicBoolean
+    private val cancelled: AtomicBoolean = AtomicBoolean(false)
+    private val done: AtomicBoolean = AtomicBoolean(false)
     fun cancel() {
         cancelled.set(true)
     }
@@ -59,8 +59,4 @@ class RecognitionTask(private val recognizer: DigitalInkRecognizer?, private val
             )
     }
 
-    init {
-        cancelled = AtomicBoolean(false)
-        done = AtomicBoolean(false)
-    }
 }

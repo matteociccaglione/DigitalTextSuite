@@ -94,4 +94,6 @@
     <string name="no_pdf_file_has_been_found">Nessun file pdf trovato</string>
     <string name="saved_whiteboard">Salvata</string>
     <string name="not_saved_whiteboard">Errore non puoi salvare una whiteboard vuota</string>
+    <string name="filter">Filtro</string>
+    <string name="no_item">Nessun elemento selezionato</string>
 </resources>

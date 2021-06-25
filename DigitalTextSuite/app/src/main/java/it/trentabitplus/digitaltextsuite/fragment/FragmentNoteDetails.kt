@@ -22,9 +22,6 @@ class FragmentNoteDetails : Fragment() {
     private lateinit var  binding : FragmentNoteDetailsBinding
     private var note : Note? = null
     private var whiteboard = DigitalizedWhiteboards()
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,10 +63,5 @@ class FragmentNoteDetails : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setUI()
     }
-    companion object {
-        @JvmStatic
-        fun newInstance() =
-            FragmentNoteDetails().apply {
-            }
-    }
+
 }

@@ -13,9 +13,10 @@ import java.io.File
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val SPLASH_SCREEN_DURATION = 1500L
+
     companion object{
         const val CHANNEL_ID = "it.trentabitplus.digitaltextsuite"
+        private const val SPLASH_SCREEN_DURATION = 1500L
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

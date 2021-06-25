@@ -13,7 +13,7 @@ class DateUtil(val context: Context) {
      * @param calendar the Calendar to be converted
      * @return A well formed string in this format: day month year
      */
-    fun printDate(calendar: Calendar): String{
+    private fun printDate(calendar: Calendar): String{
         val month = when(calendar.get(Calendar.MONTH)){
             Calendar.JANUARY -> context.getString(R.string.january)
             Calendar.FEBRUARY -> context.getString(R.string.february)
@@ -37,7 +37,7 @@ class DateUtil(val context: Context) {
      * @param date the Date to be converted
      * @return The converted Calendar instance
      */
-    fun fromDateToCalendar(date: Date): Calendar{
+    private fun fromDateToCalendar(date: Date): Calendar{
         val calendar = Calendar.getInstance()
         calendar.time=date
         return calendar

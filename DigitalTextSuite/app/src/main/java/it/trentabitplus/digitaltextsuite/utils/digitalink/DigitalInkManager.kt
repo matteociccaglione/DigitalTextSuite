@@ -23,7 +23,7 @@ class DigitalInkManager {
     private var textRecognized: MutableList<RecognitionTask.RecognizedInk> = ArrayList()
     private var contentChangedListener: DigitalRecognizerHandler? = null
     private var statusChangedListener: StatusChangedListener? = null
-     lateinit var lastStroke: Ink.Stroke
+     lateinit var lastStroke: Stroke
     private var downloadedModelsChangedListener: DownloadedModelsChangedListener? = null
     private var stateChangedSinceLastRequest : Boolean = true
     var writingArea: WritingArea = WritingArea(1000f,1000f)
@@ -126,27 +126,6 @@ class DigitalInkManager {
     fun setDigitalInkHandler(handler: DigitalRecognizerHandler){
         this.contentChangedListener = handler
     }
-    fun setDownloadedModelsChangedListener(
-        downloadedModelsChangedListener: DownloadedModelsChangedListener?
-    ) {
-        this.downloadedModelsChangedListener = downloadedModelsChangedListener
-    }
-
-    fun getContent(): List<RecognitionTask.RecognizedInk> {
-        return textRecognized
-    }
-    fun deleteActiveModel(): Task<Nothing?> {
-        return modelManager
-            .deleteActiveModel()
-            .addOnSuccessListener { refreshDownloadedModelsStatus() }
-            .onSuccessTask(
-                SuccessContinuation { status: DigitalInkState ->
-                    this.status = status
-                    return@SuccessContinuation Tasks.forResult(null)
-                }
-            )
-    }
-
     /**
      * Set the initial number of page for this manager. Must be called by the Whiteboard which uses this manager.
      * @param number the number of pages that must be created
@@ -162,7 +141,7 @@ class DigitalInkManager {
      * This method must be called by the whiteboard which uses this manager to set the strokes for a page.
      *  @param page the number of the page which contains the strokes
      */
-    fun setInkStrokes(strokes: List<Ink.Stroke>,page: Int){
+    fun setInkStrokes(strokes: List<Stroke>, page: Int){
         resetCurrentInk(page)
         for(stroke in strokes){
             for(point in stroke.points){
@@ -255,10 +234,10 @@ class DigitalInkManager {
      * @param languageTag The language code for the model that must be set. If languageTag == emoji the model will only recognize emojis
      */
     fun setActiveModel(languageTag: String) {
-        if(languageTag=="emoji")
-            status = modelManager.setModel(DigitalInkRecognitionModelIdentifier.EMOJI)
+        status = if(languageTag=="emoji")
+            modelManager.setModel(DigitalInkRecognitionModelIdentifier.EMOJI)
         else {
-            status = modelManager.setModel(languageTag)
+            modelManager.setModel(languageTag)
         }
         language = languageTag
     }

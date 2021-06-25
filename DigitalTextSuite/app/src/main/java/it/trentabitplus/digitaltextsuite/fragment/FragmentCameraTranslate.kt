@@ -66,7 +66,7 @@ class FragmentCameraTranslate : CameraFragment() {
      */
     override fun setAnalyzer() {
         try{
-            val analyzer = TextAnalyzer(requireContext(), lifecycle, viewModel.sourceText, CROP_PERCENTAGE)
+            val analyzer = TextAnalyzer(lifecycle, viewModel.sourceText, CROP_PERCENTAGE)
             if (imageAnalysis != null) {
                 imageAnalysis.also { it!!.setAnalyzer(cameraExecutor, analyzer) }
             }else{

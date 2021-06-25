@@ -112,4 +112,5 @@
     <string name="saved_whiteboard">Saved</string>
     <string name="not_saved_whiteboard">Error you can\'t save empty whiteboard</string>
     <string name="filter">Filter</string>
+    <string name="no_item">No item selected</string>
 </resources>

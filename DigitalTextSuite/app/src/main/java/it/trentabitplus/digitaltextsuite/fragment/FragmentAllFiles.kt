@@ -208,7 +208,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         CoroutineScope(Dispatchers.IO).launch{
             val results = dao.loadDirectories()
             val listDirectory = mutableListOf<Directory>()
-            var size = 0
+            var size: Int
             var lastModify: Long
             for(res in results){
                 size = dao.loadDirectorySize(res)
@@ -249,11 +249,11 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         }
     }
     private fun setLiveData(){
-        val directoryObserver = Observer<List<Directory>>(){
+        val directoryObserver = Observer<List<Directory>>{
             setUI()
             setAdapterDirectory(it)
         }
-        val listObserver = Observer<List<Note>>(){
+        val listObserver = Observer<List<Note>>{
             setUI()
             setAdapterFiles(it)
         }
@@ -317,7 +317,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
                     2
                 layoutManager =
                     StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL)
-                (layoutManager as StaggeredGridLayoutManager).gapStrategy=StaggeredGridLayoutManager.GAP_HANDLING_NONE
+                layoutManager.gapStrategy=StaggeredGridLayoutManager.GAP_HANDLING_NONE
             }
             FilesShowMode.DIR_BIG -> {
                 spanCount =  if(orientation == Configuration.ORIENTATION_LANDSCAPE)
@@ -326,7 +326,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
                     3
                 layoutManager =
                     StaggeredGridLayoutManager(spanCount, StaggeredGridLayoutManager.VERTICAL)
-                (layoutManager as StaggeredGridLayoutManager).gapStrategy=StaggeredGridLayoutManager.GAP_HANDLING_NONE
+                layoutManager.gapStrategy=StaggeredGridLayoutManager.GAP_HANDLING_NONE
             }
             FilesShowMode.DIR_SMALL -> {
                 spanCount = 1
@@ -378,7 +378,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
         binding.sv.setOnQueryTextListener(MyQueryListener())
 
     }
-    private inner class MyQueryListener(): SearchView.OnQueryTextListener{
+    private inner class MyQueryListener: SearchView.OnQueryTextListener{
         override fun onQueryTextSubmit(query: String?): Boolean {
             return false
         }
@@ -433,7 +433,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
     override fun isAnItemSelected(): Boolean {
         return selectedItem.isNotEmpty()
     }
-    private inner class AllFilesActionModeCallback() : ActionMode.Callback{
+    private inner class AllFilesActionModeCallback: ActionMode.Callback{
         override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
             if(showMode==FilesShowMode.DIR_BIG || showMode == FilesShowMode.DIR_SMALL)
                 mode!!.menuInflater.inflate(R.menu.menu_onlong_digital,menu)
@@ -470,7 +470,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             val alertDialog = AlertDialog.Builder(requireContext())
             alertDialog.setTitle(R.string.delete_directories_alert_title)
             alertDialog.setMessage(R.string.delete_directories_alert_message)
-            alertDialog.setPositiveButton(R.string.yes){ dialogInterface: DialogInterface, i: Int ->
+            alertDialog.setPositiveButton(R.string.yes){ dialogInterface: DialogInterface, _: Int ->
                 CoroutineScope(Dispatchers.IO).launch{
                     val dao = DbDigitalPhotoEditor.getInstance(requireContext()).digitalPhotoEditorDAO()
                     val listDir = ArrayList<Directory>()

@@ -85,25 +85,23 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
     }
     //Return true if the object is selected
     override fun selectedHandler(element: Any): Boolean{
-        if(!(element is DigitalizedWhiteboards))
+        if(element !is DigitalizedWhiteboards)
             return false
-        val whiteboard = element as DigitalizedWhiteboards
         if(selectedWhiteboard.isEmpty()){
             mActionMode = requireActivity().startActionMode(MyActionModeCallback())
         }
-        if(selectedWhiteboard.contains(whiteboard)) {
-            selectedWhiteboard.remove(whiteboard)
+        if(selectedWhiteboard.contains(element)) {
+            selectedWhiteboard.remove(element)
             if(selectedWhiteboard.size==0)
                 mActionMode!!.finish()
             return false
         }
-        selectedWhiteboard.add(whiteboard)
+        selectedWhiteboard.add(element)
         return true
     }
     private fun setUI(){
         val conf = requireContext().resources?.configuration
         val dm = requireContext().resources?.displayMetrics
-        val orientation = requireContext().resources.configuration.orientation
         binding.rvWhiteboards.layoutManager = null
         binding.rvWhiteboards.adapter = null
         spanCount = 3
@@ -133,7 +131,7 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
         fun newInstance() =
             DigitalInkFragment()
     }
-    private inner class MySearchListener(): SearchView.OnQueryTextListener{
+    private inner class MySearchListener: SearchView.OnQueryTextListener{
         override fun onQueryTextSubmit(query: String?): Boolean {
             return false
         }
@@ -144,7 +142,7 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
         }
 
     }
-    inner class MyActionModeCallback(): ActionMode.Callback{
+    inner class MyActionModeCallback: ActionMode.Callback{
         override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
             mode!!.menuInflater.inflate(R.menu.menu_onlong_digital,menu)
             return true
@@ -160,7 +158,7 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
             val checkbox = binding.checkBox
             checkbox.setText(R.string.delete_also_model)
             var alsoModel = false
-            checkbox.setOnCheckedChangeListener{ compoundButton: CompoundButton, b: Boolean ->
+            checkbox.setOnCheckedChangeListener{ _: CompoundButton, b: Boolean ->
                 alsoModel = b
             }
             binding.root.removeView(checkbox)

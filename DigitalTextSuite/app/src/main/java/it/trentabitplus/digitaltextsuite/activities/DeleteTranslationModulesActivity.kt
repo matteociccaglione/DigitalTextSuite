@@ -1,3 +1,4 @@
+
 package it.trentabitplus.digitaltextsuite.activities
 
 import android.os.Bundle
@@ -41,47 +42,55 @@ class DeleteTranslationModulesActivity : AppCompatActivity() {
 
         // get translation models stored on the device
         CoroutineScope(Dispatchers.IO).launch {
-            Tasks.await(modelManager.getDownloadedModels(TranslateRemoteModel::class.java)
-                .addOnSuccessListener{ models ->
-                    models.forEach {
-                        modules.add(Language(it.language))
-                    }
-                }
-                .addOnFailureListener{
-                    finish()
-                })
-            CoroutineScope(Dispatchers.Main).launch {
-                if (modules.isEmpty())
-                    binding.tvEmptyList.visibility = View.VISIBLE
-                else
-                    binding.tvEmptyList.visibility = View.GONE
-
-                val recView = binding.rvModules
-                recView.layoutManager = LinearLayoutManager(baseContext)
-                recView.addItemDecoration(
-                    LinearSpacingDecorator(resources.getDimensionPixelSize(R.dimen.cardView_margin),1)
-                )
-                val adapter = ModuleAdapter(modules, baseContext)
-                recView.adapter = adapter
-
-                binding.btnDeleteModules.setOnClickListener {
-                    if (adapter.selectedLanguages.size == 0)
-                        Toast.makeText(applicationContext, "No items selected", Toast.LENGTH_SHORT).show()
-                    else{
-                        adapter.selectedLanguages.forEach {
-
-                            modules.remove(it)
-                            CoroutineScope(Dispatchers.Default).launch {
-                                deleteModule(modelManager, it.code)
-                            }
+            kotlin.runCatching {
+                Tasks.await(modelManager.getDownloadedModels(TranslateRemoteModel::class.java)
+                    .addOnSuccessListener { models ->
+                        models.forEach {
+                            modules.add(Language(it.language))
                         }
-                        recView.invalidate()
-                        val newAdapter = ModuleAdapter(modules, baseContext)
-                        recView.adapter = newAdapter
+                    }
+                    .addOnFailureListener {
+                        finish()
+                    })
+                CoroutineScope(Dispatchers.Main).launch {
+                    if (modules.isEmpty())
+                        binding.tvEmptyList.visibility = View.VISIBLE
+                    else
+                        binding.tvEmptyList.visibility = View.GONE
+
+                    val recView = binding.rvModules
+                    recView.layoutManager = LinearLayoutManager(baseContext)
+                    recView.addItemDecoration(
+                        LinearSpacingDecorator(
+                            resources.getDimensionPixelSize(R.dimen.cardView_margin),
+                            1
+                        )
+                    )
+                    val adapter = ModuleAdapter(modules, baseContext)
+                    recView.adapter = adapter
+
+                    binding.btnDeleteModules.setOnClickListener {
+                        if (adapter.selectedLanguages.size == 0)
+                            Toast.makeText(
+                                applicationContext,
+                                "No items selected",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        else {
+                            adapter.selectedLanguages.forEach {
+
+                                modules.remove(it)
+                                CoroutineScope(Dispatchers.Default).launch {
+                                    deleteModule(modelManager, it.code)
+                                }
+                            }
+                            recView.invalidate()
+                            val newAdapter = ModuleAdapter(modules, baseContext)
+                            recView.adapter = newAdapter
+                        }
                     }
                 }
             }
-
         }
 
 

@@ -25,7 +25,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\Andrea Pepe\.android\avd\Pixel_4_XL_API_29.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@4e0a9fab]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -41,14 +41,23 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\Andrea Pepe\Desktop\Università\3 ANNO\2° semestre 2021\MOBILE PROGRAMMING\30BitPlus.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
   <component name="ProjectId" id="1t204s8hrp30AvxGqdPy75jjut5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ApkExportedModule" value="Digital_Text_Suite.app" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="SerialNumber@4e0a9fab" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-18T08:33:12.441020600Z" />
+    <property name="ExportApk.ApkPath" value="C:\Users\Andrea Pepe\Desktop\Esame MP\trunk\DigitalTextSuite\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV2" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android-custom-viewC:/Users/Andrea Pepe/Desktop/Esame MP/trunk/DigitalTextSuite/app/src/main/java/it/trentabitplus/digitaltextsuite/view/Whiteboard.kt_SELECTED" value="Whiteboard" />
     <property name="android-custom-viewC:/Users/gianl/AndroidStudioProjects/DigitalPhotoEditor/app/src/main/java/it/trentabitplus/digitalphotoeditor/view/Whiteboard.kt_SELECTED" value="Whiteboard" />
@@ -56,7 +65,7 @@
     <property name="android-custom-viewC:/Users/matte/AndroidStudioProjects/progetto_finale_vero/trunk/DigitalPhotoEditor/app/src/main/java/it/trentabitplus/digitaltextsuite/view/Whiteboard.kt_SELECTED" value="Whiteboard" />
     <property name="android-custom-viewC:/Users/matte/AndroidStudioProjects/progetto_finale_vero/trunk/DigitalTextSuite/app/src/main/java/it/trentabitplus/digitaltextsuite/view/Whiteboard.kt_SELECTED" value="Whiteboard" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Università/3 ANNO/2° semestre 2021/MOBILE PROGRAMMING/30BitPlus.jks" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -189,9 +198,10 @@
     <state x="546" y="175" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1624111572508" />
     <state x="614" y="198" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1623415228783" />
     <state x="658" y="208" key="AndroidCreateXmlResourceDialog/74.0.1462.864/2400.11.1920.1040@74.0.1462.864" timestamp="1623270914362" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1623940131741">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="488" y="148" key="FileChooserDialogImpl" timestamp="1624631817420">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="488" y="148" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624631817420" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1623940131741" />
     <state x="597" y="175" key="FileChooserDialogImpl/74.0.1462.864/2400.11.1920.1040@74.0.1462.864" timestamp="1623270329799" />
     <state width="1323" height="423" key="GridCell.Tab.0.bottom" timestamp="1624596040728">

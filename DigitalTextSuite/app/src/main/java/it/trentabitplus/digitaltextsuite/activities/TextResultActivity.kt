@@ -1,3 +1,4 @@
+
 package it.trentabitplus.digitaltextsuite.activities
 
 import android.content.*
@@ -228,7 +229,7 @@ class TextResultActivity : AppCompatActivity() {
                         binding.editTextTextMultiLine.isEnabled = true
                         setType(menu)
                     } else {
-                        if (originalText.equals(textResult)) {
+                        if (originalText == textResult) {
                             type = TextResultType.SAVED
                             setType(menu)
                         }
@@ -378,15 +379,17 @@ class TextResultActivity : AppCompatActivity() {
                                 val translator = Translator()
 
                                 // waiting the translation, blocking UI
-                                val newRes = Tasks.await(translator.translate(textResult, language, targetLang))
-                                CoroutineScope(Dispatchers.Main).launch {
-                                    binding.grpTranslation.visibility = View.GONE
-                                    val intent = Intent(this@TextResultActivity,TextResultActivity::class.java)
-                                    val newNote = Note(newRes,"","",targetLang,System.currentTimeMillis(),false)
-                                    intent.putExtra("result",newNote)
-                                    intent.putExtra("type",TextResultType.NOT_SAVED)
-                                    startActivity(intent)
-                                    setNormalLayoutEnable(true)
+                                kotlin.runCatching {
+                                    val newRes = Tasks.await(translator.translate(textResult, language, targetLang))
+                                    CoroutineScope(Dispatchers.Main).launch {
+                                        binding.grpTranslation.visibility = View.GONE
+                                        val intent = Intent(this@TextResultActivity,TextResultActivity::class.java)
+                                        val newNote = Note(newRes,"","",targetLang,System.currentTimeMillis(),false)
+                                        intent.putExtra("result",newNote)
+                                        intent.putExtra("type",TextResultType.NOT_SAVED)
+                                        startActivity(intent)
+                                        setNormalLayoutEnable(true)
+                                    }
                                 }
                             }
                         }

@@ -10,7 +10,7 @@ import it.trentabitplus.digitaltextsuite.databinding.ChooseLanguageDialogBinding
 /**
  * This is a dialog to choose a target language, typically for translation
  */
-class LanguageDialogFragment(private val languages : List<String>): DialogFragment() {
+class LanguageDialogFragment(private var languages : List<String>): DialogFragment() {
     /*
     This attribute must be set using setOnLanguageSelected
     If not set the Dialog do nothing with the selected string
@@ -44,7 +44,9 @@ class LanguageDialogFragment(private val languages : List<String>): DialogFragme
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        languages.toMutableList().sort()
+        val list = languages.toMutableList()
+        list.sort()
+        languages = list
         binding.stringPicker.minValue=0
         binding.stringPicker.maxValue=languages.size-1
         binding.stringPicker.displayedValues=languages.toTypedArray()

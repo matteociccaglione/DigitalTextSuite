@@ -124,7 +124,7 @@ class FavouriteFragment : Fragment(){
         fun newInstance() =
             FavouriteFragment()
     }
-    private inner class MyQueryListener(): SearchView.OnQueryTextListener{
+    private inner class MyQueryListener: SearchView.OnQueryTextListener{
         override fun onQueryTextSubmit(query: String?): Boolean {
             return false
         }

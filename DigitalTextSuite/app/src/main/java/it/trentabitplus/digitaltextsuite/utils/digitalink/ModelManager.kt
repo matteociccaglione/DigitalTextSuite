@@ -20,7 +20,7 @@ import java.util.HashSet
 class ModelManager {
     private var model: DigitalInkRecognitionModel? = null
     var recognizer: DigitalInkRecognizer? = null
-    val remoteModelManager = RemoteModelManager.getInstance()
+    private val remoteModelManager = RemoteModelManager.getInstance()
 
     /**
      * Set a new model for digital ink recognition
@@ -72,7 +72,7 @@ class ModelManager {
 
     /**
      * This method remove the active model from the device storage
-     * @return a Tast<DigitalInkState> instance. The result of the task is NO_MODEL_DOWNLOADED if the model is not in the device storage and MODEL_DELETED if the model has been deleted and UNKOWN_ERROR if there is an exception
+     * @return a Task<DigitalInkState> instance. The result of the task is NO_MODEL_DOWNLOADED if the model is not in the device storage and MODEL_DELETED if the model has been deleted and UNKOWN_ERROR if there is an exception
      */
     fun deleteActiveModel(): Task<DigitalInkState> {
         if (model == null) {
@@ -85,13 +85,13 @@ class ModelManager {
                 }
                 remoteModelManager
                     .deleteDownloadedModel(model!!)
-                    .onSuccessTask { _: Void? ->
+                    .onSuccessTask {
                         Tasks.forResult(
                             DigitalInkState.MODEL_DELETED
                         )
                     }
             }
-            .addOnFailureListener { e: Exception ->
+            .addOnFailureListener {
                 Tasks.forResult(DigitalInkState.UNKOWN_ERROR)
             }
     }
@@ -104,7 +104,7 @@ class ModelManager {
                 for (model in remoteModels!!) {
                     result.add(model.modelIdentifier.languageTag)
                 }
-                Tasks.forResult<Set<String>>(result.toSet())
+                Tasks.forResult(result.toSet())
             }
 
     /**
@@ -116,10 +116,10 @@ class ModelManager {
             Tasks.forResult(DigitalInkState.NO_MODEL_SET)
         } else remoteModelManager
             .download(model!!, DownloadConditions.Builder().build())
-            .onSuccessTask { _: Void? ->
+            .onSuccessTask {
                 Tasks.forResult(DigitalInkState.MODEL_DOWNLOADED)
             }
-            .addOnFailureListener { e: Exception ->
+            .addOnFailureListener {
             }
     }
 

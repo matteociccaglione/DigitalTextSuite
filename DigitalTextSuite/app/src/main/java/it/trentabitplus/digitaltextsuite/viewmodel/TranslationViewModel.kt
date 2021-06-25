@@ -78,7 +78,7 @@ class TranslationViewModel(application: Application) : AndroidViewModel(applicat
     }
 
     // Identify the source text language
-    val sourceLang = Transformations.switchMap(sourceText){text ->
+    private val sourceLang = Transformations.switchMap(sourceText){text ->
         val result = MutableLiveData<Language>()
         /**
          * Call the language identification method and assign it

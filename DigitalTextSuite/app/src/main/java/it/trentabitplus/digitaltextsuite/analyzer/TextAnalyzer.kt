@@ -1,7 +1,6 @@
 package it.trentabitplus.digitaltextsuite.analyzer
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
@@ -13,6 +12,8 @@ import com.google.mlkit.vision.text.Text
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.TextRecognizerOptions
 import it.trentabitplus.digitaltextsuite.utils.ImageUtils
+import kotlin.math.max
+import kotlin.math.min
 
 /**
  * This class is an analyzer used in the translation use case
@@ -21,8 +22,7 @@ import it.trentabitplus.digitaltextsuite.utils.ImageUtils
  *
  * @author Andrea Pepe
  */
-class TextAnalyzer(private val context: Context,
-                   lifecycle: Lifecycle,
+class TextAnalyzer(lifecycle: Lifecycle,
                    private val result: MutableLiveData<String>,
                    private val cropPercentage : Float)
     : ImageAnalysis.Analyzer {
@@ -81,25 +81,24 @@ class TextAnalyzer(private val context: Context,
 
     /* This method is used to compare previous recognized data with the new analyzed data.
     Recognized data will be updated only if there is a difference of at least
-    DIFFERENCE PERCENTAGE. This operation is used to avoid continuos updates on
+    DIFFERENCE PERCENTAGE. This operation is used to avoid continuous updates on
     recognized data, so the feature has more stability. */
     private fun compareResult(words: List<String>): Boolean {
         if (result.value == null) {
             return true
         }
         val actualWords = result.value!!.split(" ")
-        val size = Math.min(words.size, actualWords.size)
-        val maxSize = Math.max(words.size, actualWords.size)
+        val size = min(words.size, actualWords.size)
+        val maxSize = max(words.size, actualWords.size)
 
         val ref = (size * DIFFERENCE_PERCENTAGE)
-        val refInt: Int
-        if (ref - ref.toInt() >= 0.5f)
-            refInt = ref.toInt() + 1
+        val refInt: Int = if (ref - ref.toInt() >= 0.5f)
+            ref.toInt() + 1
         else
-            refInt = ref.toInt()
+            ref.toInt()
         var count = 0
         for (i in 0 until size) {
-            if (!words[i].equals(actualWords[i]))
+            if (words[i] != actualWords[i])
                 count++
             if (count >= refInt)
                 return true

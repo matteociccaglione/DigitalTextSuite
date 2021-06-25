@@ -21,7 +21,7 @@ class MakeDirectoryDialog: DialogFragment() {
     private lateinit var binding: MakeDirectoryDialogBinding
     private lateinit var directorySelected : String
     private var directoryList : MutableList<String> = mutableListOf()
-    private var directoryListener: (directory: String,title: String) -> Unit ={ s: String, s1: String ->
+    private var directoryListener: (directory: String,title: String) -> Unit ={ _: String, _: String ->
 
     }
     var isDirectoryShowed : Boolean = true

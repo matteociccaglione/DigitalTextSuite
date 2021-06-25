@@ -11,6 +11,7 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.core.net.toUri
 import com.google.mlkit.vision.digitalink.Ink
+import com.google.mlkit.vision.digitalink.WritingArea
 import it.trentabitplus.digitaltextsuite.enumeration.DrawingMode
 import it.trentabitplus.digitaltextsuite.utils.digitalink.DigitalInkManager
 import it.trentabitplus.digitaltextsuite.utils.digitalink.SaveManager
@@ -59,7 +60,7 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         canvasBitmap = Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888)
         drawCanvas = Canvas(canvasBitmap!!)
-        //manager.writingArea = WritingArea(w.toFloat(),h.toFloat())
+        manager.writingArea = WritingArea(w.toFloat(),h.toFloat())
         invalidate()
     }
 
@@ -219,9 +220,8 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
      * This exception is throw when a whiteboard is empty
      *
      */
-    class EmptyWhiteboardException(): Exception(){
+    class EmptyWhiteboardException: Exception()
 
-    }
     /**
      * This method allows you to save the current whiteboard (and all its pages)
      * @param path is the file that must contain the metadata used to restore the whiteboard

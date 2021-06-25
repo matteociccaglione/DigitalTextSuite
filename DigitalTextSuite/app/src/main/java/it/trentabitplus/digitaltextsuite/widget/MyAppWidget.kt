@@ -45,44 +45,41 @@ class MyAppWidget : AppWidgetProvider() {
         super.onReceive(context, intent)
 
         // Real-time translation
-        if(intent?.action == "b3")
-        {
-            val i = Intent(context,RealMainActivity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            i.putExtra("fragment",3)
-            context?.startActivity(i)
+        when (intent?.action) {
+            "b3" -> {
+                val i = Intent(context,RealMainActivity::class.java)
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                i.putExtra("fragment",3)
+                context?.startActivity(i)
 
-        }
-        //all files
-        else if(intent?.action == "b2")
-        {
-            val i = Intent(context,RealMainActivity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            i.putExtra("fragment",0)
-            context?.startActivity(i)
-        }
-        // Digital ink whiteboard
-        else if(intent?.action == "b1")
-        {
-            val i = Intent(context,RealMainActivity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            i.putExtra("fragment",1)
-            context?.startActivity(i)
-        }
-        // Text recognition
-        else if(intent?.action == "b4")
-        {
-            val i = Intent(context,RealMainActivity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            i.putExtra("fragment",4)
-            context?.startActivity(i)
-        }
-        // Play with emoji activity
-        else if(intent?.action == "b5")
-        {
-            val i = Intent(context,PlayWithEmojiActivity::class.java)
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            context?.startActivity(i)
+            }
+            //all files
+            "b2" -> {
+                val i = Intent(context,RealMainActivity::class.java)
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                i.putExtra("fragment",0)
+                context?.startActivity(i)
+            }
+            // Digital ink whiteboard
+            "b1" -> {
+                val i = Intent(context,RealMainActivity::class.java)
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                i.putExtra("fragment",1)
+                context?.startActivity(i)
+            }
+            // Text recognition
+            "b4" -> {
+                val i = Intent(context,RealMainActivity::class.java)
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                i.putExtra("fragment",4)
+                context?.startActivity(i)
+            }
+            // Play with emoji activity
+            "b5" -> {
+                val i = Intent(context,PlayWithEmojiActivity::class.java)
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                context?.startActivity(i)
+            }
         }
     }
 

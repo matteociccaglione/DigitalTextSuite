@@ -31,7 +31,9 @@ class PlayWithEmojiActivity : AppCompatActivity(), DigitalRecognizerHandler,Stat
 
     private var highScore = 0
     private val viewModel : PlayWithEmojiViewModel by viewModels()
-    private  val FILENAME = "emojiBuone.csv"
+    companion object{
+        private const val FILENAME = "emojiBuone.csv"
+    }
     private var listEmoji = ArrayList<CharArray>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
