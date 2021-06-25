@@ -22,7 +22,7 @@ import it.trentabitplus.digitaltextsuite.utils.ImageUtils
  * @author Andrea Pepe
  */
 class TextAnalyzer(private val context: Context,
-                   private val lifecycle: Lifecycle,
+                   lifecycle: Lifecycle,
                    private val result: MutableLiveData<String>,
                    private val cropPercentage : Float)
     : ImageAnalysis.Analyzer {

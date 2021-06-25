@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.autofill.AutofillValue
 import android.widget.SeekBar
 import it.trentabitplus.digitaltextsuite.databinding.ChoosePenDialogBinding
 

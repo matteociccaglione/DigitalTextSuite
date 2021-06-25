@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import it.trentabitplus.digitaltextsuite.activities.DigitalInkActivity
-import it.trentabitplus.digitaltextsuite.activities.RealMainActivity
 import it.trentabitplus.digitaltextsuite.activities.TextResultActivity
 import it.trentabitplus.digitaltextsuite.database.DbDigitalPhotoEditor
 import it.trentabitplus.digitaltextsuite.database.DigitalizedWhiteboards

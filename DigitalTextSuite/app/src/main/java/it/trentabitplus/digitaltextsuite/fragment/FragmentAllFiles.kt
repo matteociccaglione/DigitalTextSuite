@@ -5,7 +5,6 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.SearchView
 import android.widget.Toast
@@ -65,7 +64,7 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true);
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -99,7 +98,6 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
                 selectedItem = ArrayList()
                 mActionMode = null
                 if (showMode == FilesShowMode.DIR_BIG || showMode == FilesShowMode.BIG) {
-                    Log.d("HERE", "HERE")
                     item.icon = ContextCompat.getDrawable(
                         requireContext(),
                         R.drawable.ic_baseline_grid_view_24
@@ -206,7 +204,6 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
 
 
     private fun loadData(){
-        Log.d("RESUME","RESUME")
         val dao = DbDigitalPhotoEditor.getInstance(requireContext()).digitalPhotoEditorDAO()
         CoroutineScope(Dispatchers.IO).launch{
             val results = dao.loadDirectories()
@@ -232,7 +229,6 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
     }
     private fun setAdapterDirectory(listDirectory: List<Directory>){
         binding.rvFiles.invalidate()
-        Log.d("DIR_SIZE",listDirectory.size.toString())
         if(showMode == FilesShowMode.DIR_BIG){
             adapterDirectoryBig = DirectoryBigAdapter(listDirectory, requireContext(),this,spanCount)
             binding.rvFiles.adapter = adapterDirectoryBig

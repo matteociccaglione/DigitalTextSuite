@@ -5,7 +5,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
 import androidx.appcompat.app.AppCompatDelegate
 import it.trentabitplus.digitaltextsuite.databinding.ActivityMainBinding
 import it.trentabitplus.digitaltextsuite.notifications.NotificationBuilder
@@ -14,7 +13,7 @@ import java.io.File
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private final val SPLASH_SCREEN_DURATION = 1500L
+    private val SPLASH_SCREEN_DURATION = 1500L
     companion object{
         const val CHANNEL_ID = "it.trentabitplus.digitaltextsuite"
     }

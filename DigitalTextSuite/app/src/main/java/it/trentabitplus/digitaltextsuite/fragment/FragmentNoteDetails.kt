@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import it.trentabitplus.digitaltextsuite.R
 import it.trentabitplus.digitaltextsuite.activities.TextResultActivity
 import it.trentabitplus.digitaltextsuite.database.DbDigitalPhotoEditor
 import it.trentabitplus.digitaltextsuite.database.DigitalizedWhiteboards

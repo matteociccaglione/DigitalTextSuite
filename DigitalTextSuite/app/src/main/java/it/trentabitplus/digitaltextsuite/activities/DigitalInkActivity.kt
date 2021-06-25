@@ -10,7 +10,6 @@ import android.os.Bundle
 import it.trentabitplus.digitaltextsuite.database.DigitalizedWhiteboards
 import android.os.Environment
 import android.os.PersistableBundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -403,7 +402,6 @@ class DigitalInkActivity : AppCompatActivity(),StatusChangedListener,DigitalReco
         CoroutineScope(Dispatchers.IO).launch {
             var textResultType = TextResultType.NOT_SAVED
             if (whiteboard.idNote != null) {
-                Log.d("IDNOTE",whiteboard.idNote.toString())
                 val dao = DbDigitalPhotoEditor.getInstance(this@DigitalInkActivity).digitalPhotoEditorDAO()
                 val oldNote = dao.loadNoteById(whiteboard.idNote!!)
                 oldNote.text = stringResult.toString()

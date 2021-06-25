@@ -1,7 +1,6 @@
 package it.trentabitplus.digitaltextsuite.utils.digitalink
 
 import android.graphics.Paint
-import android.util.Log
 import com.google.gson.GsonBuilder
 import com.google.gson.TypeAdapter
 import com.google.gson.reflect.TypeToken
@@ -37,7 +36,6 @@ class SaveManager {
         val adapter = MetadataAdapter()
         gson.registerTypeAdapter(WhiteboardMetadata::class.java,adapter)
         val writer = FileWriter(path)
-        Log.d("METADATASAVESIZE",metadata.size.toString())
         gson.create().toJson(metadata,metadataType,writer )
         writer.flush()
         writer.close()
@@ -105,7 +103,7 @@ class SaveManager {
             var listOfPoints : MutableList<WhiteboardMetadata.PointMetadata> = mutableListOf()
             var point : WhiteboardMetadata.PointMetadata = WhiteboardMetadata.PointMetadata(0,0f,0f)
             val listOfStrokes : MutableList<WhiteboardMetadata.StrokeMetadata> = mutableListOf()
-            var fieldName : String = ""
+            var fieldName = ""
             if(reader!= null) {
                     reader.beginObject()
                     token = reader.peek()
@@ -122,7 +120,6 @@ class SaveManager {
                         reader.beginArray()
                         if (token == com.google.gson.stream.JsonToken.BEGIN_ARRAY) {
                             while (token != com.google.gson.stream.JsonToken.END_ARRAY) {
-                                Log.d("ALLSTROKE",allStroke.toString())
                                 if(allStroke == 0)
                                     reader.beginObject()
                                 token = reader.peek()
@@ -151,7 +148,6 @@ class SaveManager {
                                 reader.beginArray()
                                     if (token == com.google.gson.stream.JsonToken.BEGIN_ARRAY) {
                                         while (token != com.google.gson.stream.JsonToken.END_ARRAY) {
-                                            Log.d("ALLPOINTS",all.toString())
                                             if(all==0){
                                                 reader.beginObject()
                                             }

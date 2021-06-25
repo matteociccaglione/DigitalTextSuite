@@ -2,7 +2,6 @@ package it.trentabitplus.digitaltextsuite.fragment
 
 import android.content.DialogInterface
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.CompoundButton
 import android.widget.SearchView
@@ -60,7 +59,6 @@ class DigitalInkFragment : Fragment(),SelectedHandler {
     }
     override fun onResume(){
         super.onResume()
-        Log.d("FRAGDEBUG","ONRESUMEDIGITALINK")
         setUI()
         setLiveData()
     }

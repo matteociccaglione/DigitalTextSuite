@@ -1,7 +1,6 @@
 package it.trentabitplus.digitaltextsuite.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
@@ -41,7 +40,6 @@ class SelectPdfAdapter(val listPdf : List<File>, val context: Context) : Recycle
         var file : File = RealMainActivity.rootDir
             set(value) {
                 field = value
-                Log.d("pdf", "nome file: " + file.name)
                 binding.tvPdfFilename.text = file.name
             }
 

@@ -86,7 +86,6 @@ class FragmentCameraTranslate : CameraFragment() {
     }
     override fun onResume() {
         super.onResume()
-        Log.d("FRAGDEBUG","ONRESUMETRANSLATE")
         orientationEventListener.enable()
         show(binding.vfCameraTranslate)
     }
@@ -109,7 +108,6 @@ class FragmentCameraTranslate : CameraFragment() {
         }
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Log.d("FRAGDEBUG","ONVIEWCREATEDTRANSLATE")
         binding.fabChooseLanguage.setOnClickListener{
             val languages = viewModel.availableLanguages
             val stringLanguages = ArrayList<String>()

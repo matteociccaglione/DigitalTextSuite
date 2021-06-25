@@ -6,7 +6,6 @@ import android.graphics.*
 import android.net.Uri
 import android.util.AttributeSet
 import android.util.DisplayMetrics
-import android.util.Log
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
@@ -240,7 +239,6 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
             }
             listOfStrokes.add(mutableListOf())
             listPaints.add(mutableListOf())
-            Log.d("PAGESTROKESIZE",pathToStroke[page].size.toString())
             for (i in pathToStroke[page].indices) {
                 listOfStrokes[page-dirtyPage].add(pathToStroke[page][i].stroke)
                 listPaints[page-dirtyPage].add(pathToStroke[page][i].paint)
@@ -391,7 +389,6 @@ class Whiteboard(context: Context,attributeSet: AttributeSet? = null): View(cont
             }
             listOfStrokes.add(mutableListOf())
             listPaints.add(mutableListOf())
-            Log.d("PAGESTROKESIZE",pathToStroke[page].size.toString())
             for (i in pathToStroke[page].indices) {
                 listOfStrokes[page-dirtyPage].add(pathToStroke[page][i].stroke)
                 listPaints[page-dirtyPage].add(pathToStroke[page][i].paint)

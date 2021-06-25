@@ -55,7 +55,7 @@ class Translator {
     fun translate(text: String, sourceCode: String, targetCode: String) : Task<String> {
 
         // params can't be null; check only if text is empty
-        if(text.isEmpty()){
+        if(text.isEmpty() || sourceCode.length != 2){
             return Tasks.forResult("")
         }
 

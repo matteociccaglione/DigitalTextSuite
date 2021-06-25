@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -52,7 +51,6 @@ class PlayWithEmojiActivity : AppCompatActivity(), DigitalRecognizerHandler,Stat
                     reader.useLines { lines ->
                         lines.forEach {
                             val emojiRead = it.split(",")[0].split(" ")[0]
-                            Log.d("EMOJI", emojiRead)
                             listEmoji.add(
                                 Character.toChars(
                                     Integer.decode(

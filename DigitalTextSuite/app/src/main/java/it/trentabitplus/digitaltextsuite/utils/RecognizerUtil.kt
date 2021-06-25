@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
-import android.util.Log
 import android.widget.Toast
 import androidx.core.net.toFile
 import com.google.mlkit.vision.common.InputImage
@@ -42,13 +41,10 @@ class RecognizerUtil(val context: Context) {
                 text ->
             if(text.text.isNotEmpty()) {
                 val intent = Intent(context, TextResultActivity::class.java)
-                Log.d("lingua", text.textBlocks[0].recognizedLanguage)
                 val language = text.textBlocks[0].recognizedLanguage
                 val note = Note(text.text,"","",language,System.currentTimeMillis(),false)
                 intent.putExtra("result",note)
                 intent.putExtra("type", TextResultType.NOT_SAVED.ordinal)
-//                intent.putExtra("language", Locale(language).displayName)
-//                intent.putExtra("result", text.text)
                 if(temp)
                     fileUri.toFile().delete()
                     context.startActivity(intent)
