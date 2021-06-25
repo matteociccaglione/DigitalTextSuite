@@ -524,14 +524,19 @@ class FragmentAllFiles : Fragment(), SelectedHandler{
             alertDialog.show()
         }
         private fun mergeFiles(mode: ActionMode?){
+            var languages = ""
             val stringBuilder = StringBuilder()
             for(elem in selectedItem){
                 if(elem is Note){
                     stringBuilder.append(elem.text)
                     stringBuilder.append("\n")
+                    if(languages == "")
+                        languages = elem.language
+                    if(elem.language!=languages)
+                        languages = "und"
                 }
             }
-            val note = Note(stringBuilder.toString(),"","","und",System.currentTimeMillis(),false)
+            val note = Note(stringBuilder.toString(),"","", languages,System.currentTimeMillis(),false)
             val intent = Intent(requireContext(),TextResultActivity::class.java)
             intent.putExtra("result",note)
             intent.putExtra("type", TextResultType.NOT_SAVED.ordinal)

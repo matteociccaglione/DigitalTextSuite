@@ -152,9 +152,9 @@ class TextResultActivity : AppCompatActivity() {
                                 note.title = title
                                 CoroutineScope(Dispatchers.IO).launch {
                                     dao.insertNote(note)
+                                    val lastNote = dao.loadLastIdNote()
+                                    note.id = lastNote
                                     if(!whiteboard.isEmpty()){
-                                        val lastNote = dao.loadLastIdNote()
-                                        note.id = lastNote
                                         whiteboard.idNote = lastNote
                                         dao.updateWhiteboard(whiteboard)
                                     }
@@ -394,7 +394,11 @@ class TextResultActivity : AppCompatActivity() {
                             }
                         }
                     }
+                    if(note.language != "und"){
                     dialog.show(supportFragmentManager, "LANGDIALOG")
+                    }else{
+                        Toast.makeText(this@TextResultActivity, getString(R.string.und_translation_error), Toast.LENGTH_SHORT).show()
+                    }
                 }
 
 
